@@ -1,0 +1,39 @@
+.heroHomeImg {
+    width: 100%;
+}
+
+.productsBoxContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productBox {
+    width: 50%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    pointer-events: none;
+}
+  
+.productBox img {
+    width: 100%;
+}
+.productBoxText {
+    position: relative;
+    top: -72%;
+    right: -10%;
+    color: white;
+    font-size: xxx-large;
+    font-weight: 400;
+}
