@@ -1,7 +1,10 @@
 .navbar {
     display: flex;
     justify-content: space-around;
+    height: 10vh;
 }
 .logoNavbar {
     width: 180px;
+    height: fit-content;
+    margin-top: 2%;
 }

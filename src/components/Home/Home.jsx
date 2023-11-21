@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import hero from '/fotos crudas/cortinas (1).jpg'
+import hero from '/fotos crudas/cortinas (12).jpg'
 import photo1 from '/fotos crudas/cortinas (1).jpg'
 import photo2 from '/fotos crudas/cortinas (2).jpg'
 import photo3 from '/fotos crudas/cortinas (3).jpg'
