@@ -10,12 +10,15 @@
     margin: 0 0 2vh 0;
     height: 30vh;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .aboutText {
     border: 2px solid #C1C09F;
     color: var(--color-darkgrey);
     padding: 5%;
+    border-radius: 5px;
+    margin-bottom: 10vh;
 }
 
 .aboutContainer h3{

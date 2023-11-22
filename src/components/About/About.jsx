@@ -1,6 +1,8 @@
 import React from 'react'
 import './About.css'
-import image from '/camioneta.png'
+import van from '/camioneta.png'
+import image from '/images/cortinas (10).jpg'
+
 
 function About() {
   return (
