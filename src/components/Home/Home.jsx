@@ -14,7 +14,7 @@ function Home() {
     <div>
       <img src={hero} alt="cortina" className='heroHomeImg' />
 
-      <h2>NUESTROS PRODUCTOS</h2>
+      <h2 id='products' >NUESTROS PRODUCTOS</h2>
       <div className='productsBoxContainer'>
         <div className='productBox' > 
           <div className='imageOverlay'></div>

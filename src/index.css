@@ -7,22 +7,33 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-darkgrey: #656668;
+  --color-lightgrey: #7C7C7C;
+
+  --color-darkbeige: #D1D1B7;
+  --color-lightbeige: #C1C09F;
+
+  
 }
+
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box
 }
 a {
-  color: black;
+  color: var(--color-darkgrey);
   text-decoration: none;
 }
 a:hover {
-  color: #a4a4ad;
+  color: var(--color-lightgrey);
 }
 h2 {
   text-align: center;
   font-weight: 200;
+  color: var(--color-darkgrey);
 }
 
 h1 {

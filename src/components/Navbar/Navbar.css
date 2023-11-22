@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     height: 10vh;
-    align-items: flex-end; 
+    align-items: center;
     position: fixed;
     width: 100%;
     background: white;
@@ -10,6 +10,33 @@
     z-index: 10;
 }
 .logoNavbar {
-    width: 180px;
+    width: 150px;
     height: fit-content;
+}
+
+.navbarItems {
+    font-size: 14px;
+}
+
+.navbarItemsContainer {
+    display: flex;
+    width: 37%;
+    justify-content: space-between;
+}
+
+.dropdownContainer {
+    position: absolute;
+    top: 8vh;
+    background: white;
+    width: 50%;
+    right: 0;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: right;
+}
+
+.dropdownItem {
+    padding-right: 12%;
+    color: var(--color-darkgrey);
+    font-weight: 800;
 }
