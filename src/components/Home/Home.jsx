@@ -7,6 +7,8 @@ import photo3 from '/images/cortinas (9).jpg'
 import photo4 from '/fotos crudas/cortinas (15).jpg'
 import photo5 from '/fotos crudas/cortinas (5).jpg'
 import photo6 from '/fotos crudas/cortinas (2).jpg'
+import { Link } from 'react-router-dom'
+import Promos from '../Promos/Promos'
 
 function Home() {
   
@@ -16,38 +18,40 @@ function Home() {
 
       <h2 id='products' >NUESTROS PRODUCTOS</h2>
       <div className='productsBoxContainer'>
-        <div className='productBox' > 
+        <Link className='productBox' to='/translucida' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo1} alt="" />
           <p className='productBoxText'>Translúcida</p>
-        </div>
-        <div className='productBox' >
+        </Link>
+        <Link className='productBox' to='/sunscreen' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo2} alt="" />
           <p className='productBoxText'>Sunscreen</p>
-        </div>
-        <div className='productBox' >
+        </Link>
+        <Link className='productBox' to='/blackout' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo3} alt="" />
           <p className='productBoxText'>Blackout</p>
-        </div>
-        <div className='productBox' >
+        </Link>
+        <Link className='productBox' to='/duo' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo4} alt="" />
           <p className='productBoxText'>Dúo</p>
-        </div>
-        <div className='productBox' >
+        </Link>
+        <Link className='productBox' to='/rusticas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo5} alt="" />
           <p className='productBoxText'>Rústicas</p>
-        </div>
-        <div className='productBox' >
+        </Link>
+        <Link className='productBox' to='/linos' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo6} alt="" />
           <p className='productBoxText'>Linos</p>
-        </div>
+        </Link>
 
       </div>
+
+      <Promos/>
     </div>
   )
 }

@@ -13,8 +13,9 @@ function Navbar() {
 
   }
   const scrollToProducts = () => {
+
     const productsSection = document.getElementById('products');
-    const offset = productsSection?.offsetTop - 12 * window.innerHeight / 100; // Resta 10vh
+    const offset = productsSection?.offsetTop - 10 * window.innerHeight / 100; // Resta 10vh
   
     window.scrollTo({
       top: offset,
@@ -32,12 +33,13 @@ function Navbar() {
       </div>
       {showDropdown &&
         <div className='dropdownContainer'>
-          <p className='dropdownItem'>Translúcida</p>
-          <p className='dropdownItem'>Sunscreen</p>
-          <p className='dropdownItem'>Blackout</p>
-          <p className='dropdownItem'>Dúo</p>
-          <p className='dropdownItem'>Rústicas</p>
-          <p className='dropdownItem'>Linos</p>
+          <Link to='/translucida' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Translúcida</p></Link>
+          <Link to='/sunscreen' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Sunscreen</p></Link>
+          <Link to='/blackout' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Blackout</p></Link>
+          <Link to='/duo' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Dúo</p></Link>
+          <Link to='/rusticas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Rústicas</p></Link>
+          <Link to='/linos' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Linos</p></Link>
+          
         </div>
       }
 

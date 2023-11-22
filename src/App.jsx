@@ -5,24 +5,28 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import Footer from './components/Footer/Footer'
 import CheckScroll from './CheckScroll'
+import Detail from './components/Detail/Detail'
 
 function App() {
 
   return (
     <BrowserRouter>
+    
     <Navbar />
     <CheckScroll/>
+
     <Routes className='appRoutes'>
 
       <Route path='/' element={< Home />} />
       
       <Route path='/about' element={< About />} />
       
-      {/* <Route path='/:category' element={< GalleryContainer />} />
-      <Route path='/prensa/:id' element={< NewsDetail />} /> */}
+      <Route path='/:category' element={< Detail />} />
       
     </Routes>
+
     <Footer />
+
   </BrowserRouter>
   )
 }

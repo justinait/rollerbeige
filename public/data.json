@@ -1,0 +1,17 @@
+{
+    "categorys": [
+        {
+            "id": 1,
+            "title": "Blackout",
+            "subtitle": "Cortina que no permite el paso de la luz.",
+            "image": "https://res.cloudinary.com/dsgxxcikg/image/upload/v1694692227/realidaduniversitariaperublog_dfe6q0.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Blackout Premium",
+            "subtitle": "Cortina que no permite el paso de la luz.",
+            "image": "https://res.cloudinary.com/dsgxxcikg/image/upload/v1694692227/realidaduniversitariaperublog_dfe6q0.jpg"
+        }
+    ]
+  }
+    

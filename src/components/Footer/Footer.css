@@ -1,10 +1,33 @@
 .footer {
-    height: 150px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: #373737;
 }
 
 .logoFooter {
     width: 130px;
+}
+
+.footerInfo {
+    width: 45%;
+}
+
+.footerLinks {
+    display: flex;
+    font-size: x-small;
+    align-items: center;
+    font-weight: 600;
+    color: #bfbfbf;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+    margin: 3%;
+}
+
+.footerInfo h4{
+    margin: 6% 4%;
+    font-weight: 600;
+    color: #bfbfbf
 }

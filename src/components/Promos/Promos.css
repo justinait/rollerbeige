@@ -1,0 +1,49 @@
+.promosDivContainer {
+    display: flex;
+    padding-bottom: 10vh;
+}
+
+.promoContainer {
+    padding: 2%;
+    margin: 0 2%;
+    border: 2px solid #C1C09F;
+    width: 45%;
+    border-radius: 20px;
+}
+.promoImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.promoCategory {
+    text-align: center;
+    font-size: small;
+    font-weight: 300;
+    font-family: monospace;
+    color: var(--color-darkgrey);
+    font-family: 'Raleway';
+    font-family: 'poppins';
+    margin: 5px;
+}
+
+.promoTitle {
+    text-align: center;
+    margin: 5px;
+    color: var(--color-darkgrey);
+    font-family: 'Raleway';
+
+    font-family: 'poppins';
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.promoPrice {
+    text-align: center;
+    margin: 5px;
+    font-family: 'Raleway';
+    color: var(--color-darkgrey);
+    color: black;
+    font-weight: 600;
+}
