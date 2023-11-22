@@ -2,6 +2,7 @@
     width: 100%;
     height: 78vh;
     object-fit: cover;
+    padding-top: 10vh;
 }
 
 .productsBoxContainer {
@@ -12,30 +13,48 @@
 
 .productBox {
     width: 50%;
-    height: 250px;
+    height: 190px;
     position: relative;
     overflow: hidden;
 }
 
 .imageOverlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 3%;
+    left: 3%;
     background-color: black;
     opacity: 0.3;
+    z-index: 1;
     pointer-events: none;
+    width: 94%;
+    height: 94%;
 }
   
 .productBox img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 3;
 }
 .productBoxText {
     position: relative;
-    top: -72%;
-    right: -10%;
+    top: -60%;
+    right: -7%;
     color: white;
-    font-size: xxx-large;
-    font-weight: 400;
+    font-size: x-large;
+    z-index: 3;
+    text-transform: uppercase;
+    
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    font-family: 'Poppins';
+    
+    font-weight: 700;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: unset;
+
+    
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
 }
