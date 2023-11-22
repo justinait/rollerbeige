@@ -14,7 +14,7 @@ function Navbar() {
   }
   const scrollToProducts = () => {
     const productsSection = document.getElementById('products');
-    const offset = productsSection.offsetTop - 12 * window.innerHeight / 100; // Resta 10vh
+    const offset = productsSection?.offsetTop - 12 * window.innerHeight / 100; // Resta 10vh
   
     window.scrollTo({
       top: offset,
@@ -24,10 +24,10 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-      <Link to='/' style={{marginBottom: '-2%' }}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
+      <Link to='/' style={{marginBottom: '-2%' }} onClick={()=>setShowDropdown(false)}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
       
       <div className='navbarItemsContainer'>
-        <p className='navbarItems'> <Link to='/about'>Nosotros</Link></p>
+        <p className='navbarItems' onClick={()=>setShowDropdown(false)}> <Link to='/about'>Nosotros</Link></p>
         <p className='navbarItems' onClick={handleClick}> Productos </p>
       </div>
       {showDropdown &&
