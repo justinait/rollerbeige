@@ -15,6 +15,7 @@ function Home() {
   return (
     <div>
       <img src={hero} alt="cortina" className='heroHomeImg' />
+      {/* <p>Asesoramiento Personalizado</p> */}
 
       <h2 id='products' >NUESTROS PRODUCTOS</h2>
       <div className='productsBoxContainer'>

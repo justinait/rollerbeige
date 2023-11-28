@@ -2,23 +2,24 @@
     height: 180px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background: #373737;
+    flex-direction: row-reverse;
 }
 
 .logoFooter {
-    width: 130px;
+    width: 110px;
 }
 
 .footerInfo {
-    width: 45%;
+    width: 52%;
 }
 
 .footerLinks {
     display: flex;
     font-size: x-small;
     align-items: center;
-    font-weight: 600;
+    font-weight: 500;
     color: #bfbfbf;
 }
 
