@@ -21,6 +21,7 @@
     align-items: center;
     font-weight: 500;
     color: #bfbfbf;
+    padding-bottom: 2%;
 }
 
 .css-i4bv87-MuiSvgIcon-root {
@@ -29,6 +30,6 @@
 
 .footerInfo h4{
     margin: 6% 4%;
-    font-weight: 600;
+    font-weight: 500;
     color: #bfbfbf
 }
