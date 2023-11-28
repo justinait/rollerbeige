@@ -10,14 +10,16 @@
     z-index: 10;
 }
 .logoNavbar {
-    width: 150px;
+    width: 130px;
     height: fit-content;
+    padding-left: 5%;
 }
 
 .navbarItems {
     font-size: 13px;
     font-weight: 500;
     color: var(--color-darkgrey);
+    padding-right: 5%;
 }
 
 .navbarItemsContainer {
