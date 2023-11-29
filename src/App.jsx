@@ -6,6 +6,9 @@ import About from './components/About/About'
 import Footer from './components/Footer/Footer'
 import CheckScroll from './CheckScroll'
 import Detail from './components/Detail/Detail'
+import Products from './components/Products/Products'
+import Promos from './components/Promos/Promos'
+import Fabric from './components/Fabric/Fabric'
 
 function App() {
 
@@ -20,6 +23,10 @@ function App() {
       <Route path='/' element={< Home />} />
       
       <Route path='/about' element={< About />} />
+      
+      <Route path='/cortinas' element={< Products />} />
+      <Route path='/telas' element={< Fabric />} />
+      <Route path='/accesorios' element={< Promos />} />
       
       <Route path='/:category' element={< Detail />} />
       

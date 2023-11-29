@@ -33,12 +33,16 @@ function Navbar() {
       </div>
       {showDropdown &&
         <div className='dropdownContainer'>
-          <Link to='/translucida' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Translúcida</p></Link>
-          <Link to='/sunscreen' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Sunscreen</p></Link>
-          <Link to='/blackout' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Blackout</p></Link>
+          <Link to='/cortinas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Cortinas</p></Link>
+          <Link to='/telas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Telas</p></Link>
+          <Link to='/accesorios' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Accesorios</p></Link>
+          {/* <Link to='/translucida' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Roller</p></Link>
+          <Link to='/translucida' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Bandas Verticales</p></Link>
+          <Link to='/sunscreen' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Tradicionales</p></Link>
+          <Link to='/blackout' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Paneles Orientales</p></Link>
           <Link to='/duo' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Dúo</p></Link>
-          <Link to='/rusticas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Rústicas</p></Link>
-          <Link to='/linos' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Linos</p></Link>
+          <Link to='/rusticas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Venecianas</p></Link>
+          <Link to='/linos' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Romanas</p></Link> */}
           
         </div>
       }
