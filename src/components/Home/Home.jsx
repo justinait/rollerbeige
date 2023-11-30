@@ -2,12 +2,20 @@ import React from 'react'
 import './Home.css'
 import hero from '/images/cortinas (5).jpg'
 import photo1 from '/images/cortinas (10).jpg'
-import photo2 from '/fotos crudas/cortinas (33).jpg'
+import photo2 from '/images/cortinas (31).jpg'
 import photo3 from '/images/cortinas (9).jpg'
-import photo4 from '/fotos crudas/cortinas (15).jpg'
-import photo5 from '/fotos crudas/cortinas (5).jpg'
-import photo6 from '/fotos crudas/cortinas (2).jpg'
+import photo4 from '/images/cortinas (14).jpg'
+import photo5 from '/images/cortinas (5).jpg'
+import photo6 from '/images/cortinas (2).jpg'
+import photo7 from '/images/cortinas (2).jpg'
 import photo8 from '/images/cortinas (38).jpg'
+
+import blackout from '/images/cortinas (38).jpg'
+import sunscreen from '/images/cortinas (14).jpg'
+import traslucida from '/images/cortinas (2).jpg'
+import eclipse from '/images/cortinas (2).jpg'
+import lino from '/images/cortinas (5).jpg'
+
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -22,27 +30,27 @@ function Home() {
 
       <div className='productsBoxContainer'>
         <Link className='productBoxHome' to='/translucida' onClick={()=>setShowDropdown(false)}>
-          <img src={photo8} alt="" />
+          <img src={blackout} alt="" />
           <p className='productBoxHomeText'> Blackout</p>
           <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/translucida' onClick={()=>setShowDropdown(false)}>
-          <img src={photo1} alt="" />
+          <img src={sunscreen} alt="" />
           <p className='productBoxHomeText'> Sunscreen</p>
           <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/sunscreen' onClick={()=>setShowDropdown(false)}>
-          <img src={photo2} alt="" />
+          <img src={traslucida} alt="" />
           <p className='productBoxHomeText'> Traslúcidas</p>
           <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/blackout' onClick={()=>setShowDropdown(false)}>
-          <img src={photo3} alt="" />
+          <img src={eclipse} alt="" />
           <p className='productBoxHomeText'> Dúo</p>
           <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/duo' onClick={()=>setShowDropdown(false)}>
-          <img src={photo4} alt="" />
+          <img src={lino} alt="" />
           <p className='productBoxHomeText'> Lino</p>
           <div className='homeImageOverlay'></div>
         </Link>
