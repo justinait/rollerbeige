@@ -12,27 +12,45 @@
 }
 
 .productBoxHome {
-    height: 50px;
-    padding: 5%;
+    height: 65px;
+    padding: 4%;overflow: hidden; 
 }
 
 .productBoxHome img {
-    width: 80vw;
-    height: 50px;
+    width: 42vw;
+    height: 70px;
     object-fit: cover;
+    border-radius: 5px;
+    z-index: 2;
+    position: absolute;
+    
 }
 
 .productBoxHomeText {
     position: relative;
-    top: -57%;
-    right: -6%;
+    top: 18%;
+    right: -3%;
     color: white;
     font-size: 20px;
     z-index: 3;
     text-transform: uppercase;
     
-    font-weight: 300;
+    width: 42vw;
     letter-spacing: 0.8px;
-    font-family: 'Poppins';
-    
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    z-index: 4;
+}
+
+.homeImageOverlay {
+    position: relative;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 3;
+    pointer-events: none;
+    width: 42vw;
+    height: 70px;
+    border-radius: 5px;
+    bottom: 70px;
+    left: 0%;
 }

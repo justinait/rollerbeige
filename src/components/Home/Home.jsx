@@ -23,43 +23,53 @@ function Home() {
       <div className='productsBoxContainer'>
         <Link className='productBoxHome' to='/translucida' onClick={()=>setShowDropdown(false)}>
           <img src={photo8} alt="" />
-          <p className='productBoxHomeText'><br /> Blackout</p>
+          <p className='productBoxHomeText'> Blackout</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/translucida' onClick={()=>setShowDropdown(false)}>
           <img src={photo1} alt="" />
-          <p className='productBoxHomeText'><br /> Sunscreen</p>
+          <p className='productBoxHomeText'> Sunscreen</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/sunscreen' onClick={()=>setShowDropdown(false)}>
           <img src={photo2} alt="" />
-          <p className='productBoxHomeText'><br /> Traslúcidas</p>
+          <p className='productBoxHomeText'> Traslúcidas</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/blackout' onClick={()=>setShowDropdown(false)}>
           <img src={photo3} alt="" />
-          <p className='productBoxHomeText'><br /> Dúo</p>
+          <p className='productBoxHomeText'> Dúo</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/duo' onClick={()=>setShowDropdown(false)}>
           <img src={photo4} alt="" />
-          <p className='productBoxHomeText'><br /> Lino</p>
+          <p className='productBoxHomeText'> Lino</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/rusticas' onClick={()=>setShowDropdown(false)}>
           <img src={photo5} alt="" />
-          <p className='productBoxHomeText'><br /> Gross</p>
+          <p className='productBoxHomeText'> Gross</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/linos' onClick={()=>setShowDropdown(false)}>
           <img src={photo6} alt="" />
-          <p className='productBoxHomeText'><br /> Tusor</p>
+          <p className='productBoxHomeText'> Tusor</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/rusticas' onClick={()=>setShowDropdown(false)}>
           <img src={photo5} alt="" />
-          <p className='productBoxHomeText'>Gasa <br /> de Lino</p>
+          <p className='productBoxHomeText'>Gasa  de Lino</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/linos' onClick={()=>setShowDropdown(false)}>
           <img src={photo6} alt="" />
-          <p className='productBoxHomeText'>Gasa <br /> de hilo</p>
+          <p className='productBoxHomeText'>Gasa  de hilo</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/linos' onClick={()=>setShowDropdown(false)}>
           <img src={photo6} alt="" />
-          <p className='productBoxHomeText'>Voile <br /> de hilo</p>
+          <p className='productBoxHomeText'>Voile de hilo</p>
+          <div className='homeImageOverlay'></div>
         </Link>
       </div>
     
@@ -69,34 +79,43 @@ function Home() {
       <div className='productsBoxContainer'>
         <Link className='productBoxHome' to='/translucida' onClick={()=>setShowDropdown(false)}>
           <img src={photo8} alt="" />
-          <p className='productBoxHomeText'><br /> Roller</p>
+          <p className='productBoxHomeText'> Roller</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/translucida' onClick={()=>setShowDropdown(false)}>
           <img src={photo1} alt="" />
-          <p className='productBoxHomeText'>Bandas <br /> Verticales</p>
+          <p className='productBoxHomeText'>Bandas  Verticales</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/sunscreen' onClick={()=>setShowDropdown(false)}>
           <img src={photo2} alt="" />
-          <p className='productBoxHomeText'><br /> Tradicionales</p>
+          <p className='productBoxHomeText'> Tradicionales</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/blackout' onClick={()=>setShowDropdown(false)}>
           <img src={photo3} alt="" />
-          <p className='productBoxHomeText'>Paneles <br /> Orientales</p>
+          <p className='productBoxHomeText'>Paneles  Orientales</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/duo' onClick={()=>setShowDropdown(false)}>
           <img src={photo4} alt="" />
-          <p className='productBoxHomeText'><br /> Dúo</p>
+          <p className='productBoxHomeText'> Dúo</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/rusticas' onClick={()=>setShowDropdown(false)}>
           <img src={photo5} alt="" />
-          <p className='productBoxHomeText'><br /> Venecianas</p>
+          <p className='productBoxHomeText'> Venecianas</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/linos' onClick={()=>setShowDropdown(false)}>
           <img src={photo6} alt="" />
-          <p className='productBoxHomeText'><br /> Romanas</p>
+          <p className='productBoxHomeText'> Romanas</p>
+          <div className='homeImageOverlay'></div>
         </Link>
         <Link className='productBoxHome' to='/linos' onClick={()=>setShowDropdown(false)}>
+          {/* <div className='imageOverlay'></div> */}
           <img src={photo6} alt="" />
+          <div className='homeImageOverlay'></div>
           <p className='productBoxHomeText'>Cortinas de baño</p>
         </Link>
       </div>
