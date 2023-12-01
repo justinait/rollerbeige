@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import './Products.css'
 
 import roller from '/images/cortinas (6).jpg'
-import eclipse from '/images/cortinas (85).jpg'
-import tradicionales from '/images/cortinas (5).jpg'
+import eclipse from '/images/cortinas (46).jpg'
+import tradicionales from '/images/cortinas (2).jpg'
 import verticales from '/images/cortinas (73).jpg'//82
 import orientales from '/images/cortinas (41).jpg'
 import baño from '/images/cortinas (8).jpg'
@@ -24,6 +24,11 @@ function Products() {
         <div className='productContainer'>
             <img src={verticales} alt="roller" className='imgProduct'/>
             <p className='productText'>Bandas Verticales</p>
+        </div>
+
+        <div className='productContainer'>
+            <img src={tradicionales} alt="roller" className='imgProduct'/>
+            <p className='productText'>Tradicionales</p>
         </div>
 
         <div className='productContainer'>
