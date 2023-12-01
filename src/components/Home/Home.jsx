@@ -7,7 +7,6 @@ import photo2 from '/fotos crudas/cortinas (33).jpg'
 import photo4 from '/fotos crudas/cortinas (15).jpg'
 import photo5 from '/fotos crudas/cortinas (5).jpg'
 import photo6 from '/fotos crudas/cortinas (2).jpg'
-import photo8 from '/images/cortinas (38).jpg'
 
 import blackout from '/images/cortinas (38).jpg'
 import sunscreen from '/images/cortinas (14).jpg'
@@ -15,7 +14,7 @@ import traslucida from '/images/cortinas (2).jpg'
 import eclipse from '/images/cortinas (2).jpg'
 import lino from '/images/cortinas (5).jpg'
 
-import roller from '/images/cortinas (42).jpg'
+import roller from '/images/cortinas (6).jpg'
 import tradicionales from '/images/cortinas (5).jpg'
 import verticales from '/images/cortinas (4).png'
 import orientales from '/images/cortinas (2).jpg'
@@ -26,48 +25,48 @@ function Products() {
     <div>
       <img src={hero} alt="cortina" className='heroHomeImg' />
 
-      <h2 id='products' >NUESTROS PRODUCTOS</h2>
+      {/* <h2 id='products' >NUESTROS PRODUCTOS</h2> */}
 
       <h3 id='products' >ELEGÍ TUS CORTINAS</h3>
       <h2 id='products' className='subtitleHome' >Por sistema</h2>
       
       <div className='productsBoxContainer'>
-        <Link className='productBox' to='/translucida' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={roller} alt="roller" />
           <p className='productBoxText'><br />Roller</p>
         </Link>
-        <Link className='productBox' to='/translucida' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={verticales} alt="bandas verticales" />
           <p className='productBoxText'>Bandas Verticales</p>
         </Link>
-        <Link className='productBox' to='/sunscreen' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={tradicionales} alt="tradicionales" />
           <p className='productBoxText'><br />Tradicionales</p>
         </Link>
-        <Link className='productBox' to='/blackout' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={orientales} alt="paneles orientales" />
           <p className='productBoxText'>Paneles Orientales</p>
         </Link>
-        <Link className='productBox' to='/duo' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo4} alt="duo eclipse" />
           <p className='productBoxText'><br />Dúo</p>
         </Link>
-        <Link className='productBox' to='/rusticas' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo5} alt="venecianas" />
           <p className='productBoxText'><br />Venecianas</p>
         </Link>
-        <Link className='productBox' to='/linos' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={photo1} alt="romanas" />
           <p className='productBoxText'><br />Romanas</p>
         </Link>
-        <Link className='productBox' to='/linos' onClick={()=>setShowDropdown(false)}>
+        <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
           <div className='imageOverlay'></div>
           <img src={baño} alt="cortiñas de baño" />
           <p className='productBoxText'>Cortinas <br />de baño</p>
