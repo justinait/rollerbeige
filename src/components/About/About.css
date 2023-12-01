@@ -7,22 +7,29 @@
 
 .aboutContainer img {
     width: 100%;
-    margin: 0 0 2vh 0;
-    height: 30vh;
+    height: 55vh;
     object-fit: cover;
     border-radius: 5px;
+    margin: 10% 0 0;
 }
 
 .aboutText {
-    border: 2px solid #C1C09F;
+    /* border: 2px solid #C1C09F; */
     color: var(--color-darkgrey);
-    padding: 5%;
+    padding: 5% 3%;
     border-radius: 5px;
     margin-bottom: 10vh;
+    font-size: 14px;
 }
 
-.aboutContainer h3{
-    font-size: medium;
-    font-weight: 500;
-    display: none;
+.aboutContainer h3 {
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 800;
+    font-size: large;
+    color: var(--color-darkgrey);
+    padding-bottom: 5%;
+}
+.aboutContainer h2 {
+    padding: 10%;
 }
