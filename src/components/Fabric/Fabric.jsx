@@ -17,7 +17,7 @@ function Products() {
   return (
     <div className='productsContainer'>
 
-      <h2 id='products'> NUESTRAS CORTINAS</h2>
+      <h2 id='products'> NUESTRAS TELAS</h2>
 
       <div className='productContainer'>
         <img src={blackout} alt="roller" className='imgProduct'/>
