@@ -19,15 +19,16 @@ import tradicionales from '/images/cortinas (5).jpg'
 import verticales from '/images/cortinas (4).png'
 import orientales from '/images/cortinas (2).jpg'
 import baño from '/images/cortinas (8).jpg'
+import Services from '../Services/Services'
 
 function Products() {
   return (
     <div>
+
       <img src={hero} alt="cortina" className='heroHomeImg' />
 
-      {/* <h2 id='products' >NUESTROS PRODUCTOS</h2> */}
-
       <h3 id='products' >ELEGÍ TUS CORTINAS</h3>
+
       <h2 id='products' className='subtitleHome' >Por sistema</h2>
       
       <div className='productsBoxContainer'>
@@ -127,6 +128,7 @@ function Products() {
           <p className='productBoxText'><br />Voile de hilo</p>
         </Link>
       </div>
+      <Services/>
     </div>
   )
 }
