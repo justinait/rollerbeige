@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Products.css'
 
-import roller from '/images/cortinas (6).jpg'
-import eclipse from '/images/cortinas (46).jpg'
-import tradicionales from '/images/cortinas (2).jpg'
-import verticales from '/images/cortinas (73).jpg'//82
-import orientales from '/images/cortinas (41).jpg'
-import baño from '/images/cortinas (8).jpg'
-import romanas from '/images/cortinas (73).jpg'
+import roller from '/images/curtains/cortinas (6).jpg'
+import eclipse from '/images/curtains/cortinas (46).jpg'
+import tradicionales from '/images/curtains/cortinas (2).jpg'
+import verticales from '/images/curtains/cortinas (73).jpg'//82
+import orientales from '/images/curtains/cortinas (41).jpg'
+import baño from '/images/curtains/cortinas (8).jpg'
+import romanas from '/images/curtains/cortinas (73).jpg'
 
 function Products() {
   return (

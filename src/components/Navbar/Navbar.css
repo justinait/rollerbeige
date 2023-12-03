@@ -37,10 +37,18 @@
     font-size: 14px;
     border-radius: 3px;
     text-align: right;
+    padding-bottom: 5%;
 }
 
 .dropdownItem {
+    padding-right: 19%;
+    color: var(--color-darkgrey);
+    font-weight: 600;
+    font-size: 15px;
+}
+.subcategoryDropdown {
     padding-right: 17%;
     color: var(--color-darkgrey);
-    font-weight: 800;
+    font-weight: 300;
+    margin: 6px 0;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Promos.css'
-import promo1 from '/images/cortinas (3).jpg'
-import promo2 from '/images/cortinas (2).jpg'
+import promo1 from '/images/curtains/cortinas (3).jpg'
+import promo2 from '/images/curtains/cortinas (2).jpg'
 
 function Promos() {
   return (
