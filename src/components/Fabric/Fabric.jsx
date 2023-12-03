@@ -5,7 +5,7 @@ import './Fabric.css'
 import blackoutClasico from '/images/fabrics/black clasico.jpg'
 import blackoutLino from '/images/fabrics/black lino.png'
 import blackoutClasicoSintetico from '/images/fabrics/black clasico sintetico2.png'
-import blackoutPremium from '/images/fabrics/black lino.png'
+import blackoutPremium from '/images/fabrics/black premium.png'
 
 import sunscreen from '/images/fabrics/black lino.png'
 import traslucida from '/images/curtains/cortinas (2).jpg'
@@ -22,59 +22,94 @@ function Products() {
     <div className='productsContainer'>
 
       <h2 id='products'> NUESTRAS TELAS</h2>
-
-      <p className='fabricTitle'>Blackout</p>
+      <br />
       
+      <p className='fabricTitle'>Blackout</p>
       <div className='fabricContainer'>
         <div>
-          <img src={blackoutClasico} alt="roller" className='imgFabric'/>
-          <p>Blackout Clásico <br /> Bicapa</p>
+          <img src={blackoutClasico} alt="blackout clasico" className='imgFabric'/>
+          <p>Blackout Clásico <br /> Bicapa Tradicional</p>
         </div>
         <div>
-          <img src={blackoutLino} alt="roller" className='imgFabric'/>
+          <img src={blackoutLino} alt="blackout lino" className='imgFabric'/>
           <p>Blackout Lino <br /> Tricapa</p>
         </div>
         <div>
-          <img src={blackoutClasicoSintetico} alt="roller" className='imgFabric'/>
-          <p>Blackout Clásico</p>
+          <img src={blackoutClasicoSintetico} alt="blackout clasico" className='imgFabric'/>
+          <p>Blackout Clásico <br />Sintética</p>
         </div>
         <div>
-          <img src={blackoutLino} alt="roller" className='imgFabric'/>
+          <img src={blackoutPremium} alt="blackout premium" className='imgFabric'/>
           <p>Blackout Premium</p>
         </div>
       </div>
 
-      <div className='productContainer'>
-        <p className='productText'>Sunscreen</p>
-        <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
-        <p>Sunscreen 6%</p>
-        <p>Sunscreen Premium 5%</p>
-        <p>Sunscreen Poliéster 4%</p>
-        <p>Sunscreen Premium 3%</p>
+      <p className='fabricTitle'>Sunscreen</p>
+      <div className='fabricContainer'>
+        <div>
+          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <p>Sunscreen 6%</p>
+        </div>
+        <div>
+          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <p>Sunscreen Premium 5%</p>
+        </div>
+        <div>
+          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <p>Sunscreen Poliéster 4%</p>
+        </div>
+        <div>
+          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <p>Sunscreen Premium 3%</p>
+        </div>
       </div>
 
-      <div className='productContainer'>
-        <img src={traslucida} alt="traslucidas" className='imgFabric'/>
-        <p className='productText'>Traslúcidas</p>
-        <p>Traslúcida Luz 3%</p>
-        <p>Traslúcida Clásica 3%</p>
-        <p>Traslúcida Internacionales 3%</p>
-        <p>Traslúcida Premium DAVON 3%</p>
+      <p className='fabricTitle'>Traslúcidas</p>
+      <div className='fabricContainer'>
+        <div>
+          <img src={traslucida} alt="traslucidas" className='imgFabric'/>
+          <p>Traslúcida Luz 3%</p>
+        </div>
+        <div>
+          <img src={traslucida} alt="traslucidas" className='imgFabric'/>
+          <p>Traslúcida Clásica 3%</p>
+        </div>
+        <div>
+          <img src={traslucida} alt="traslucidas" className='imgFabric'/>
+          <p>Traslúcida Internacionales 3%</p>
+        </div>
+        <div>
+          <img src={traslucida} alt="traslucidas" className='imgFabric'/>
+          <p>Traslúcida Premium DAVON 3%</p>
+        </div>
       </div>
 
-      <div className='productContainer'>
-        <img src={eclipse} alt="duo" className='imgFabric'/>
-        <p className='productText'>Dúo</p>
-        <p>Dúo Lisas</p>
-        <p>Dúo Matices</p>
-        <p>Dúo Premium</p>
+      <p className='fabricTitle'>Dúo</p>
+      <div className='fabricContainer'>
+        <div>
+          <img src={eclipse} alt="duo" className='imgFabric'/>
+          <p>Dúo Lisas</p>
+        </div>
+        <div>
+          <img src={eclipse} alt="duo" className='imgFabric'/>
+          <p>Dúo Matices</p>
+        </div>
+        <div>
+          <img src={eclipse} alt="duo" className='imgFabric'/>
+          <p>Dúo Premium</p>
+        </div>
       </div>
 
-      <div className='productContainer'>
-        <img src={lino} alt="roller" className='imgFabric'/>
-        <p className='productText'>Lino</p>
-        <p>Lino Blackout</p>
-        <p>Lino Screen</p>
+      <p className='fabricText'>Lino</p>
+      <div className='fabricContainer'>
+        <div>
+          <img src={lino} alt="roller" className='imgFabric'/>
+          <p>Lino Blackout</p>
+        </div>
+        <div>
+          <img src={lino} alt="roller" className='imgFabric'/>
+          <p>Lino Screen</p>
+        </div>
       </div>
 
       <div className='productContainer'>
