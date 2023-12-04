@@ -7,7 +7,11 @@ import blackoutLino from '/images/fabrics/black lino.png'
 import blackoutClasicoSintetico from '/images/fabrics/black clasico sintetico2.png'
 import blackoutPremium from '/images/fabrics/black premium.png'
 
-import sunscreen from '/images/fabrics/black lino.png'
+import sunscreen6 from '/images/fabrics/sunscreen6.jpg'
+import sunscreen5 from '/images/fabrics/sunscreen5.png'
+import sunscreen4 from '/images/fabrics/sunscreen4.png'
+import sunscreen3 from '/images/fabrics/sunscreen3.png'
+
 import traslucida from '/images/curtains/cortinas (2).jpg'
 import eclipse from '/images/curtains/cortinas (2).jpg'
 import lino from '/images/curtains/cortinas (5).jpg'
@@ -47,19 +51,19 @@ function Products() {
       <p className='fabricTitle'>Sunscreen</p>
       <div className='fabricContainer'>
         <div>
-          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <img src={sunscreen6} alt="sunscreen" className='imgFabric'/>
           <p>Sunscreen 6%</p>
         </div>
         <div>
-          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <img src={sunscreen5} alt="sunscreen" className='imgFabric'/>
           <p>Sunscreen Premium 5%</p>
         </div>
         <div>
-          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <img src={sunscreen4} alt="sunscreen" className='imgFabric'/>
           <p>Sunscreen Poliéster 4%</p>
         </div>
         <div>
-          <img src={sunscreen} alt="sunscreen" className='imgFabric'/>
+          <img src={sunscreen3} alt="sunscreen" className='imgFabric'/>
           <p>Sunscreen Premium 3%</p>
         </div>
       </div>
