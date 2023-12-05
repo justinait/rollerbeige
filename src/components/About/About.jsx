@@ -14,7 +14,7 @@ function About() {
       <p className='aboutText'>
         <h3>Nuestra historia</h3>
 
-        <strong>Bienvenidos a Roller Beige</strong>, un proyecto que nació en el corazón de una
+        <strong>Bienvenidos a Roller Beige</strong>, un proyecto que nació en Paraná, Entre Ríos, en el corazón de una
         familia apasionada por la creación de ambientes acogedores y estilos propios.
         Fundada a principios del año 2021, nos dedicamos a la
         fabricación y venta de cortinas e insumos, convirtiéndonos en una referencia en

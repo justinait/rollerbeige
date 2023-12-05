@@ -25,8 +25,8 @@
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-    margin: 3%;
-    padding-right: 2%;
+    margin: 3% !important;
+    padding-right: 2% !important;
 }
 
 .footerInfo h4{

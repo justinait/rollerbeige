@@ -5,7 +5,11 @@
     color: var(--color-darkgrey);
 }
 .servicesContainer {
-    margin: 5% 5% 10%;
+    /* margin: 5% 5% 10%; */
+    margin: 7% 8% 10%;
+    border: 2px solid #C1C09F;
+    border-radius: 20px;
+    padding: 5%;
 }
 .services {
     margin-top: 8%;
