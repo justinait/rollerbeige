@@ -14,7 +14,7 @@ function Services() {
       <div className='servicesContainer'>
         <div className=''>
           <PaletteOutlinedIcon/>
-          Asesoramiento personalizado.
+          Asesoramiento personalizado
         </div>
         <div>
           <EngineeringOutlinedIcon/>
