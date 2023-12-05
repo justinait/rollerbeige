@@ -1,0 +1,12 @@
+.servicesContainer div {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    color: var(--color-darkgrey);
+}
+.servicesContainer {
+    margin: 5% 5% 10%;
+}
+.services {
+    margin-top: 8%;
+}
