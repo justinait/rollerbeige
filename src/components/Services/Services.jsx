@@ -13,7 +13,7 @@ function Services() {
       <h3>SERVICIOS</h3>
       <div className='servicesContainer'>
         <div className=''>
-          <PaletteOutlinedIcon/>
+          <PaletteOutlinedIcon className='icons'/>
           Asesoramiento personalizado
         </div>
         <div>
