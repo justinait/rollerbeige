@@ -7,11 +7,17 @@ import photo4 from '/fotos crudas/cortinas (15).jpg'
 import photo5 from '/fotos crudas/cortinas (5).jpg'
 import photo6 from '/fotos crudas/cortinas (2).jpg'
 
-import blackout from '/images/curtains/cortinas (38).jpg'
-import sunscreen from '/images/curtains/cortinas (14).jpg'
-import traslucida from '/images/curtains/cortinas (2).jpg'
-import eclipse from '/images/curtains/cortinas (2).jpg'
-import lino from '/images/curtains/cortinas (5).jpg'
+import blackout from '/images/fabrics/black clasico.jpg'
+import sunscreen from '/images/fabrics/sunscreen4.png'
+
+import traslucida from '/images/fabrics/traslucida.jpg'
+import eclipse from '/images/fabrics/duo2.jpg'
+import lino from '/images/fabrics/linorustico.jpeg'
+import gasalino from '/images/fabrics/gasalino.jpg'
+import gross from '/images/fabrics/gross.jpg'
+import tusor from '/images/fabrics/tusor.jpg'
+import gasahilo from '/images/fabrics/gasahilo.jpeg'
+import voilehilo from '/images/fabrics/voilehilo.jpg'
 
 import roller from '/images/curtains/cortinas (6).jpg'
 import tradicionales from '/images/curtains/cortinas (5).jpg'
@@ -94,32 +100,32 @@ function ProductsHome() {
         </Link>
         <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo4} alt="lino" />
+            <img src={lino} alt="lino" />
             <p className='productBoxText'><br />Lino</p>
         </Link>
         <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo5} alt="gross" />
+            <img src={gross} alt="gross" />
             <p className='productBoxText'><br />Gross</p>
         </Link>
         <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo2} alt="tusor" />
+            <img src={tusor} alt="tusor" />
             <p className='productBoxText'><br />Tusor</p>
         </Link>
         <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={lino} alt="gasa de lino" />
+            <img src={gasalino} alt="gasa de lino" />
             <p className='productBoxText'><br />Gasa de Lino</p>
         </Link>
         <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo2} alt="gasa de hilo" />
+            <img src={gasahilo} alt="gasa de hilo" />
             <p className='productBoxText'><br />Gasa de Hilo</p>
         </Link>
         <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo6} alt="voile de hilo" />
+            <img src={voilehilo} alt="voile de hilo" />
             <p className='productBoxText'><br />Voile de hilo</p>
         </Link>
         </div>
