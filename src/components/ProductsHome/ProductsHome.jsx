@@ -2,10 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './ProductsHome.css'
 import photo1 from '/images/curtains/cortinas (10).jpg'
-import photo2 from '/fotos crudas/cortinas (33).jpg'
 import photo4 from '/fotos crudas/cortinas (15).jpg'
 import photo5 from '/fotos crudas/cortinas (5).jpg'
-import photo6 from '/fotos crudas/cortinas (2).jpg'
 
 import blackout from '/images/fabrics/black clasico.jpg'
 import sunscreen from '/images/fabrics/sunscreen4.png'
@@ -20,6 +18,7 @@ import gasahilo from '/images/fabrics/gasahilo.jpeg'
 import voilehilo from '/images/fabrics/voilehilo.jpg'
 
 import roller from '/images/curtains/cortinas (6).jpg'
+import duo from '/images/curtains/cortinas (46).jpg'
 import tradicionales from '/images/curtains/cortinas (5).jpg'
 import verticales from '/images/curtains/cortinas (4).png'
 import orientales from '/images/curtains/cortinas (2).jpg'
@@ -55,7 +54,7 @@ function ProductsHome() {
         </Link>
         <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo4} alt="duo eclipse" />
+            <img src={duo} alt="duo eclipse" />
             <p className='productBoxText'><br />Dúo</p>
         </Link>
         <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>

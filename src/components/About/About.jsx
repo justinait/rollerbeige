@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import van from '/camioneta.png'
-import image from '/images/curtains/cortinas (22).png'
+import image from '/images/curtains/heroabout.png'
 import image2 from '/images/curtains/cortinas (73).jpg'
 
 
