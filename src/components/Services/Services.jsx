@@ -17,15 +17,15 @@ function Services() {
           Asesoramiento personalizado
         </div>
         <div>
-          <EngineeringOutlinedIcon/>
+          <EngineeringOutlinedIcon className='icons'/>
           Instalaciones
         </div>
         <div>
-          <HandshakeOutlinedIcon />
+          <HandshakeOutlinedIcon  className='icons'/>
           Servicio Postventa
         </div>
         <div>
-          <HandymanOutlinedIcon />
+          <HandymanOutlinedIcon  className='icons'/>
           Reparaciones
         </div>
       </div>
