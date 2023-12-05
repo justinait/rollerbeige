@@ -15,11 +15,11 @@ import sunscreen3 from '/images/fabrics/sunscreen3.png'
 import traslucida from '/images/fabrics/traslucida.jpg'
 import eclipse from '/images/fabrics/duo2.jpg'
 import lino from '/images/fabrics/linorustico.jpeg'
-import gross from '/images/curtains/cortinas (38).jpg'
-import tusor from '/images/curtains/cortinas (14).jpg'
-import gasahilo from '/images/curtains/cortinas (2).jpg'
-import gasalino from '/images/curtains/cortinas (2).jpg'
-import voilehilo from '/images/curtains/cortinas (5).jpg'
+import gasalino from '/images/fabrics/gasalino.jpg'
+import gross from '/images/fabrics/gross.jpg'
+import tusor from '/images/fabrics/tusor.jpg'
+import gasahilo from '/images/fabrics/gasahilo.jpeg'
+import voilehilo from '/images/fabrics/voilehilo.jpg'
 
 function Products() {
   return (
@@ -104,7 +104,7 @@ function Products() {
         </div>
       </div>
 
-      <p className='fabricText'>Lino</p>
+      <p className='fabricTitle'>Lino</p>
       <div className='fabricContainer'>
         <div>
           <img src={lino} alt="roller" className='imgFabric'/>
@@ -113,6 +113,14 @@ function Products() {
         <div>
           <img src={lino} alt="roller" className='imgFabric'/>
           <p>Lino Screen</p>
+        </div>
+        <div>
+          <img src={lino} alt="roller" className='imgFabric'/>
+          <p>Lino Rústico</p>
+        </div>
+        <div>
+          <img src={gasalino} alt="roller" className='imgFabric'/>
+          <p>Gasa de Lino</p>
         </div>
       </div>
 
@@ -124,11 +132,6 @@ function Products() {
       <div className='productContainer'>
         <img src={tusor} alt="roller" className='imgFabric'/>
         <p className='productText'>Tusor</p>
-      </div>
-
-      <div className='productContainer'>
-        <img src={gasalino} alt="roller" className='imgFabric'/>
-        <p className='productText'>Gasa de Lino</p>
       </div>
 
       <div className='productContainer'>
