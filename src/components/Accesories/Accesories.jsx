@@ -2,7 +2,7 @@ import React from 'react'
 import './Accesories.css'
 import roller from '/images/curtains/cortinas (48).jpg'
 import bandas from '/images/curtains/cortinas (7).jpg'
-import tradicionales from '/images/curtains/hero.jpg'
+import tradicionales from '/images/curtains/cortinas (5).jpg'
 
 function Accesories() {
   return (
@@ -28,18 +28,10 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <img src={bandas} alt="Roller" className='accesoriesImage' />
         <ul>
-          <li>
-          Cadenas de giro
-          </li>
-          <li>
-          Cadenas inferiores
-          </li>
-          <li>
-          Pesos de cadena
-          </li>
-          <li>
-          Bastones de aluminio
-          </li>
+          <li>          Cadenas de giro          </li>
+          <li>          Cadenas inferiores          </li>
+          <li>          Pesos de cadena          </li>
+          <li>          Bastones de aluminio          </li>
         </ul>
       </div>
 
@@ -48,30 +40,14 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <img src={tradicionales} alt="Roller" className='accesoriesImage' />
         <ul>
-          <li>
-          Rieles europeos y super europeos (a bastón)
-          </li>
-          <li>
-          Barrales metálicos de 1” y ¾”, blancos, negros y níquel
-          </li>
-          <li>
-          Bastones de aluminio para rieles europeos
-          </li>
-          <li>
-          Ganchitos para cabezales de cortina
-          </li>
-          <li>
-          Patines para rieles
-          </li>
-          <li>
-          Cruces europeos y super europeos
-          </li>
-          <li>
-          Soportes de barrales
-          </li>
-          <li>
-          Ménsulas estándar y XL
-          </li>
+          <li>          Rieles europeos y super europeos (a bastón)          </li>
+          <li>          Barrales metálicos de 1” y ¾”          </li>
+          <li>          Bastones de aluminio para rieles europeos          </li>
+          <li>          Ganchitos para cabezales de cortina          </li>
+          <li>          Patines para rieles          </li>
+          <li>          Cruces europeos y super europeos          </li>
+          <li>          Soportes de barrales          </li>
+          <li>          Ménsulas estándar y XL          </li>
         </ul>     
       </div>
     </div>
