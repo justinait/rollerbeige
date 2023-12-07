@@ -13,24 +13,13 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <img src={roller} alt="Roller" className='accesoriesImage' />
         <ul>
-          <li>
-            Mecanismos Roller (todas las medidas)
-          </li>
-          <li>
-          Cadenas Roller
-          </li>
-          <li>
-          Uniones y topes de cadenas de cadena 
-          </li>
-          <li>
-          Pesos de cadena
-          </li>
-          <li>
-          Zocalos de aluminio
-          </li>
-          <li>
-          Zocalos forrados
-          </li>
+          <li>          Mecanismos Roller          </li>
+          <li>          Cadenas Roller          </li>
+          <li>          Uniones de cadena           </li>
+          <li>          Topes de cadena          </li>
+          <li>          Pesos de cadena          </li>
+          <li>          Zocalos de aluminio          </li>
+          <li>          Zocalos forrados          </li>
         </ul>
       
       </div>
