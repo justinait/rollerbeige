@@ -1,0 +1,7 @@
+.accesoriesImage {
+    width: 50%;
+    /* height: 300px; */
+}
+.accesoriesContainer {
+    display: flex;
+}
