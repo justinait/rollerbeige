@@ -23,6 +23,8 @@ import tradicionales from '/images/curtains/cortinas (5).jpg'
 import verticales from '/images/curtains/cortinas (4).png'
 import orientales from '/images/curtains/cortinas (2).jpg'
 import baño from '/images/curtains/cortinas (8).jpg'
+import romanas from '/images/curtains/romanas.jpg'
+import venecianas from '/images/curtains/venecianas2.jpg'
 
 function ProductsHome() {
   return (
@@ -59,12 +61,12 @@ function ProductsHome() {
         </Link>
         <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo5} alt="venecianas" />
+            <img src={venecianas} alt="venecianas" />
             <p className='productBoxText'><br />Venecianas</p>
         </Link>
         <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
             <div className='imageOverlay'></div>
-            <img src={photo1} alt="romanas" />
+            <img src={romanas} alt="romanas" />
             <p className='productBoxText'><br />Romanas</p>
         </Link>
         <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
