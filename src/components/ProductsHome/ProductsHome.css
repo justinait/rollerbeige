@@ -1,4 +1,3 @@
-
 .subtitleHome {
     font-size: larger;
     font-weight: 300;
@@ -22,17 +21,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    scale: 2;
+    /* scale: 2; */
 }
 
-/* a trandicionales agrregale esto */
-
-/* font-size: 18px;
-top: -49.7%; */
+.fabric .productBox img {
+    scale: 3;
+}
 
 .productBoxText {
     position: relative;
-    top: -90%;
+    top: -85%;
     right: -6%;
     color: white;
     font-size: 18px;
