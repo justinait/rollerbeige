@@ -43,11 +43,7 @@ top: -49.7%; */
     letter-spacing: 0.8px;
     font-family: 'Poppins';
     
-    font-weight: 700;
-    font-family: 'Noto Sans JP', sans-serif;
-    letter-spacing: unset;
-    
-    letter-spacing: 0.8px;
-    font-weight: 300;
-    font-family: 'Raleway', sans-serif;
+}
+.productBoxText strong {
+    font-weight: 600;
 }
