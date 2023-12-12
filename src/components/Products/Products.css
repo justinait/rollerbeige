@@ -1,13 +1,16 @@
 .productsContainer{
     padding-top: 9vh;
-    text-align: center;
+    text-align: center;    
+    padding-bottom: 15%;
 }
 .productsBoxContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-
+.productContainer {
+    padding-bottom: 15%;
+}
 .productBox {
     width: 50%;
     height: 100px;
@@ -27,7 +30,6 @@
     font-size: large;
 }
 .productDescription {
-    
     width: 74vw;
     text-align: left;
     padding-left: 15%;

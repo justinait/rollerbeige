@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import hero from '/images/hero3.png'
+import hero from '/images/hero4.png'
 import Services from '../Services/Services'
 import ProductsHome from '../ProductsHome/ProductsHome'
 
