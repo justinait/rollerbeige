@@ -20,7 +20,16 @@
     height: 170px;
     object-fit: cover;
 }
-.productText {
+.productName {
     text-align: left;
     padding: 0 15%;
+    font-weight: 500;
+    font-size: large;
+}
+.productDescription {
+    
+    width: 74vw;
+    text-align: left;
+    padding-left: 15%;
+    font-size: 14px;
 }

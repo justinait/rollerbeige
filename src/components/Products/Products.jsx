@@ -18,7 +18,24 @@ function Products() {
 
         <div className='productContainer'>
             <img src={roller} alt="roller" className='imgProduct'/>
-            <p className='productText'>Roller</p>
+            <p className='productName'>Roller</p>
+            <p className='productDescription'>
+                Las cortinas <strong>roller</strong>, también conocidas como cortinas enrollables, son una opción popular y
+                versátil y moderna, que combina funcionalidad con estilo,
+                adaptándose a una amplia gama de necesidades de diseño y preferencias personales.
+            </p>
+            {/* <ul>
+                <li> Solo trabajamos sistemas reforzados, en medidas de 32, 38 y 45 mm.                 </li>
+                <li> Variedad de telas: poliéster, algodón, mezclas de tejidos, e incluso
+                tejidos técnicos que ofrecen propiedades adicionales como resistencia al agua
+                o aislamiento térmico.                </li>
+                <li>Control de luz y privacidad: tela translúcida permiten que pase la luz suavemente,
+mientras que las opciones opacas brindan mayor privacidad y bloqueo de luz.</li>
+                <li>Fácil mantenimiento</li>
+                <li>Adaptabilidad a Diferentes Ventanas</li>
+                <li>Personalización: Posibilidad de personalizar con bordes decorativos, cenefas o impresiones.</li>
+                <li>Posibilidad de motorización</li>
+            </ul> */}
         </div>
 
         <div className='productContainer'>

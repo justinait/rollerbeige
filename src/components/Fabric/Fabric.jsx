@@ -72,7 +72,7 @@ function Products() {
       <div className='fabricContainer'>
         <div>
           <img src={traslucida} alt="traslucidas" className='imgFabric'/>
-          <p>Traslúcida Luz 3%</p>
+          <p>Traslúcida Lux 3%</p>
         </div>
         <div>
           <img src={traslucida} alt="traslucidas" className='imgFabric'/>
