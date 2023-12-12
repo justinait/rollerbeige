@@ -39,7 +39,7 @@ function ProductsHome() {
             <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
                 <div className='imageOverlay'></div>
                 <img src={verticales} alt="bandas verticales" />
-                <p className='productBoxText'>Bandas <strong>Verticales</strong> </p>
+                <p className='productBoxText'>Bandas <br /> <strong>Verticales</strong> </p>
             </Link>
             <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
                 <div className='imageOverlay'></div>
@@ -49,7 +49,7 @@ function ProductsHome() {
             <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
                 <div className='imageOverlay'></div>
                 <img src={orientales} alt="paneles orientales" />
-                <p className='productBoxText'>Paneles <strong>Orientales</strong> </p>
+                <p className='productBoxText'>Paneles <br /><strong>Orientales</strong> </p>
             </Link>
             <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
                 <div className='imageOverlay'></div>
@@ -69,7 +69,7 @@ function ProductsHome() {
             <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
                 <div className='imageOverlay'></div>
                 <img src={baño} alt="cortiñas de baño" />
-                <p className='productBoxText'>Cortinas <br />de baño</p>
+                <p className='productBoxText'>Cortina <br />de baño</p>
             </Link>
         </div>
 

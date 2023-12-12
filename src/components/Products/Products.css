@@ -11,12 +11,6 @@
 .productContainer {
     padding-bottom: 15%;
 }
-.productBox {
-    width: 50%;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-}
 .imgProduct{
     width: 70%;
     border-radius: 3px;
@@ -34,4 +28,8 @@
     text-align: left;
     padding-left: 15%;
     font-size: 14px;
+}
+
+@media(min-width:639px) {
+    
 }

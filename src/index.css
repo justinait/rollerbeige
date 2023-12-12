@@ -47,3 +47,16 @@ h1 {
   line-height: 1.1;
 }
 
+@media (min-width:639px){
+  h3{
+    font-size: 26px;
+  }
+  h2 {
+    padding: 0;
+  }
+}
+@media (min-width: 639px){
+  h3 {
+    font-size: 36px;
+  }
+}

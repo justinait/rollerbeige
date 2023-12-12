@@ -21,7 +21,6 @@
     align-items: center;
     font-weight: 500;
     color: #bfbfbf;
-    padding-bottom: 2%;
 }
 
 .css-i4bv87-MuiSvgIcon-root, .icons {
@@ -33,4 +32,12 @@
     margin: 6% 4%;
     font-weight: 500;
     color: #bfbfbf
+}
+@media(min-width:639px) {
+    .footer{
+        height: 220px;
+    }
+    .logoFooter {
+        width: 180px 
+    }
 }

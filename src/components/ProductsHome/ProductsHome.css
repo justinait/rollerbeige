@@ -23,6 +23,12 @@
     object-fit: cover;
     /* scale: 2; */
 }
+.productBox {
+    width: 50%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
 
 .fabric .productBox img {
     scale: 3;
@@ -44,4 +50,21 @@
 }
 .productBoxText strong {
     font-weight: 600;
+}
+
+@media (min-width:639px) {
+    .subtitleHome {
+        font-size: 22px;
+    }
+    .productBox {
+        height: 150px;
+    }
+    .productBoxText {
+        font-size: 29px;
+    }
+}
+@media (min-width: 639px){
+    .subtitleHome {
+        font-size: 30px;
+    }
 }
