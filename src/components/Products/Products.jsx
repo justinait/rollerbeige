@@ -8,7 +8,9 @@ import tradicionales from '/images/curtains/cortinas (2).jpg'
 import verticales from '/images/curtains/cortinas (73).jpg'//82
 import orientales from '/images/curtains/cortinas (41).jpg'
 import baño from '/images/curtains/cortinas (8).jpg'
-import romanas from '/images/curtains/cortinas (73).jpg'
+import romanas from '/images/curtains/romanas.jpg'
+import venecianas from '/images/curtains/venecianas.jpg'
+import celulares from '/images/curtains/celulares.jpg'
 
 function Products() {
   return (
@@ -77,7 +79,7 @@ function Products() {
         </div>
 
         <div className='productContainer'>
-            <img src={roller} alt="roller" className='imgProduct'/>
+            <img src={venecianas} alt="roller" className='imgProduct'/>
             <p className='productName'>Venecianas</p>
             <p className="productDescription">
                 Las cortinas <strong> venecianas</strong> son un estilo clásico de tratamiento de ventanas que consisten en
@@ -113,7 +115,7 @@ function Products() {
         </div>
 
         <div className='productContainer'>
-            <img src={baño} alt="roller" className='imgProduct'/>
+            <img src={celulares} alt="roller" className='imgProduct'/>
             <p className='productName'>Celulares</p>
             <p className="productDescription">
                 Las cortinas <strong>celulares</strong>, también conocidas como cortinas arriba-abajo o celulares, son una
