@@ -16,7 +16,7 @@
 }
 
 .navbarItems {
-    font-size: 13px;
+    font-size: clamp(0.8rem, 8vw - 2rem, 3rem);
     font-weight: 500;
     color: var(--color-darkgrey);
     padding-right: 5%;
@@ -62,14 +62,21 @@
     .navbarItemsContainer {
         width: 31%;
     }
-    .navbarItems{
-        font-size: 17px;
-    }
     
     .dropdownItem {
         padding-right: 24%;
         color: var(--color-darkgrey);
         font-weight: 600;
         font-size: 20px;
+    }
+}
+
+@media(min-width:1023px){
+    
+    .navbarItems{
+        font-size: 22px;
+    }
+    .logoNavbar {
+        width: 260px;
     }
 }

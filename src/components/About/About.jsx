@@ -42,7 +42,8 @@ function About() {
         atención personalizada, tanto en la compra como en la postventa.
         <br />
         <br />
-        <strong>Gracias por ser parte de nuestra historia.</strong>
+        </p>
+        <p className='aboutText finalAbout'>Gracias por ser parte de nuestra historia.</p>
         
 {/* <p>
   Bienvenidos a Roller Beige, un proyecto que nació en el corazón de una familia apasionada
@@ -65,7 +66,6 @@ function About() {
   compra como en la postventa.
 </p> */}
 
-      </p>
     </div>
   )
 }

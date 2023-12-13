@@ -18,8 +18,8 @@
     color: var(--color-darkgrey);
     padding: 5% 3%;
     border-radius: 5px;
-    margin-bottom: 10vh;
     font-size: 14px;
+    margin-bottom: 0;
 }
 
 .aboutContainer h3 {
@@ -32,4 +32,12 @@
 }
 .aboutContainer h2 {
     padding: 10%;
+}
+
+.finalAbout {
+    margin: 0;
+    margin-bottom: 10vh;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 0;
 }
