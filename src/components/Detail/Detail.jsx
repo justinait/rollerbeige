@@ -5,7 +5,7 @@ import Whatsapp from '../Whatsapp/Whatsapp'
 function Detail() {
   return (
     <div className='detailContainer'>
-      hola
+      
       <Whatsapp/>
     </div>
   )

@@ -71,6 +71,11 @@ function ProductsHome() {
                 <img src={baño} alt="cortiñas de baño" />
                 <p className='productBoxText'>Cortina <br />de baño</p>
             </Link>
+            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
+                <div className='imageOverlay'></div>
+                <img src={venecianas} alt="celulares" />
+                <p className='productBoxText'>Celulares</p>
+            </Link>
         </div>
 
         <h2 id='products' className='subtitleHome' >Por tela</h2>

@@ -28,7 +28,7 @@ function App() {
       <Route path='/telas' element={< Fabric />} />
       <Route path='/accesorios' element={< Promos />} />
       
-      <Route path='/:category' element={< Detail />} />
+      <Route path='/:product' element={< Detail />} />
       
     </Routes>
 
