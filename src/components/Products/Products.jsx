@@ -18,7 +18,7 @@ function Products() {
 
         <h2 id='products'> NUESTRAS CORTINAS</h2>
 
-        <div className='productContainer'>
+        <Link to='/roller' className='productContainer'>
             <img src={roller} alt="roller" className='imgProduct'/>
             <p className='productName'>Roller</p>
             <p className='productDescription'>
@@ -26,7 +26,7 @@ function Products() {
                 versátil y moderna, que combina funcionalidad con estilo,
                 adaptándose a una amplia gama de necesidades de diseño y preferencias personales.
             </p>
-        </div>
+        </Link>
 
         <div className='productContainer'>
             <img src={verticales} alt="roller" className='imgProduct'/>
