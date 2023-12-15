@@ -22,60 +22,30 @@ import orientales from '/images/curtains/cortinas (2).jpg'
 import baño from '/images/curtains/cortinas (8).jpg'
 import romanas from '/images/curtains/romanas.jpg'
 import venecianas from '/images/curtains/venecianas2.jpg'
+import celulares from '/images/curtains/celulares.jpg'
 
-function ProductsHome() {
+function ProductsHome({curtains}) {
   return (
     <div>
         <h3 id='products' >ELEGÍ TUS CORTINAS</h3>
+        {console.log(curtains)}
 
         <h2 id='products' className='subtitleHome' >Por sistema</h2>
 
         <div className='productsBoxContainer'>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={roller} alt="roller" />
-                <p className='productBoxText'><br />Roller</p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={verticales} alt="bandas verticales" />
-                <p className='productBoxText'>Bandas <br /> <strong>Verticales</strong> </p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={tradicionales} alt="tradicionales" />
-                <p className='productBoxText'><br />Tradicionales</p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={orientales} alt="paneles orientales" />
-                <p className='productBoxText'>Paneles <br /><strong>Orientales</strong> </p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={duo} alt="duo eclipse" />
-                <p className='productBoxText'><br />Dúo</p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={venecianas} alt="venecianas" />
-                <p className='productBoxText'><br />Venecianas</p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={romanas} alt="romanas" />
-                <p className='productBoxText'><br />Romanas</p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={baño} alt="cortiñas de baño" />
-                <p className='productBoxText'>Cortina <br />de baño</p>
-            </Link>
-            <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={venecianas} alt="celulares" />
-                <p className='productBoxText'>Celulares</p>
-            </Link>
+        
+        {
+            curtains && curtains.slice().reverse().map((e, i) =>  {
+                return(
+                    <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)} key={i}>
+                        <div className='imageOverlay'></div>
+                        <img src={e.image} alt={e.title} />
+                        <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
+                    </Link>
+                )
+
+            })
+        }
         </div>
 
         <h2 id='products' className='subtitleHome' >Por tela</h2>
