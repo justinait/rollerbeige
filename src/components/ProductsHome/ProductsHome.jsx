@@ -4,7 +4,6 @@ import './ProductsHome.css'
 
 import blackout from '/images/fabrics/black clasico.jpg'
 import sunscreen from '/images/fabrics/sunscreen4.png'
-
 import traslucida from '/images/fabrics/traslucida.jpg'
 import eclipse from '/images/fabrics/duo2.jpg'
 import lino from '/images/fabrics/linorustico.jpeg'
@@ -13,16 +12,6 @@ import gross from '/images/fabrics/gross.jpg'
 import tusor from '/images/fabrics/tusor.jpg'
 import gasahilo from '/images/fabrics/gasahilo.jpeg'
 import voilehilo from '/images/fabrics/voilehilo.jpg'
-
-import roller from '/images/curtains/roller.jpeg'
-import duo from '/images/curtains/duo.jpg'
-import tradicionales from '/images/curtains/tradicionales.jpg'
-import verticales from '/images/curtains/cortinas (83).jpg'
-import orientales from '/images/curtains/cortinas (2).jpg'
-import baño from '/images/curtains/cortinas (8).jpg'
-import romanas from '/images/curtains/romanas.jpg'
-import venecianas from '/images/curtains/venecianas2.jpg'
-import celulares from '/images/curtains/celulares.jpg'
 
 function ProductsHome({curtains}) {
   return (
