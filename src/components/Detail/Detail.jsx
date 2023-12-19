@@ -25,12 +25,11 @@ function Detail() {
   }, [curtain])
 
   const {image, name, description, attributes} = product
-  let objectData
-  if (product && Object.keys(product).length > 0) {
-    objectData = Object.keys(product).map(key => ({
-      key,
-      value: product[key],
-    }));
+  
+  let objectData;
+
+  if (product && product.attributes) {
+    objectData = Object.keys(product.attributes);
   }
 
   return (
@@ -38,42 +37,22 @@ function Detail() {
       
       <img src={image} alt={name} className='detailImage'/>
       <p dangerouslySetInnerHTML={{ __html: description }} className=''></p>
+
+      {Array.isArray(objectData) && objectData.map((key, i) => {
+        const values = product.attributes[key];
+
+        return (
+          <div key={i}>
+            <h3>{key}</h3>
+            <ul>
+              {Array.isArray(values) && values.map((value, j) => (
+                <li key={j}>{value}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
       
-      {console.log(attributes)}
-      {console.log(objectData)}
-
-      {/* {objectData && objectData.map(item => (
-        <div key={item.key}>
-          
-          <p>Nombre: {product.name}</p>
-          <p>
-            Array 1: {attributes}
-          </p>
-        </div>
-      ))} */}
-
-      {/* {objectData?.map((e, i) => (
-        <div key={i}>
-          
-          <p>{e}:</p>
-          
-          {e.map((value, index) => {
-            return (<p>{value}</p>)
-          }  
-          )}
-        </div>
-      ))}  */}
-      {/* {Object.keys(attributes)?.map((e, i) => (
-        <div key={index}>
-          <p>{e}</p>
-          {e.map((value, index) => {
-            return (<p>{value}</p>)
-
-          }  
-          )}
-        </div>
-      ))} */}
-
       <Whatsapp />
     </div>
   );
