@@ -9,7 +9,7 @@
 .servicesContainer {
     border-radius: 20px;
     padding: 0% 13% 8%;
-    font-size: clamp(0.8rem, 8vw - 2rem, 3rem);
+    font-size: clamp(0.7rem, 8vw - 2rem, 3rem);
 }
 .services {
     margin-top: 8%;
