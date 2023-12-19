@@ -25,9 +25,9 @@ function ProductsHome({curtains}) {
         {
             curtains && curtains.slice().reverse().map((e, i) =>  {
                 return(
-                    <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)} key={i}>
+                    <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)} key={i} style={{ width: i === curtains.length - 1 ? '100%' : '50%' }}>
                         <div className='imageOverlay'></div>
-                        <img src={e.image} alt={e.title} />
+                        <img src={e.image} alt={e.title}/>
                         <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
                     </Link>
                 )
