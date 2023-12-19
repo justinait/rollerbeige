@@ -17,8 +17,7 @@ function ProductsHome({curtains}) {
   return (
     <div>
         <h3 id='products' >ELEGÍ TUS CORTINAS</h3>
-        {console.log(curtains)}
-
+        
         <h2 id='products' className='subtitleHome' >Por sistema</h2>
 
         <div className='productsBoxContainer'>

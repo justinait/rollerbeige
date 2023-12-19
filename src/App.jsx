@@ -9,32 +9,36 @@ import Detail from './components/Detail/Detail'
 import Products from './components/Products/Products'
 import Promos from './components/Promos/Promos'
 import Fabric from './components/Fabric/Fabric'
+import ProductsProvider from './context/ProductsProvider'
 
 function App() {
 
   return (
-    <BrowserRouter>
-    
-    <Navbar />
-    <CheckScroll/>
-
-    <Routes className='appRoutes'>
-
-      <Route path='/' element={< Home />} />
+    <ProductsProvider>
+      <BrowserRouter>
       
-      <Route path='/about' element={< About />} />
-      
-      <Route path='/cortinas' element={< Products />} />
-      <Route path='/telas' element={< Fabric />} />
-      <Route path='/accesorios' element={< Promos />} />
-      
-      <Route path='/:curtain' element={< Detail />} />
-      
-    </Routes>
+      <Navbar />
+      <CheckScroll/>
 
-    <Footer />
+      <Routes className='appRoutes'>
 
-  </BrowserRouter>
+        <Route path='/' element={< Home />} />
+        
+        <Route path='/about' element={< About />} />
+        
+        <Route path='/cortinas' element={< Products />} />
+        <Route path='/telas' element={< Fabric />} />
+        <Route path='/accesorios' element={< Promos />} />
+        
+        <Route path='/:curtain' element={< Detail />} />
+        
+      </Routes>
+
+      <Footer />
+
+    </BrowserRouter>
+  </ProductsProvider>
+
   )
 }
 
