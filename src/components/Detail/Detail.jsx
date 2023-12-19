@@ -29,24 +29,24 @@ function Detail() {
   let objectData;
 
   if (product && product.attributes) {
-    objectData = Object.keys(product.attributes);
+    objectData = Object.keys(attributes);
   }
 
   return (
     <div className='detailContainer'>
-      
+      <h3>{name}</h3>
       <img src={image} alt={name} className='detailImage'/>
-      <p dangerouslySetInnerHTML={{ __html: description }} className=''></p>
+      <p dangerouslySetInnerHTML={{ __html: description }} className='detailDescription'></p>
 
-      {Array.isArray(objectData) && objectData.map((key, i) => {
-        const values = product.attributes[key];
+      {Array.isArray(objectData) && objectData.map((e, i) => {
+        const values = attributes[e];
 
         return (
           <div key={i}>
-            <h3>{key}</h3>
+            <h4 className='detailAttributeSubtitle'>{e}</h4>
             <ul>
               {Array.isArray(values) && values.map((value, j) => (
-                <li key={j}>{value}</li>
+                <li key={j} className='detailAttribute'>{value}</li>
               ))}
             </ul>
           </div>
