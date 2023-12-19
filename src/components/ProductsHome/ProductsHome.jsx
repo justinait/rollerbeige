@@ -16,7 +16,7 @@ import voilehilo from '/images/fabrics/voilehilo.jpg'
 function ProductsHome({curtains}) {
   return (
     <div>
-        <h3 id='products' >ELEGÍ TUS CORTINAS</h3>
+        <h3 id='products' style={{marginBottom: '0'}}>ELEGÍ TUS CORTINAS</h3>
         
         <h2 id='products' className='subtitleHome' >Por sistema</h2>
 

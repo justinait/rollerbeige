@@ -10,8 +10,8 @@ function Navbar() {
   const handleClick = () => {
     scrollToProducts();
     setShowDropdown(!showDropdown);
-
   }
+  
   const scrollToProducts = () => {
 
     const productsSection = document.getElementById('products');
@@ -33,9 +33,10 @@ function Navbar() {
       </div>
       {showDropdown &&
         <div className='dropdownContainer'>
-          <Link to='/cortinas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Cortinas</p></Link>
+
+          <Link to='/cortinas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Todas las Cortinas</p></Link>
           
-          <Link to='/telas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Telas</p></Link>
+          <Link to='/telas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Todas las Telas</p></Link>
 
           <Link to='/accesorios' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Accesorios</p></Link>
           

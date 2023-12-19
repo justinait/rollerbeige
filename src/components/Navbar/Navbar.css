@@ -37,7 +37,8 @@
     font-size: 14px;
     border-radius: 3px;
     text-align: right;
-    padding-bottom: 5%;
+    width: 83%;
+    padding: 10% 0;
 }
 
 .dropdownItem {
