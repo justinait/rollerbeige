@@ -4,14 +4,28 @@
     object-fit: cover;
     object-position: bottom;
 }
-
+.heroHomeImgDesktop {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: bottom;
+}
 @media (min-width:639px){
     .heroHomeImg {
         height: 90vh;
     }
 }
-@media (min-width: 639px){
+@media (min-width: 1023px){
     .heroHomeImg {
         height: 105vh;
+    }
+}
+@media (min-width: 1279px){
+    .heroHomeImg {
+        display: none;
+    }
+    .heroHomeImgDesktop {
+        display: block;
     }
 }

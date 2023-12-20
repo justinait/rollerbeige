@@ -48,3 +48,18 @@
         font-weight: 300;
     }
 }
+@media(min-width:1023px) {
+    .footer{
+        height: 320px;
+    }
+    .logoFooter {
+        width: 220px;
+    }
+    .footerInfo h4{
+        font-size: 24px;
+    }
+    .footerLinks {
+        font-size: large;
+        font-weight: 300;
+    }
+}

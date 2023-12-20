@@ -15,8 +15,45 @@
     margin-top: 8%;
 }
 
+@media(min-width:639px){
+    .servicesContainer {
+        font-size: clamp(1.3rem, 8vw - 2rem, 3rem);
+    }
+}
 @media(min-width:1023px){
     .servicesContainer {
         font-size: clamp(0.7rem, 6vw - 2rem, 3rem);
+    }
+}
+@media(min-width:1279px){
+    .servicesContainer {
+        border-radius: 30px;
+        padding: 5% 7% 8%;
+        background: #D1D1B7;
+        color: white;
+        margin: 8% auto;
+        font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem);
+        display: flex;
+    }
+    .servicesContainer div {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        text-align: center;
+        color: var(--color-darkgrey);
+        border-bottom: unset;
+        padding: 2% 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .services {
+        margin-top: 0;
+        padding-top: 6%;
+    }
+}
+@media(min-width:1534px){
+    .servicesContainer {
+        margin: 5% auto;
     }
 }
