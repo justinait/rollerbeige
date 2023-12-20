@@ -8,7 +8,7 @@ function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleClick = () => {
-    scrollToProducts();
+    // scrollToProducts();
     setShowDropdown(!showDropdown);
   }
   

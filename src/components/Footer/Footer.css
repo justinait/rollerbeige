@@ -35,9 +35,16 @@
 }
 @media(min-width:639px) {
     .footer{
-        height: 220px;
+        height: 250px;
     }
     .logoFooter {
         width: 180px 
+    }
+    .footerInfo h4{
+        font-size: 20px;
+    }
+    .footerLinks {
+        font-size: smaller;
+        font-weight: 300;
     }
 }

@@ -18,14 +18,19 @@ function ProductsHome({curtains}) {
     <div>
         <h3 id='products' style={{marginBottom: '0'}}>ELEGÍ TUS CORTINAS</h3>
         
-        <h2 id='products' className='subtitleHome' >Por sistema</h2>
+        <h2 className='subtitleHome' >Por sistema</h2>
 
         <div className='productsBoxContainer'>
         
         {
             curtains && curtains.slice().reverse().map((e, i) =>  {
                 return(
-                    <Link className='productBox' to='/cortinas' onClick={()=>setShowDropdown(false)} key={i} style={{ width: i === curtains.length - 1 ? '100%' : '50%' }}>
+                    <Link 
+                    to={`/${e.name}`} 
+                    className='productBox' 
+                    onClick={()=>setShowDropdown(false)} 
+                    key={i} 
+                    style={{ width: i === curtains.length - 3 ? '100%' : '50%' }}>
                         <div className='imageOverlay'></div>
                         <img src={e.image} alt={e.title}/>
                         <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
@@ -36,7 +41,7 @@ function ProductsHome({curtains}) {
         }
         </div>
 
-        <h2 id='products' className='subtitleHome' >Por tela</h2>
+        <h2 className='subtitleHome' >Por tela</h2>
 
         <div className='productsBoxContainer fabric'>
             <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>

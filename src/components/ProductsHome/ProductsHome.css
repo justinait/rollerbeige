@@ -57,7 +57,8 @@
 
 @media (min-width:639px) {
     .subtitleHome {
-        font-size: 22px;
+        font-size: 26px;
+        margin: 5%;
     }
     .productBox {
         height: 150px;
@@ -66,12 +67,11 @@
         font-size: 29px;
     }
 }
-@media (min-width: 639px){
+
+@media (min-width: 1023px){
     .subtitleHome {
         font-size: 30px;
     }
-}
-@media (min-width: 639px){
     .productBox {
         height: 180px;
     }

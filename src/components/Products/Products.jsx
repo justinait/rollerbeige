@@ -44,12 +44,12 @@ function Products() {
   return (
     <div className='productsContainer'>
 
-        <h2 id='products'> NUESTRAS CORTINAS</h2>
+        <h2> NUESTRAS CORTINAS</h2>
 
         {
             dataCurtains && dataCurtains.slice().reverse().map((e, i) =>  {
                 return(
-                    <Link to={`/${e.name}`}  className='productContainer' key={i}>
+                    <Link to={`/${e.name}`} className='productContainer' key={i}>
                         <img src={e.image} alt={e.name} className='imgProduct'/>
                         <p className='productName'>{e.name}</p>
                         

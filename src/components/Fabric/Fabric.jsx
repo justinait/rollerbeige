@@ -25,7 +25,7 @@ function Products() {
   return (
     <div className='productsContainer'>
 
-      <h2 id='products'> NUESTRAS TELAS</h2>
+      <h2> NUESTRAS TELAS</h2>
       <br />
       
       <p className='fabricTitle'>Blackout</p>
