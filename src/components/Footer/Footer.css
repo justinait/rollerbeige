@@ -63,3 +63,11 @@
         font-weight: 300;
     }
 }
+@media(min-width:1023px) {
+    
+    .css-i4bv87-MuiSvgIcon-root, .icons {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+

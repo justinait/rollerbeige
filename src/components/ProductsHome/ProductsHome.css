@@ -79,3 +79,24 @@
         font-size: 35px;
     }
 }
+
+@media (min-width: 1279px){
+    .subtitleHome {
+        font-size: 30px;
+    }
+    .productBox {
+        width: 33.3% !important;
+        height: 320px
+    }
+    .productBoxText {
+        font-size: 36px;
+        top: -52%;
+        right: -30px;
+    }
+    .imageOverlay{
+        top: unset;
+        left: unset;
+        width: 100%;
+        height: 100%;
+    }
+}
