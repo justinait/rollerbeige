@@ -29,11 +29,12 @@
     .servicesContainer {
         border-radius: 30px;
         padding: 5% 7% 8%;
-        background: #D1D1B7;
+        border: 2px solid #C1C09F;
         color: white;
         margin: 8% auto;
         font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem);
         display: flex;
+        width: 70vw;
     }
     .servicesContainer div {
         width: 50vw;

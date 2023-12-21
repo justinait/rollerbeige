@@ -77,14 +77,22 @@
     .navbarItems{
         font-size: 26px;
     }
-    .logoNavbar {
+    /* .logoNavbar {
         width: 260px;
-    }
+    } */
 }
 
 @media (min-width: 1279px){
     .navbar{
         height: 12vh;
+    }
+    .navbarItemsContainer {
+        width: 28%;
+    }
+}
+@media (min-width: 1519px){
+    .navbar{
+        height: 110px;
     }
     .navbarItemsContainer {
         width: 28%;
