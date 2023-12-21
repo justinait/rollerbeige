@@ -5,7 +5,7 @@
     align-items: center;
     position: fixed;
     width: 90%;
-    background: white;
+    background: #FAFAFA;
     top: 0;
     z-index: 10;
     padding: 0 5%;
@@ -16,7 +16,7 @@
 }
 
 .navbarItems {
-    font-size: clamp(0.8rem, 8vw - 2rem, 3rem);
+    font-size: clamp(0.7rem, 8vw - 2rem, 3rem);
     font-weight: 500;
     color: var(--color-darkgrey);
     padding-right: 5%;
@@ -31,7 +31,7 @@
 .dropdownContainer {
     position: absolute;
     top: 8vh;
-    background: white;
+    background: #FAFAFA;
     width: 46%;
     right: 0;
     font-size: 14px;
@@ -61,7 +61,7 @@
     }
     
     .navbarItemsContainer {
-        width: 31%;
+        width: 37%;
     }
     
     .dropdownItem {
@@ -74,27 +74,47 @@
 
 @media(min-width:1023px){
     
-    .navbarItems{
-        font-size: 26px;
+    .productNavbarItem{
+        display: none;
     }
-    /* .logoNavbar {
-        width: 260px;
-    } */
+    .dropdownContainer{
+        display: flex;
+
+        justify-content: space-between;
+        width: 30vw;
+        background: unset;
+        position: unset;
+        top: unset;
+        right: unset;
+        border-radius: unset;
+        text-align: unset;
+        padding: unset;
+    }
+    .dropdownItem{
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-darkgrey);
+        padding-right: 5%;
+    }
+    .navbarItemsContainer{
+        width: 36.6%;
+        justify-content: flex-end;
+    }
+
+
+    .navbarItems{
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 1279px){
+    
+}
+@media (min-width: 1439px){
     .navbar{
         height: 12vh;
     }
-    .navbarItemsContainer {
-        width: 28%;
-    }
-}
-@media (min-width: 1519px){
-    .navbar{
-        height: 110px;
-    }
-    .navbarItemsContainer {
-        width: 28%;
+    .logoNavbar {
+        margin-bottom: 7%;
     }
 }

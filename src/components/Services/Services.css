@@ -47,6 +47,7 @@
         padding: 2% 0;
         flex-direction: column;
         justify-content: center;
+        font-weight: 400;
     }
     .services {
         margin-top: 0;
