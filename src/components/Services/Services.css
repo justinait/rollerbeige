@@ -29,12 +29,15 @@
     .servicesContainer {
         border-radius: 30px;
         padding: 5% 0%;
-        border: 2px solid #C1C09F;
+        border: 4px solid #C1C09F;
         color: white;
         margin: 8% auto;
         font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem);
         display: flex;
         width: 80vw;
+    }
+    .servicesContainer .icons {
+        color: #C1C09F;
     }
     .servicesContainer div {
         width: 50vw;

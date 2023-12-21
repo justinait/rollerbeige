@@ -94,8 +94,12 @@
 
 @media (min-width: 1279px){
     .subtitleHome {
-        margin: 5%;
-        font-size: 34px;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 30px;
+        width: 80vw;
+        font-weight: 600;
+        margin: 7% auto 3%;
     }
     .productBox {
         width: 33.3% !important;
