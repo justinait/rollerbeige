@@ -17,6 +17,11 @@
     height: 94%;
 }
   
+.productsBoxContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 .productBox img {
     width: 100%;
     height: 100%;

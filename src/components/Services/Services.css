@@ -28,13 +28,13 @@
 @media(min-width:1279px){
     .servicesContainer {
         border-radius: 30px;
-        padding: 5% 7% 8%;
+        padding: 5% 0%;
         border: 2px solid #C1C09F;
         color: white;
         margin: 8% auto;
         font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem);
         display: flex;
-        width: 70vw;
+        width: 80vw;
     }
     .servicesContainer div {
         width: 50vw;
@@ -53,6 +53,7 @@
         padding-top: 6%;
     }
 }
+
 @media(min-width:1534px){
     .servicesContainer {
         margin: 5% auto;

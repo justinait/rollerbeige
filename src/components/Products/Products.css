@@ -3,11 +3,6 @@
     text-align: center;    
     padding-bottom: 15%;
 }
-.productsBoxContainer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
 .productContainer {
     padding-bottom: 15%;
 }
