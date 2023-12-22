@@ -10,19 +10,19 @@ function Services() {
     <div className='services'>
       <h3>SERVICIOS</h3>
       <div className='servicesContainer'>
-        <div className=''>
+        <div className='servicesDiv'>
           <PaletteOutlinedIcon className='icons'/>
           Asesoramiento personalizado
         </div>
-        <div>
+        <div className='servicesDiv'>
           <EngineeringOutlinedIcon className='icons'/>
           Instalaciones
         </div>
-        <div>
+        <div className='servicesDiv'>
           <HandshakeOutlinedIcon  className='icons'/>
           Servicio Postventa
         </div>
-        <div>
+        <div className='servicesDiv'>
           <HandymanOutlinedIcon  className='icons'/>
           Reparaciones
         </div>

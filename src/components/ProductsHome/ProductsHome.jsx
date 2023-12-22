@@ -18,7 +18,7 @@ function ProductsHome({curtains}) {
     <div>
         <h3 id='products' style={{marginBottom: '0'}}>ELEGÍ TUS CORTINAS</h3>
         
-        <h2 className='subtitleHome' >Por sistema</h2>
+        <h4 className='subtitleHome' >Por sistema</h4>
 
         <div className='productsBoxContainer'>
         
@@ -41,7 +41,7 @@ function ProductsHome({curtains}) {
         }
         </div>
 
-        <h2 className='subtitleHome' >Por tela</h2>
+        <h4 className='subtitleHome' >Por tela</h4>
 
         <div className='productsBoxContainer fabric'>
             <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>

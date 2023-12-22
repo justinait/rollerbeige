@@ -3,6 +3,8 @@
     font-weight: 300;
     color: var(--color-darkgrey);
     margin: 0% auto;
+    text-align: center;
+    padding: 10% 0;
 }
 
 .imageOverlay {
@@ -64,6 +66,7 @@
     .subtitleHome {
         font-size: 26px;
         margin: 7%;
+        padding: 0;
     }
     .productBox {
         height: 150px;
@@ -99,7 +102,9 @@
         font-size: 30px;
         width: 80vw;
         font-weight: 600;
-        margin: 7% auto 3%;
+        margin: 8% auto 3%;
+        padding: 0%;
+        font-size: 32px;
     }
     .productBox {
         width: 33.3% !important;
@@ -124,7 +129,7 @@
 @media (min-width: 1439px){
     
     .subtitleHome {
-        margin: 3% auto -2%;
+        /* margin: 3% auto 0%; */
     }
     .productBoxText {
         top: -56%;

@@ -28,33 +28,45 @@
 @media(min-width:1279px){
     .servicesContainer {
         border-radius: 30px;
-        padding: 5% 0%;
+        padding: 6% 0% 6% 10%;
         border: 4px solid #C1C09F;
         color: white;
         margin: 8% auto;
-        font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem);
+        /* font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem); */
         display: flex;
-        width: 80vw;
+        width: 65vw;
+        flex-wrap: wrap;
+        box-shadow: antiquewhite 1px solid;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .servicesContainer .icons {
         color: #C1C09F;
     }
     .servicesContainer div {
-        width: 50vw;
         display: flex;
+        width: 50%;
+        margin: auto;
         align-items: center;
         font-weight: 300;
-        text-align: center;
+        text-align: unset;
         color: var(--color-darkgrey);
         border-bottom: unset;
         padding: 2% 0;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: flex-start;
         font-weight: 400;
+        font-size: 22px;
+    }
+    .servicesDiv{
+        width: 50%;
     }
     .services {
         margin-top: 0;
         padding-top: 6%;
+    }
+    .servicesContainer .icons {
+        width: 1.8em !important;
+        height: 1.8em !important;
     }
 }
 
