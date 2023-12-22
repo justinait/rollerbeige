@@ -1,35 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import db from '../../firebaseConfig';
-import { getDocs, collection } from 'firebase/firestore'
 import './Products.css'
+import { ProductsContext } from '../../context/ProductsProvider';
 
 function Products() {
-    const [dataCurtains, setdataCurtains] = useState([])
-    const { id } = useParams();
-
-    const getCurtains = async () => {
+    const { dataCurtains } = useContext(ProductsContext);
+    const {curtain} = useParams();
+    const [product, setProduct] = useState([]);
+  
+    const getProduct = () =>{
+  
+      dataCurtains?.map(e => {
         
-        const curtainsCollection = collection(db, 'curtains');
-        const curtainsSnapshot = await getDocs(curtainsCollection);
-
-        const curtainsList = curtainsSnapshot.docs.map( (e) => {
-            let eachItem = e.data();
-            eachItem.id = e.id;
-
-            return eachItem;
-        })
-        return curtainsList
-        
+        if(curtain == e.name){
+          setProduct(e);
+        }
+        return product
+      })
     }
-
-    useEffect(() => {
-        
-        getCurtains()
-        .then( (res) => { 
-            setdataCurtains(res)
-        })
-    }, [id])
+  
+    useEffect(()=>{
+      getProduct();
+    }, [curtain])
 
   return (
     <div className='productsContainer'>
