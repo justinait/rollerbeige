@@ -123,6 +123,9 @@
 }
 @media (min-width: 1439px){
     
+    .subtitleHome {
+        margin: 3% auto -2%;
+    }
     .productBoxText {
         top: -56%;
         right: -22px;

@@ -55,9 +55,19 @@ h1 {
     padding: 0;
   }
 }
-@media (min-width: 639px){
-  h3 {
-    font-size: 36px;
+
+@media (min-width: 1023px){
+  h2 {
+    font-size: 30px;
+  }
+  h2{
+    padding: 7% 0 0%;
+  }
+}
+@media (min-width: 1279px){
+  h2 {    
+    padding: 5%;
+    font-size: 32px;
   }
 }
 

@@ -4,16 +4,6 @@ import db from '../../firebaseConfig';
 import { getDocs, collection } from 'firebase/firestore'
 import './Products.css'
 
-import roller from '/images/curtains/roller.jpeg'
-import eclipse from '/images/curtains/cortinas (46).jpg'
-import tradicionales from '/images/curtains/cortinas (2).jpg'
-import verticales from '/images/curtains/cortinas (73).jpg'//82
-import orientales from '/images/curtains/cortinas (41).jpg'
-import baño from '/images/curtains/cortinas (8).jpg'
-import romanas from '/images/curtains/romanas.jpg'
-import venecianas from '/images/curtains/venecianas.jpg'
-import celulares from '/images/curtains/celulares.jpg'
-
 function Products() {
     const [dataCurtains, setdataCurtains] = useState([])
     const { id } = useParams();

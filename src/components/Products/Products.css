@@ -26,5 +26,9 @@
 }
 
 @media(min-width:639px) {
-    
+    .imgProduct{
+        margin: 6% 0 4%;
+        border-radius: 10px;
+        height: 225px;
+    }
 }
