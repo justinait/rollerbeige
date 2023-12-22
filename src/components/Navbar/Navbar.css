@@ -108,7 +108,12 @@
 }
 
 @media (min-width: 1279px){
-    
+    .navbarItemsContainer{
+        width: 55vw;
+    }
+    .dropdownContainer{
+        width: 20vw;
+    }
     .logoNavbar {
         margin-bottom: 8%;
     }
@@ -125,5 +130,8 @@
     .logoNavbar {
         margin-bottom: 10%;
         width: 230px;
+    }
+    .navbarItems, .dropdownItem {
+        font-size: 20px;
     }
 }
