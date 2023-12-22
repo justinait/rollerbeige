@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Detail.css';
 import Whatsapp from '../Whatsapp/Whatsapp';
 import { ProductsContext } from '../../context/ProductsProvider';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function Detail() { 
   const { dataCurtains } = useContext(ProductsContext);
@@ -21,7 +22,7 @@ function Detail() {
   useEffect(() => {
     const loadData = () => {
       if (!dataCurtains) {
-        setTimeout(loadData, 1000); // Esperar 3 segundos y volver a intentar cargar
+        setTimeout(loadData, 100);//0.1segundo
         return;
       }
 
@@ -41,6 +42,7 @@ function Detail() {
 
   return (
     <div className='detailContainer'>
+      <Link to='/cortinas'>      <ArrowBackIcon/>      </Link>
       <h3>{name}</h3>
       <img src={image} alt={name} className='detailImage'/>
       <p dangerouslySetInnerHTML={{ __html: description }} className='detailDescription'></p>
