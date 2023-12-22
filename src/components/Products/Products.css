@@ -24,6 +24,12 @@
     padding-left: 15%;
     font-size: 14px;
 }
+.moreInfo{    
+    text-align: left;
+    padding-left: 15%;
+    font-size: 11px;
+    padding-bottom: 5%;
+}
 
 @media(min-width:639px) {
     .imgProduct{
@@ -50,12 +56,21 @@
     .productDescription {
         font-size: 20px;
     }
+    .moreInfo{
+        font-size: 15px;
+        padding-bottom: 0;
+    }
 }
 @media(min-width:1269px){
     .productContainer {
         display: flex;
         width: 90%;
         margin: 0 10% 2%;
+        padding: 0 0 10% 0;
+        align-items: center;
+    }
+    .moreInfo{
+        padding-left: 5%;
     }
     .imgProduct {
         margin: 0;
@@ -68,6 +83,7 @@
     }
     .productName{
         padding: 0 5%;
+        font-size: 28px;
     }
     .productInfoContainer{
         width: 60%;

@@ -44,6 +44,7 @@ function Products() {
                         <div className='productInfoContainer'>
                             <p className='productName'>{e.name}</p>
                             <p dangerouslySetInnerHTML={{ __html: e.description }} className='productDescription'></p>
+                            <p className='moreInfo'>Ver más...</p>
                         </div>
 
                     </Link>
