@@ -15,6 +15,11 @@ function Navbar() {
       setShowDropdown(!showDropdown);
     }
   }
+  const closeDropdown = () => {
+    if (windowWidth <= 1023) {
+      setShowDropdown(false);
+    }
+  }
   
   const scrollToProducts = () => {
 
@@ -29,20 +34,20 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-      <Link to='/' style={{marginBottom: '-2%' }} onClick={handleClick}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
+      <Link to='/' style={{marginBottom: '-2%' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
       
       <div className='navbarItemsContainer'>
-        <p className='navbarItems' onClick={handleClick}> <Link to='/about'>Nosotros</Link></p>
+        <p className='navbarItems' onClick={closeDropdown}> <Link to='/about'>Nosotros</Link></p>
         <p className='navbarItems productNavbarItem' onClick={handleClick}> Productos </p>
       </div>
       {showDropdown &&
         <div className='dropdownContainer'>
 
-          <Link to='/cortinas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Cortinas</p></Link>
+          <Link to='/cortinas' onClick={closeDropdown}><p className='dropdownItem'>Cortinas</p></Link>
           
-          <Link to='/telas' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Telas</p></Link>
+          <Link to='/telas' onClick={closeDropdown}><p className='dropdownItem'>Telas</p></Link>
 
-          <Link to='/accesorios' onClick={()=>setShowDropdown(false)}><p className='dropdownItem'>Accesorios</p></Link>
+          <Link to='/accesorios' onClick={closeDropdown}><p className='dropdownItem'>Accesorios</p></Link>
           
         </div>
       }
