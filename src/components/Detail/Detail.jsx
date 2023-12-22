@@ -9,20 +9,27 @@ function Detail() {
   const {curtain} = useParams();
   const [product, setProduct] = useState([]);
 
-  const getProduct = () =>{
+  const getProduct = () => {
+    const foundProduct = dataCurtains?.find((e) => curtain === e.name);
+  
+    if (foundProduct) {
+      setProduct(foundProduct);
+    }
+  };
+  
 
-    dataCurtains?.map(e => {
-      
-      if(curtain == e.name){
-        setProduct(e);
+  useEffect(() => {
+    const loadData = () => {
+      if (!dataCurtains) {
+        setTimeout(loadData, 1000); // Esperar 3 segundos y volver a intentar cargar
+        return;
       }
-      return product
-    })
-  }
 
-  useEffect(()=>{
-    getProduct();
-  }, [curtain])
+      getProduct();
+    };
+
+    loadData();
+  }, [dataCurtains, curtain]);
 
   const {image, name, description, attributes} = product
   

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import './ProductsHome.css'
 
 import blackout from '/images/fabrics/black clasico.jpg'
@@ -12,8 +12,29 @@ import gross from '/images/fabrics/gross.jpg'
 import tusor from '/images/fabrics/tusor.jpg'
 import gasahilo from '/images/fabrics/gasahilo.jpeg'
 import voilehilo from '/images/fabrics/voilehilo.jpg'
+import { ProductsContext } from '../../context/ProductsProvider'
 
-function ProductsHome({curtains}) {
+function ProductsHome() {
+    
+    const { dataCurtains } = useContext(ProductsContext);
+    const {curtain} = useParams();
+    const [product, setProduct] = useState([]);
+  
+    const getProduct = () =>{
+  
+      dataCurtains?.map(e => {
+        
+        if(curtain == e.name){
+          setProduct(e);
+        }
+        return product
+      })
+    }
+  
+    useEffect(()=>{
+      getProduct();
+    }, [curtain])
+
   return (
     <div>
         <h3 id='products' style={{marginBottom: '0'}}>ELEGÍ TUS CORTINAS</h3>
@@ -23,14 +44,14 @@ function ProductsHome({curtains}) {
         <div className='productsBoxContainer'>
         
         {
-            curtains && curtains.slice().reverse().map((e, i) =>  {
+            dataCurtains && dataCurtains.slice().reverse().map((e, i) =>  {
                 return(
                     <Link 
                     to={`/${e.name}`} 
                     className='productBox' 
                     onClick={()=>setShowDropdown(false)} 
                     key={i} 
-                    style={{ width: i === curtains.length - 3 ? '100%' : '50%' }}>
+                    style={{ width: i === dataCurtains.length - 3 ? '100%' : '50%' }}>
                         <div className='imageOverlay'></div>
                         <img src={e.image} alt={e.title}/>
                         <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
