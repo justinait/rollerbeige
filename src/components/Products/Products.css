@@ -51,3 +51,25 @@
         font-size: 20px;
     }
 }
+@media(min-width:1269px){
+    .productContainer {
+        display: flex;
+        width: 90%;
+        margin: 0 10% 2%;
+    }
+    .imgProduct {
+        margin: 0;
+        height: 400px;
+        width: 40%;
+    }
+    .productDescription{
+        padding: 0 5%;
+        width: 80%;
+    }
+    .productName{
+        padding: 0 5%;
+    }
+    .productInfoContainer{
+        width: 60%;
+    }
+}

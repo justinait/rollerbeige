@@ -41,9 +41,10 @@ function Products() {
                 return(
                     <Link to={`/${e.name}`} className='productContainer' key={i}>
                         <img src={e.image} alt={e.name} className='imgProduct'/>
-                        <p className='productName'>{e.name}</p>
-                        
-                        <p dangerouslySetInnerHTML={{ __html: e.description }} className='productDescription'></p>
+                        <div className='productInfoContainer'>
+                            <p className='productName'>{e.name}</p>
+                            <p dangerouslySetInnerHTML={{ __html: e.description }} className='productDescription'></p>
+                        </div>
 
                     </Link>
                 )
