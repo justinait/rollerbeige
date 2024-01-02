@@ -20,3 +20,9 @@
     height: 40px !important;
     width: 40px !important;
 }
+@media (min-width:1023px){
+    
+    .linksIcons {
+        font-size: 2em;
+    }
+}
