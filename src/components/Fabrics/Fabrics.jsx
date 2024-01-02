@@ -4,22 +4,22 @@ import { ProductsContext } from '../../context/ProductsProvider';
 
 function Fabrics() {
     
-    const { dataFabrics } = useContext(ProductsContext);
-    const [product, setProduct] = useState([]);
-  
-    const getProduct = () =>{
-  
-        dataFabrics?.map(e => {
-        
-            setProduct(e);
-            return product
+  const { dataFabrics } = useContext(ProductsContext);
+  const [product, setProduct] = useState([]);
 
-        })
-    }
-  
-    useEffect(()=>{
-      getProduct();
-    }, [])
+  const getProduct = () =>{
+
+    dataFabrics?.map(e => {
+    
+      setProduct(e);
+      return product
+
+    })
+  }
+
+  useEffect(()=>{
+    getProduct();
+  }, [])
 
   return (
     <div className='productsContainer'>
@@ -27,19 +27,57 @@ function Fabrics() {
       <h2> NUESTRAS TELAS</h2>
 
       <h3> Telas Sintéticas</h3>
-
       {
         dataFabrics && dataFabrics.slice().reverse().map((e, i) =>  {
+          
           return(
-            <Link to={`/${e.name}`} className='productContainer' key={i}>
-              <img src={e.image} alt={e.name} className='imgProduct'/>
-              <div className='productInfoContainer'>
-                <p className='productName'>{e.name}</p>
-                <p dangerouslySetInnerHTML={{ __html: e.description }} className='productDescription'></p>
-                <p className='moreInfo'>Ver más...</p>
-              </div>
-
-            </Link>
+            <>
+              {
+                !e.category &&   
+                <Link to={`/${e.name}`} className='productContainer' key={i}>
+                  <img src={e.image} alt={e.name} className='imgProduct'/>
+                  <div className='productInfoContainer'>
+                    <p className='productName'>{e.name}</p>
+                    <p dangerouslySetInnerHTML={{ __html: e.description }} className='productDescription'></p>
+                    <p className='moreInfo'>Ver más...</p>
+                  </div>
+                </Link>
+              }
+            </>
+              
+          )
+        })
+        
+           
+      }
+      <h3> Telas Tradicionales</h3>
+      <p>
+        En Roller Beige, estamos comprometidos con la excelencia y la satisfacción del
+        cliente, y eso se refleja en cada detalle de nuestras telas de género. Antes de llegar a
+        tus ventanas, cada cortina de género ha pasado por un riguroso proceso de calidad,
+        siendo sometida a nuestras más altas exigencias. <br />
+        Cada una de nuestras telas tradicionales ha sido probada y aprobada por nosotros
+        mismos, asegurando que cumplan con estabilidad dimensional y preservando la
+        intensidad de los colores.
+      </p>
+      {
+        dataFabrics && dataFabrics.slice().reverse().map((e, i) =>  {
+          
+          return(
+            <>
+              {
+                e.category &&   
+                <Link to={`/${e.name}`} className='productContainer' key={i}>
+                  <img src={e.image} alt={e.name} className='imgProduct'/>
+                  <div className='productInfoContainer'>
+                    <p className='productName'>{e.name}</p>
+                    <p dangerouslySetInnerHTML={{ __html: e.description }} className='productDescription'></p>
+                    
+                  </div>
+                </Link>
+              }
+            </>
+              
           )
         })
       }
