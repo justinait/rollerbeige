@@ -4,24 +4,8 @@ import './Products.css'
 import { ProductsContext } from '../../context/ProductsProvider';
 
 function Products() {
-    const { dataCurtains } = useContext(ProductsContext);
-    const {curtain} = useParams();
-    const [product, setProduct] = useState([]);
-  
-    const getProduct = () =>{
-  
-      dataCurtains?.map(e => {
-        
-        if(curtain == e.name){
-          setProduct(e);
-        }
-        return product
-      })
-    }
-  
-    useEffect(()=>{
-      getProduct();
-    }, [curtain])
+  const { dataCurtains } = useContext(ProductsContext);
+  const {curtain} = useParams();
 
   return (
     <div className='productsContainer'>

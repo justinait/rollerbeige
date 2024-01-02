@@ -1,32 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ProductsContext } from '../../context/ProductsProvider';
+import './Fabrics.css'
 
 function Fabrics() {
     
   const { dataFabrics } = useContext(ProductsContext);
-  const [product, setProduct] = useState([]);
-
-  const getProduct = () =>{
-
-    dataFabrics?.map(e => {
-    
-      setProduct(e);
-      return product
-
-    })
-  }
-
-  useEffect(()=>{
-    getProduct();
-  }, [])
 
   return (
     <div className='productsContainer'>
 
       <h2> NUESTRAS TELAS</h2>
 
-      <h3> Telas Sintéticas</h3>
+      <h3 style={{marginTop: '-5%' }} > Telas Sintéticas</h3>
       {
         dataFabrics && dataFabrics.slice().reverse().map((e, i) =>  {
           
@@ -51,7 +37,7 @@ function Fabrics() {
            
       }
       <h3> Telas Tradicionales</h3>
-      <p>
+      <p className='traditionalDescription'>
         En Roller Beige, estamos comprometidos con la excelencia y la satisfacción del
         cliente, y eso se refleja en cada detalle de nuestras telas de género. Antes de llegar a
         tus ventanas, cada cortina de género ha pasado por un riguroso proceso de calidad,

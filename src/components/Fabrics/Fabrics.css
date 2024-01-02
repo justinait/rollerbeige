@@ -16,3 +16,9 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.traditionalDescription {
+    text-align: left;
+    width: 80%;
+    margin: 10% auto 15%;
+    font-size: 14px;
+}
