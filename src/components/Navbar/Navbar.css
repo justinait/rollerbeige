@@ -114,21 +114,14 @@
     .dropdownContainer{
         width: 20vw;
     }
-    .logoNavbar {
-        margin-bottom: 8%;
-    }
 }
 @media (min-width: 1439px){
     .navbar{
         height: 12vh;
     }
-    .logoNavbar {
-        margin-bottom: 7%;
-    }
 }
-@media (min-width: 1600px){
+@media (min-width: 1800px){
     .logoNavbar {
-        margin-bottom: 10%;
         width: 230px;
     }
     .navbarItems, .dropdownItem {

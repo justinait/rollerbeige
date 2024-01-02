@@ -34,7 +34,7 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-      <Link to='/' style={{marginBottom: '-2%' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
+      <Link to='/' style={{display: 'flex' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
       
       <div className='navbarItemsContainer'>
         <p className='navbarItems' onClick={closeDropdown}> <Link to='/about'>Nosotros</Link></p>
