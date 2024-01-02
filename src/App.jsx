@@ -8,7 +8,6 @@ import CheckScroll from './CheckScroll'
 import Detail from './components/Detail/Detail'
 import Products from './components/Products/Products'
 import Promos from './components/Promos/Promos'
-import Fabric from './components/Fabric/Fabric'
 import ProductsProvider from './context/ProductsProvider'
 import Fabrics from './components/Fabrics/Fabrics'
 

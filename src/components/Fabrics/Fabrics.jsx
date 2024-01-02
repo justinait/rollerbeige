@@ -6,7 +6,21 @@ import './Fabrics.css'
 function Fabrics() {
     
   const { dataFabrics } = useContext(ProductsContext);
+  const [product, setProduct] = useState([]);
 
+  const getProduct = () =>{
+
+    dataFabrics?.map(e => {
+
+      setProduct(e);
+      return product
+
+    })
+  }
+
+  useEffect(()=>{
+    getProduct();
+  }, [])
   return (
     <div className='productsContainer'>
 
