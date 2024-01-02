@@ -72,6 +72,9 @@ h5 {
     padding: 7% 0 0%;
     font-weight: 300;
   }
+  h3 {
+    font-size: 40px;
+  }
 }
 @media (min-width: 1279px){
   h2 {    

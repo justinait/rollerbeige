@@ -73,7 +73,7 @@ function ProductsHome() {
                 dataFabrics && dataFabrics.map((e, i) =>  {
                     return(
                         <Link 
-                        to={'/telas'} 
+                        to={`/${e.name}`} 
                         className='productBox' 
                         onClick={()=>setShowDropdown(false)} 
                         key={i} 

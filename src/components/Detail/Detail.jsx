@@ -50,30 +50,36 @@ function Detail() {
       <Link to='/telas' className='arrow'>      <ArrowBackIcon/>      </Link>  :
       <Link to='/cortinas' className='arrow'>      <ArrowBackIcon/>      </Link> 
       }
+
       <h3>{name}</h3>
-      <img src={image} alt={name} className='detailImage'/>
-      <p dangerouslySetInnerHTML={{ __html: description }} className='detailDescription'></p>
+      <div className='ppalInfo'>
+        <img src={image} alt={name} className='detailImage'/>
+        <p dangerouslySetInnerHTML={{ __html: description }} className='detailDescription'></p>
+      </div>
 
-      {Array.isArray(objectData) && objectData.map((e, i) => {
-        const values = attributes[e];
+      <div className='detailsListContainer'>
+        
+        {Array.isArray(objectData) && objectData.map((e, i) => {
+          const values = attributes[e];
 
-        return (
-          <div key={i}>
-            <h4 className='detailAttributeSubtitle'>{e}</h4>
-            {Array.isArray(values) ? (
-              <ul>
-                {values.map((item, k) => (
-                  <li key={k}>{item}</li>
-                ))}
-              </ul>
-            ) : (
-              <ul>
-                <li>{values}</li>
-              </ul>
-            )}
-          </div>
-        );
-      })}
+          return (
+            <div key={i} className='detailsListItem'>
+              <h4 className='detailAttributeSubtitle'>{e}</h4>
+              {Array.isArray(values) ? (
+                <ul>
+                  {values.map((item, k) => (
+                    <li key={k}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <ul>
+                  <li>{values}</li>
+                </ul>
+              )}
+            </div>
+          );
+        })}
+      </div>
       
     </div>
   );
