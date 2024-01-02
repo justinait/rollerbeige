@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import hero from '/images/hero4.png'
-import heroPc from '/images/curtains/heropc2.jpg'
+import heroPc from '/images/heropc4.png'
 import Services from '../Services/Services'
 import ProductsHome from '../ProductsHome/ProductsHome'
 
