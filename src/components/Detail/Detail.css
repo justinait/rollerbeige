@@ -78,7 +78,7 @@ ul {
     }
     ul{
         font-size: 17px;
-        width: 35vw;
+        width: 31vw;
     }
     li{
         padding: 0.5% 0;
@@ -86,10 +86,29 @@ ul {
     .detailsListContainer {
         display: flex;
         flex-wrap: wrap;
-        margin: auto;
-        width: 80%;
+        margin: 8% auto;
+        width: 75%;
+        justify-content: space-between;
     }
     .detailsListItem {
-        padding: 5% 6% 0 0;
+        padding: 1% 0;
+    }
+}
+
+@media(min-width:1439px){
+    .detailDescription{
+        font-size: 20px;
+    }
+}
+@media(min-width:1600px){
+    .detailAttributeSubtitle {
+        font-size: 26px;
+    }
+    .detailDescription{
+        width: 60%;
+        font-size: 25px;
+    }
+    ul{
+        font-size: 22px;
     }
 }
