@@ -1,5 +1,22 @@
-.whatsappLink {
-    position: sticky;
-    top: 80vh;
+.linksContainer {
+    position: fixed;
+    bottom: 0;
     left: 80vw;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.whatsappLink {    
+    background-color: white;
+    width: fit-content;
+    display: flex;
+    padding: 7%;
+    border-radius: 20%;
+    margin: 10% auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.linksIcons {
+    color: var(--color-darkbeige);
+    height: 40px !important;
+    width: 40px !important;
 }

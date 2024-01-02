@@ -20,6 +20,7 @@ function App() {
       
       <Navbar />
       <CheckScroll/>
+      <Whatsapp />
 
       <Routes className='appRoutes'>
 
@@ -35,7 +36,6 @@ function App() {
         
       </Routes>
 
-      <Whatsapp />
       <Footer />
 
     </BrowserRouter>
