@@ -10,6 +10,7 @@ import Products from './components/Products/Products'
 import Promos from './components/Promos/Promos'
 import Fabric from './components/Fabric/Fabric'
 import ProductsProvider from './context/ProductsProvider'
+import Fabrics from './components/Fabrics/Fabrics'
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
         <Route path='/about' element={< About />} />
         
         <Route path='/cortinas' element={< Products />} />
-        <Route path='/telas' element={< Fabric />} />
+        <Route path='/telas' element={< Fabrics />} />
         <Route path='/accesorios' element={< Promos />} />
         
         <Route path='/:curtain' element={< Detail />} />

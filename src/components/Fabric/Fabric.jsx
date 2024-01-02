@@ -26,7 +26,9 @@ function Products() {
     <div className='productsContainer'>
 
       <h2> NUESTRAS TELAS</h2>
-      <br />
+      
+      <h3> Telas Sintéticas</h3>
+      
       
       <p className='fabricTitle'>Blackout</p>
       <div className='fabricContainer'>
