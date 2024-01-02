@@ -26,7 +26,7 @@ function Fabrics() {
 
       <h2> NUESTRAS TELAS</h2>
 
-      <h3 style={{marginTop: '-5%' }} > Telas Sintéticas</h3>
+      <h5 style={{marginTop: '-5%' }} > Telas Sintéticas</h5>
       {
         dataFabrics && dataFabrics.slice().reverse().map((e, i) =>  {
           
@@ -50,7 +50,8 @@ function Fabrics() {
         
            
       }
-      <h3> Telas Tradicionales</h3>
+
+      <h5> Telas Tradicionales</h5>
       <p className='traditionalDescription'>
         En Roller Beige, estamos comprometidos con la excelencia y la satisfacción del
         cliente, y eso se refleja en cada detalle de nuestras telas de género. Antes de llegar a

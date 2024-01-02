@@ -6,17 +6,26 @@ import { Link, useParams } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function Detail() { 
-  const { dataCurtains } = useContext(ProductsContext);
-  const {curtain} = useParams();
+  const { dataCurtains, dataFabrics } = useContext(ProductsContext);
+  const param = useParams();
   const [product, setProduct] = useState([]);
+  const [isFabric, setIsFabric] = useState(false);
 
   const getProduct = () => {
-    const foundProduct = dataCurtains?.find((e) => curtain === e.name);
+    let foundProduct = null;
+  
+    foundProduct = dataCurtains?.find((e) => param.curtain === e.name);
   
     if (foundProduct) {
-      setProduct(foundProduct);
+      setIsFabric(false);
+    } else {
+      foundProduct = dataFabrics?.find((e) => param.curtain === e.name);
+      setIsFabric(true);
     }
+  
+    setProduct(foundProduct);
   };
+  
   
 
   useEffect(() => {
@@ -30,9 +39,10 @@ function Detail() {
     };
 
     loadData();
-  }, [dataCurtains, curtain]);
-
-  const {image, name, description, attributes} = product
+  }, [dataCurtains, param]);
+  
+    const { image, name, description, attributes } = product;
+  
   
   let objectData;
 
@@ -42,7 +52,9 @@ function Detail() {
 
   return (
     <div className='detailContainer'>
-      <Link to='/cortinas'>      <ArrowBackIcon/>      </Link>
+      {isFabric ?      <Link to='/telas'>      <ArrowBackIcon/>      </Link> 
+      :  <Link to='/cortinas'>      <ArrowBackIcon/>      </Link> 
+      }
       <h3>{name}</h3>
       <img src={image} alt={name} className='detailImage'/>
       <p dangerouslySetInnerHTML={{ __html: description }} className='detailDescription'></p>
@@ -53,11 +65,22 @@ function Detail() {
         return (
           <div key={i}>
             <h4 className='detailAttributeSubtitle'>{e}</h4>
-            <ul>
+            {/* <ul>
               {Array.isArray(values) && values.map((value, j) => (
                 <li key={j} className='detailAttribute'>{value}</li>
               ))}
-            </ul>
+            </ul> */}
+            {Array.isArray(values) ? (
+              <ul>
+                {values.map((item, k) => (
+                  <li key={k}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <ul>
+                <li>{values}</li>
+              </ul>
+            )}
           </div>
         );
       })}

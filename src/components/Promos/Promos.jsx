@@ -15,13 +15,13 @@ function Promos() {
         <div className='promoContainer'>
           <img src={promo1} alt="" className='promoImage' />
           <p className='promoCategory'>Tela</p>
-          <h5 className='promoTitle'>Tela de Lino 1x1</h5>
+          <h6 className='promoTitle'>Tela de Lino 1x1</h6>
           <p className='promoPrice'>$ 300</p>
         </div>
         <div className='promoContainer'>
           <img src={promo2} alt="" className='promoImage' />
           <p className='promoCategory'>Tela</p>
-          <h5 className='promoTitle'>Tela de Lino 1x1</h5>
+          <h6 className='promoTitle'>Tela de Lino 1x1</h6>
           <p className='promoPrice'>$ 300</p>
         </div>
       </div>
