@@ -26,24 +26,18 @@ function Detail() {
     setProduct(foundProduct);
   };
   
-  
-
   useEffect(() => {
     const loadData = () => {
       if (!dataCurtains) {
         setTimeout(loadData, 100);//0.1segundo
         return;
       }
-
       getProduct();
     };
-
     loadData();
   }, [dataCurtains, param]);
   
-    const { image, name, description, attributes } = product;
-  
-  
+  const { image, name, description, attributes } = product;
   let objectData;
 
   if (product && product.attributes) {
@@ -52,8 +46,9 @@ function Detail() {
 
   return (
     <div className='detailContainer'>
-      {isFabric ?      <Link to='/telas'>      <ArrowBackIcon/>      </Link> 
-      :  <Link to='/cortinas'>      <ArrowBackIcon/>      </Link> 
+      {isFabric ?      
+      <Link to='/telas' className='arrow'>      <ArrowBackIcon/>      </Link>  :
+      <Link to='/cortinas' className='arrow'>      <ArrowBackIcon/>      </Link> 
       }
       <h3>{name}</h3>
       <img src={image} alt={name} className='detailImage'/>
@@ -65,11 +60,6 @@ function Detail() {
         return (
           <div key={i}>
             <h4 className='detailAttributeSubtitle'>{e}</h4>
-            {/* <ul>
-              {Array.isArray(values) && values.map((value, j) => (
-                <li key={j} className='detailAttribute'>{value}</li>
-              ))}
-            </ul> */}
             {Array.isArray(values) ? (
               <ul>
                 {values.map((item, k) => (
@@ -85,7 +75,6 @@ function Detail() {
         );
       })}
       
-      <Whatsapp />
     </div>
   );
 }

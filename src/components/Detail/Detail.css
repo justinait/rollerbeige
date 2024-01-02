@@ -10,8 +10,8 @@
     object-position: top;
 }
 .detailDescription {
-    padding: 5%;
-    font-size: 14px;
+    padding: 7%;
+    font-size: 15px;
 }
 .detailAttribute{
     font-size: 13px;
@@ -24,4 +24,12 @@
     color: var(--color-darkgrey);
     color: #9c9b83;
     margin: 0;
+}
+ul {    
+    padding-right: 10%;
+    font-size: 14px;
+}
+.arrow {
+  width: fit-content;
+  display: block;
 }

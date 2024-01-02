@@ -10,6 +10,7 @@ import Products from './components/Products/Products'
 import Promos from './components/Promos/Promos'
 import ProductsProvider from './context/ProductsProvider'
 import Fabrics from './components/Fabrics/Fabrics'
+import Whatsapp from './components/Whatsapp/Whatsapp'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         
       </Routes>
 
+      <Whatsapp />
       <Footer />
 
     </BrowserRouter>
