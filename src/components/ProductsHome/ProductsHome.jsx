@@ -80,65 +80,14 @@ function ProductsHome() {
                         style={{ width: i === dataFabrics.length - 3 ? '100%' : '50%' }}>
                             <div className='imageOverlay'></div>
                             <img src={e.image} alt={e.title}/>
-                            <p className='productBoxText'>{e.name}</p>
+                            <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
                         </Link>
                     )
 
                 })
             }
         </div>
-        {/* <div className='productsBoxContainer fabric'>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={blackout} alt="blackout" />
-                <p className='productBoxText'><br />Blackout</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={sunscreen} alt="sunscreen" />
-                <p className='productBoxText'><br />Sunscreen</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={traslucida} alt="traslucidas" />
-                <p className='productBoxText'><br />Traslúcidas</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={eclipse} alt="duo" />
-                <p className='productBoxText'><br />Dúo</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={lino} alt="lino" />
-                <p className='productBoxText'><br />Lino</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={gross} alt="gross" />
-                <p className='productBoxText'><br />Gross</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={tusor} alt="tusor" />
-                <p className='productBoxText'><br />Tusor</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={gasalino} alt="gasa de lino" />
-                <p className='productBoxText'><br />Gasa de Lino</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={gasahilo} alt="gasa de hilo" />
-                <p className='productBoxText'><br />Gasa de Hilo</p>
-            </Link>
-            <Link className='productBox' to='/telas' onClick={()=>setShowDropdown(false)}>
-                <div className='imageOverlay'></div>
-                <img src={voilehilo} alt="voile de hilo" />
-                <p className='productBoxText'><br />Voile de hilo</p>
-            </Link>
-        </div> */}
+        
     </div>
   )
 }
