@@ -27,6 +27,15 @@
     .linksContainer {
         left: 83vw;
     }
+    .whatsappLink:hover {
+        background-color: var(--color-darkbeige);
+    }
+    .whatsappLink:hover .linksIcons {
+        color: white;
+    }
+    .whatsappLink, .linksIcons {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 }
 @media (min-width:1023px){
     
