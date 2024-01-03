@@ -107,13 +107,17 @@
         font-size: 32px;
     }
     .productBox {
+        width: 33.3%;
+        height: 280px;
+    }
+    .curtains {
         width: 33.3% !important;
         height: 280px;
     }
     .productBoxText {
         font-size: 36px;
-        top: -52%;
-        right: -30px;
+        top: -56%;
+        right: -15px;
     }
     .imageOverlay{
         top: unset;
@@ -124,6 +128,7 @@
     .productsBoxContainer {
         width: 80%;
         margin: auto;
+        margin-bottom: 5%;
     }
     .fabric .productBox img {
         scale: 1.8;

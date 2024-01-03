@@ -52,7 +52,7 @@ function ProductsHome() {
                 return(
                     <Link 
                     to={`/${e.name}`} 
-                    className='productBox' 
+                    className='productBox curtains' 
                     onClick={()=>setShowDropdown(false)} 
                     key={i} 
                     style={{ width: i === dataCurtains.length - 3 ? '100%' : '50%' }}>
@@ -77,9 +77,9 @@ function ProductsHome() {
                         className='productBox' 
                         onClick={()=>setShowDropdown(false)} 
                         key={i} 
-                        style={{ width: i === dataFabrics.length - 3 ? '100%' : '50%' }}>
+                        style={{ width: i === dataFabrics.length - 1 ? '100%' : '33.3%' }}>
                             <div className='imageOverlay'></div>
-                            <img src={e.image} alt={e.title}/>
+                            <img style={{scale: i === dataFabrics.length - 1 && '1'}} src={e.image} alt={e.title}/>
                             <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
                         </Link>
                     )
