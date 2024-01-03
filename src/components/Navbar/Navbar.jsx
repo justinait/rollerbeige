@@ -43,11 +43,11 @@ function Navbar() {
       {showDropdown &&
         <div className='dropdownContainer'>
 
-          <Link to='/cortinas' onClick={closeDropdown}><p className='dropdownItem'>Cortinas</p></Link>
+          <Link to='/cortinas' onClick={closeDropdown} className='dropdownItem'>Cortinas</Link>
           
-          <Link to='/telas' onClick={closeDropdown}><p className='dropdownItem'>Telas</p></Link>
+          <Link to='/telas' onClick={closeDropdown} className='dropdownItem'>Telas</Link>
 
-          <Link to='/accesorios' onClick={closeDropdown}><p className='dropdownItem'>Accesorios</p></Link>
+          <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
           
         </div>
       }
