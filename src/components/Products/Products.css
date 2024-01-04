@@ -65,7 +65,7 @@
         display: flex;
         width: 90%;
         margin: 0 10% 2%;
-        padding: 0 0 10% 0;
+        padding: 5% 0;
         align-items: center;
     }
     .moreInfo{
@@ -74,7 +74,8 @@
     .imgProduct {
         margin: 0;
         height: 400px;
-        width: 40%;
+        width: 35vw;
+        min-width: 200px;
     }
     .productDescription{
         padding: 0 5%;
@@ -86,5 +87,20 @@
     }
     .productInfoContainer{
         width: 60%;
+    }
+}
+@media(min-width:1439px){
+    .imgProduct {
+        width: 30vw;
+        height: 450px;
+    }
+    .productDescription{
+        font-size: 22px;
+    }
+    .productName{
+        font-size: 32px;
+    }
+    .moreInfo {
+        font-size: 17px;
     }
 }

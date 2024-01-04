@@ -21,8 +21,8 @@
 .detailAttributeSubtitle{
     padding-left: 40px;
     font-weight: 500;
-    color: var(--color-darkgrey);
-    color: #9c9b83;
+    /* color: #9c9b83; */
+    color: #8C6C79;
     margin: 0;
 }
 ul {    

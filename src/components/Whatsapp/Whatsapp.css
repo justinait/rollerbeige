@@ -1,7 +1,7 @@
 .linksContainer {
     position: fixed;
-    bottom: 0;
-    left: 82vw;
+    bottom: 5vh;
+    left: 80vw;
     padding: 10px;
     z-index: 1000;
 }
@@ -10,9 +10,9 @@
     background-color: white;
     width: fit-content;
     display: flex;
-    padding: 15%;
+    padding: 20%;
     border-radius: 20%;
-    margin: 15% auto; 
+    margin: 25% auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .linksIcons {
@@ -42,14 +42,11 @@
     .linksIcons {
         font-size: 3em !important;
     }
-    .linksContainer {
-        left: 88vw;
-    }
 }
 @media (min-width:1279px){
     
     .linksIcons {
-        font-size: 2em !important;
+        font-size: 1.8em !important;
     }
     .linksContainer {
         left: 92vw;
