@@ -41,3 +41,35 @@
     font-weight: 500;
     padding-top: 0;
 }
+
+@media(min-width:1023px){
+    .aboutContainer img {
+        width: 65%;
+        margin: 10% 17% 0%;
+    }
+    .aboutContainer h3 {
+        font-size: 30px;
+        padding-bottom: 0;
+    }
+    .aboutText {
+        font-size: 18px;
+    }
+    .finalAbout{
+        font-size: 20px;
+    }
+}
+
+@media(min-width:1023px){
+    .aboutContainer img {
+        width: 90%;
+        margin: 10% 5% 0%;
+        height: 70vh;
+        object-position: 10% 67%;
+    }
+    .aboutText {
+        padding: 5% 5%;
+    }
+    .finalAbout {
+        padding-top: 0 !important;
+    }
+}
