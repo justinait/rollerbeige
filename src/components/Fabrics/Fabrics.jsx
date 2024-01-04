@@ -26,7 +26,7 @@ function Fabrics() {
 
       <h2> NUESTRAS TELAS</h2>
 
-      <h5 style={{marginTop: '-5%' }} > Telas Sintéticas</h5>
+      <h5 style={{marginTop: '0' }} > Telas Sintéticas</h5>
       {
         dataFabrics && dataFabrics.slice().reverse().map((e, i) =>  {
           

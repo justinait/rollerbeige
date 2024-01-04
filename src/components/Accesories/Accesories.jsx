@@ -9,7 +9,7 @@ function Accesories() {
     <div className='productsContainer'>
       <h2 style={{marginBottom: '0' }}>ACCESORIOS</h2>
 
-      <h3>Para Roller</h3>
+      <h5 style={{marginTop: '0' }}>Para Roller</h5>
       <div className='accesoriesContainer'>
         <img src={roller} alt="Roller" className='accesoriesImage' />
         <ul>
@@ -24,7 +24,7 @@ function Accesories() {
       
       </div>
       
-      <h3>Para Bandas verticales y Paneles orientales</h3>
+      <h5>Para Bandas verticales y Paneles orientales</h5>
       <div className='accesoriesContainer'>
         <img src={bandas} alt="Roller" className='accesoriesImage' />
         <ul>
@@ -35,7 +35,7 @@ function Accesories() {
         </ul>
       </div>
 
-      <h3>Para Tradicionales</h3>
+      <h5>Para Tradicionales</h5>
 
       <div className='accesoriesContainer'>
         <img src={tradicionales} alt="Roller" className='accesoriesImage' />

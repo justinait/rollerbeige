@@ -81,8 +81,8 @@ h5 {
 }
 @media (min-width: 1279px){
   h2 {    
-    padding: 5%;
-    font-size: 32px;
+    padding: 7%;
+    margin: 0;
   }
   h3, h5{
     font-size: 34px;
@@ -93,9 +93,11 @@ h5 {
   h3, h5{
     font-size: 40px;
   }
+}
+@media (min-width: 1600px){
+  
   h2{
-    padding: 7%;
-    font-size: 40px;
+    padding: 8% 0 5% 0
   }
 }
 
