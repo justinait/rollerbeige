@@ -40,6 +40,10 @@ h2 {
   font-weight: 200;
   color: var(--color-darkgrey);
   padding: 10% 0;
+
+  font-weight: 300;
+  color: #8C6C79;
+  font-size: 32px;
 }
 
 h3 {
@@ -61,15 +65,14 @@ h5 {
     font-size: 26px;
   }
   h2 {
-    padding: 8% 0 0% 0;
-    font-size: 28px;
+    font-size: 45px;
   }
 }
 
 @media (min-width: 1023px){
   h2 {
-    font-size: 36px;
-    padding: 7% 0 0%;
+    font-size: 50px;
+    /* padding: 7% 0 0%; */
     font-weight: 300;
   }
   h3 {

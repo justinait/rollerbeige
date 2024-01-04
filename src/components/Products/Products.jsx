@@ -24,7 +24,7 @@ function Products() {
   return (
     <div className='productsContainer'>
 
-      <h2> NUESTRAS CORTINAS</h2>
+      <h2 style={{marginBottom: '0' }} > NUESTRAS CORTINAS</h2>
 
       {
         dataCurtains && dataCurtains.slice().reverse().map((e, i) =>  {

@@ -6,8 +6,8 @@ import tradicionales from '/images/curtains/cortinas (5).jpg'
 
 function Accesories() {
   return (
-    <div>
-      <h2>ACCESORIOS</h2>
+    <div className='productsContainer'>
+      <h2 style={{marginBottom: '0' }}>ACCESORIOS</h2>
 
       <h3>Para Roller</h3>
       <div className='accesoriesContainer'>

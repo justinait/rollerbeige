@@ -7,8 +7,6 @@ import Accesories from '../Accesories/Accesories'
 function Promos() {
   return (
     <div>
-      <br />
-      <br />
       <Accesories/>
         <h2>OUTLET</h2>
       <div className='promosDivContainer'>
