@@ -10,10 +10,49 @@
 }
 .accesoriesContainer ul {
     width: 50vw;
-    font-size: 14px;
     margin: auto;
     text-align: left;
 }
 .accesoriesContainer ul p {
     font-size: 16px;
+}
+
+@media(min-width:639px){
+    .accesoriesContainer ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70vw;
+    }
+    .accesoriesContainer ul p {
+        font-size: 18px;
+        /* width: 40%;
+        padding: 0 5%; */
+        width: 43%;
+        padding: 0 3%;    
+    }
+}
+
+@media(min-width:1023px){
+    .accesoriesContainer {
+        display: flex;
+    }
+    .accesoriesContainer ul {
+        width: 60vw;
+        padding-right: 0;
+        padding-top: 52.5px;
+        /* la medida del h3 */
+    }
+    .accesoriesContainer ul p {
+        font-size: 23px;
+    }
+    .accesoriesImage {
+        height: 300px;
+        width: 300px;
+    }
+    .ImgTitleAccesories{
+        
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
 }

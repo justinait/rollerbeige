@@ -67,6 +67,11 @@ h5 {
   h3, h5{
     font-size: 26px;
   }
+  h3{
+    text-align: unset;
+    width: unset;
+    margin: 5% 17%;
+  }
   h2 {
     font-size: 45px;
   }
@@ -75,11 +80,13 @@ h5 {
 @media (min-width: 1023px){
   h2 {
     font-size: 50px;
-    /* padding: 7% 0 0%; */
+    padding: 7% 0;
     font-weight: 300;
   }
   h3 {
-    font-size: 40px;
+    font-size: 35px;
+    text-align: left;
+    margin: 8% 0;
   }
 }
 @media (min-width: 1279px){
