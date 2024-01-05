@@ -50,9 +50,34 @@
         width: 300px;
     }
     .ImgTitleAccesories{
-        
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
+        max-width: 23.5vw;
+    }
+}
+
+@media(min-width:1279px){
+    .accesoriesContainer {
+        padding: 0 18% 8%;
+        align-items: center;
+    }
+    
+    .ImgTitleAccesories{
+        max-width: 23.5vw;
+    }
+    .accesoriesContainer ul p {
+        margin: 1% 0;
+        font-size: 19px;
+        width: 100%;
+    }
+    .accesoriesContainer ul {
+        flex-direction: column;
+        width: 30%;
+        margin: 0;
+        padding: 0 0 0 20%;
+    }
+    .accesoriesDiv {
+
     }
 }
