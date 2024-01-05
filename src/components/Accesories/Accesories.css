@@ -1,13 +1,19 @@
-.accesoriesImage {
-    width: 40%;
-    /* height: 200px; */
-    max-height: 205px;
+.accesoriesImage { 
+    height: 200px;
+    width: 200px;
+    /* max-height: 205px; */
+    object-fit: cover;
+    object-position: top;
 }
 .accesoriesContainer {
-    display: flex;
     padding: 5%;
 }
 .accesoriesContainer ul {
+    width: 50vw;
     font-size: 14px;
-    margin: auto 0;
+    margin: auto;
+    text-align: left;
+}
+.accesoriesContainer ul p {
+    font-size: 16px;
 }
