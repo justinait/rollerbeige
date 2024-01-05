@@ -12,9 +12,10 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
           <img src={roller} alt="Roller" className='accesoriesImage' />
-          <h3>Para Roller</h3>
+          <h3 className='h3mobile'>Para Roller</h3>
         </div>
         <ul>
+          <h3 className='h3pc'>Para Roller</h3>
           <p>▫ Mecanismos Roller</p>
           <p>▫ Cadenas Roller</p>
           <p>▫ Uniones de Cadena</p>
@@ -29,9 +30,10 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
           <img src={bandas} alt="Roller" className='accesoriesImage' />
-          <h3>Para Bandas Verticales y Paneles Orientales</h3>
+          <h3 className='h3mobile h3longText'>Para Bandas Verticales y Paneles Orientales</h3>
         </div>
         <ul>
+        <h3 className='h3pc'>Para Bandas Verticales y Paneles Orientales</h3>
           <p>▫ Cadenas de giro          </p>
           <p>▫ Cadenas inferiores          </p>
           <p>▫ Pesos de cadena          </p>
@@ -43,9 +45,10 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
           <img src={tradicionales} alt="Roller" className='accesoriesImage' />
-          <h3>Para Tradicionales</h3>
+          <h3 className='h3mobile'>Para Tradicionales</h3>
         </div>
         <ul>
+          <h3 className='h3pc'>Para Tradicionales</h3>
           <p>▫ Rieles europeos y super europeos (a bastón)          </p>
           <p>▫ Barrales metápcos de 1” y ¾”          </p>
           <p>▫ Bastones de aluminio para rieles europeos          </p>
