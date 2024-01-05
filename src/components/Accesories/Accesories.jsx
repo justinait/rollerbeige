@@ -12,10 +12,10 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
           <img src={roller} alt="Roller" className='accesoriesImage' />
-          <h3 className='h3mobile'>Para Roller</h3>
+          <h6 className='accesoriesSubtitles h3mobile'>Para Roller</h6>
         </div>
         <ul>
-          <h3 className='h3pc'>Para Roller</h3>
+          <h6 className='accesoriesSubtitles h3pc'>Para Roller</h6>
           <p>▫ Mecanismos Roller</p>
           <p>▫ Cadenas Roller</p>
           <p>▫ Uniones de Cadena</p>
@@ -30,10 +30,10 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
           <img src={bandas} alt="Roller" className='accesoriesImage' />
-          <h3 className='h3mobile h3longText'>Para Bandas Verticales y Paneles Orientales</h3>
+          <h6 className='accesoriesSubtitles h3mobile h3longText'>Para Bandas Verticales y Paneles Orientales</h6>
         </div>
         <ul>
-        <h3 className='h3pc'>Para Bandas Verticales y Paneles Orientales</h3>
+          <h6 className='accesoriesSubtitles h3pc'>Para Bandas Verticales y Paneles Orientales</h6>
           <p>▫ Cadenas de giro          </p>
           <p>▫ Cadenas inferiores          </p>
           <p>▫ Pesos de cadena          </p>
@@ -45,18 +45,18 @@ function Accesories() {
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
           <img src={tradicionales} alt="Roller" className='accesoriesImage' />
-          <h3 className='h3mobile'>Para Tradicionales</h3>
+          <h6 className='accesoriesSubtitles h3mobile'>Para Tradicionales</h6>
         </div>
         <ul>
-          <h3 className='h3pc'>Para Tradicionales</h3>
-          <p>▫ Rieles europeos y super europeos (a bastón)          </p>
-          <p>▫ Barrales metápcos de 1” y ¾”          </p>
-          <p>▫ Bastones de aluminio para rieles europeos          </p>
-          <p>▫ Ganchitos para cabezales de cortina          </p>
-          <p>▫ Patines para rieles          </p>
-          <p>▫ Cruces europeos y super europeos          </p>
-          <p>▫ Soportes de barrales          </p>
-          <p>▫ Ménsulas estándar y XL          </p>
+          <h6 className='accesoriesSubtitles h3pc'>Para Tradicionales</h6>
+          <p>▫ <strong>Rieles europeos</strong> y super europeos (a bastón)          </p>
+          <p>▫ <strong> Barrales metálicos</strong> de 1” y ¾”          </p>
+          <p>▫ <strong>Bastones de aluminio</strong> para rieles europeos          </p>
+          <p>▫ <strong>Ganchitos</strong> para cabezales de cortina          </p>
+          <p>▫ <strong>Patines</strong> para rieles          </p>
+          <p>▫ <strong>Cruces europeos</strong> y super europeos          </p>
+          <p>▫ <strong>Soportes</strong> de barrales          </p>
+          <p>▫ <strong>Ménsulas</strong> estándar y XL          </p>
         </ul>     
       </div>
     </div>
