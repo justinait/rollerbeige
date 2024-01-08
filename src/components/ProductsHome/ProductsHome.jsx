@@ -74,10 +74,12 @@ function ProductsHome() {
                     return(
                         <Link 
                         to={`/${e.name}`} 
-                        className='productBox' 
+                        // className='productBox' 
+                        className={i === dataFabrics.length - 1 ? 'productBox fillBoxItem' : 'productBox'}
                         onClick={()=>setShowDropdown(false)} 
                         key={i} 
-                        style={{ width: i === dataFabrics.length - 1 ? '100%' : '33.3%' }}>
+                        // style={{ className: i === dataFabrics.length - 1 ? 'productBox fillBoxItem' : 'productBox' }}
+                        >
                             <div className='imageOverlay'></div>
                             <img style={{scale: i === dataFabrics.length - 1 && '1'}} src={e.image} alt={e.title}/>
                             <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
