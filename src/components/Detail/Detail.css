@@ -31,9 +31,11 @@ ul {
 }
 .arrow {
   width: fit-content;
-  display: block;    
+  display: flex;    
+  align-items: center;
   padding-top: 5%;
   padding: 5% 0 0 3%;
+  font-size: 10px;
 }
 
 @media (min-width: 1023px){
@@ -92,6 +94,9 @@ ul {
     }
     .detailsListItem {
         padding: 1% 0;
+    }
+    .arrow {
+        font-size: 12px;
     }
 }
 

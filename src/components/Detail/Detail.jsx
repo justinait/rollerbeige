@@ -47,8 +47,8 @@ function Detail() {
   return (
     <div className='detailContainer'>
       {isFabric ?      
-      <Link to='/telas' className='arrow'>      <ArrowBackIcon/>      </Link>  :
-      <Link to='/cortinas' className='arrow'>      <ArrowBackIcon/>      </Link> 
+      <Link to='/telas' className='arrow'>      <ArrowBackIcon/> Telas      </Link>  :
+      <Link to='/cortinas' className='arrow'>      <ArrowBackIcon/> Cortinas      </Link> 
       }
 
       <h3>{name}</h3>
@@ -80,7 +80,10 @@ function Detail() {
           );
         })}
       </div>
-      
+      {isFabric ?      
+      <Link to='/telas' className='arrow'>      <ArrowBackIcon/> Telas      </Link>  :
+      <Link to='/cortinas' className='arrow'>      <ArrowBackIcon/> Cortinas      </Link> 
+      }
     </div>
   );
 }
