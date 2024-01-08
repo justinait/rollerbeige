@@ -123,7 +123,7 @@
         padding: 0 5% 0 0;
     }
     .navbarItemsContainer{
-        width: 36.6%;
+        width: 45%;
         justify-content: flex-end;
     }
 
@@ -135,10 +135,10 @@
 
 @media (min-width: 1279px){
     .navbarItemsContainer{
-        width: 55vw;
+        width: 50vw;
     }
     .dropdownContainer{
-        width: 20vw;
+        width: 26vw;
     }
 }
 @media (min-width: 1439px){
