@@ -48,7 +48,9 @@ function Navbar() {
           <Link to='/telas' onClick={closeDropdown} className='dropdownItem'>Telas</Link>
 
           <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
-          
+
+          <Link to='/saldos' onClick={closeDropdown} className='dropdownItem'>Saldos</Link>
+
         </div>
       }
 

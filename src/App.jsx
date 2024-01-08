@@ -11,6 +11,7 @@ import Promos from './components/Promos/Promos'
 import ProductsProvider from './context/ProductsProvider'
 import Fabrics from './components/Fabrics/Fabrics'
 import Whatsapp from './components/Whatsapp/Whatsapp'
+import Accesories from './components/Accesories/Accesories'
 
 function App() {
 
@@ -30,7 +31,8 @@ function App() {
         
         <Route path='/cortinas' element={< Products />} />
         <Route path='/telas' element={< Fabrics />} />
-        <Route path='/accesorios' element={< Promos />} />
+        <Route path='/accesorios' element={< Accesories />} />
+        <Route path='/saldos' element={< Promos />} />
         
         <Route path='/:curtain' element={< Detail />} />
         
