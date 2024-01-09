@@ -6,7 +6,7 @@ import promo2 from '/images/curtains/cortinas (2).jpg'
 function Promos() {
   return (
     <div className='productsContainer'>
-      <h2>SALDOS</h2>
+      <h2>SALE</h2>
       <div className='promosDivContainer'>
         <div className='promoContainer'>
           <img src={promo1} alt="" className='promoImage' />

@@ -49,7 +49,7 @@ function Navbar() {
 
           <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
 
-          <Link to='/saldos' onClick={closeDropdown} className='dropdownItem'>Saldos</Link>
+          <Link to='/sale' onClick={closeDropdown} className='dropdownItem'>Sale</Link>
 
         </div>
       }

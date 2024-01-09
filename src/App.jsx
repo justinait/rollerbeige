@@ -32,7 +32,7 @@ function App() {
         <Route path='/cortinas' element={< Products />} />
         <Route path='/telas' element={< Fabrics />} />
         <Route path='/accesorios' element={< Accesories />} />
-        <Route path='/saldos' element={< Promos />} />
+        <Route path='/sale' element={< Promos />} />
         
         <Route path='/:curtain' element={< Detail />} />
         
