@@ -1,17 +1,27 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '/logo/logoNavbar.png'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { onLogOut } from '../../firebaseConfig';
+import { AuthContext } from '../../context/AuthContext';
 
 function Navbar() {
 
-  const windowWidth = window.innerWidth;
+  const {handleLogoutAuth, user} = useContext(AuthContext);
   
+  const windowWidth = window.innerWidth;
+  let navigate = useNavigate()
+
   const [showDropdown, setShowDropdown] = (windowWidth <= 1023) ? useState(false): useState(true)
   
+  const handleLogOut = () => {
+    onLogOut();
+    handleLogoutAuth()
+    navigate('/')
+  }
+
   const handleClick = () => {
     if (windowWidth <= 1023) {
-      // scrollToProducts();
       setShowDropdown(!showDropdown);
     }
   }
@@ -52,6 +62,18 @@ function Navbar() {
           <Link to='/sale' onClick={closeDropdown} className='dropdownItem'>Sale</Link>
 
         </div>
+        /* dashboard */
+        // {
+        //   user.rol === import.meta.env.VITE_ROLADMIN &&
+        //   <li>
+        //     <Link to={"/dashboard"}>
+        //       <div className="listItem">
+        //         <DashboardIcon className="listItemIcon"/>
+        //         <span className="listItemText">{"Dashboard"}</span>
+        //       </div>
+        //     </Link>
+        //   </li>
+        // }
       }
 
     </div>

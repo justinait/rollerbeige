@@ -9,7 +9,7 @@ import {
 } from "firebase/auth"
 
 import {getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage"
-// import {v4} from "uuid"
+import {v4} from "uuid"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDC6o9IF9LZXwjA8uGLmRBfBchBoqaRijQ",
@@ -60,4 +60,4 @@ export const uploadFile = async (file) =>{
   return url;
 }
 
-export default db;
+// export default db;

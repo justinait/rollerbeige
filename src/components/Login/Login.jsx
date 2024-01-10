@@ -4,10 +4,14 @@ import {db, onSignIn} from '../../firebaseConfig'
 import {collection, doc, getDoc} from "firebase/firestore"
 import { AuthContext } from "../../context/AuthContext";
 import './Login.css'
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 function Login() {
   
   const {handleLogin} = useContext(AuthContext)
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const [userCredentials, setUserCredentials] = useState({
     email:'',
@@ -20,6 +24,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Form submitted');
     try {
       const res = await onSignIn(userCredentials);
       
@@ -31,9 +36,9 @@ function Login() {
 
         let finallyUser = {
           email: res.user.email,
-          rol: userDoc.data().rol
+          // rol: userDoc.data().rol
         }
-
+        console.log('okk');
         handleLogin(finallyUser);
         navigate('/');
       }  
@@ -41,8 +46,7 @@ function Login() {
       console.log(error);  
     }
   }
-  const navigate = useNavigate();
-
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="form">
@@ -57,16 +61,20 @@ function Login() {
         </div>
         <div className="passwordContainer">
           <input
+            type={showPassword ? "text" : "password"}
             name="password"
-            type="password"
+            // autoComplete="current-password"
             onChange={handleChange}
             placeholder="Contraseña"
             className="input"
           />
+          <span
+            onClick={handleClickShowPassword}
+            className="passwordToggle"
+          >
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+          </span>
         </div>
-        <Link to="/forgot-password" className="link">
-          ¿Olvidaste tu contraseña?
-        </Link>
         <button
           type="submit"
           className="button"

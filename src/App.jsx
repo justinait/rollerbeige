@@ -18,8 +18,8 @@ import AuthContextComponent from './context/AuthContext'
 function App() {
 
   return (
-    <AuthContextComponent>
-      <ProductsProvider>
+    <ProductsProvider>
+      <AuthContextComponent>
         <BrowserRouter>
         
         <Navbar />
@@ -45,8 +45,8 @@ function App() {
         <Footer />
 
         </BrowserRouter>
-      </ProductsProvider>
-    </AuthContextComponent>
+      </AuthContextComponent>
+    </ProductsProvider>
 
   )
 }
