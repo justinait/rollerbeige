@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { onLogOut } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Dashboard } from '@mui/icons-material';
 
 function Navbar() {
 
@@ -44,7 +45,7 @@ function Navbar() {
   };
 
   return (
-    <div className='navbar'>
+    <div className='header'>
       <Link to='/' style={{display: 'flex' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
       
       <div className='navbarItemsContainer'>
@@ -65,10 +66,9 @@ function Navbar() {
           {
             isLogged &&
             <>
-              <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'>Dashboard</Link>
+              <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'><Dashboard/></Link>
               
-              <LogoutIcon className="listItemIcon" onClick={handleLogOut} />
-              {/* <span className="listItemText" onClick={handleLogOut}>Cerrar sesión</span> */}
+              <p className="dropdownItem"><LogoutIcon onClick={handleLogOut} /></p>
               
             </>
               

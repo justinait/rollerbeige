@@ -14,7 +14,8 @@ import Whatsapp from './components/Whatsapp/Whatsapp'
 import Accesories from './components/Accesories/Accesories'
 import Login from './components/Login/Login'
 import AuthContextComponent from './context/AuthContext'
-import { Dashboard } from '@mui/icons-material'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App() {
 

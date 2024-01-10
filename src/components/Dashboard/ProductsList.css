@@ -1,0 +1,10 @@
+.dashboardContainer {
+    min-height: 90vh;
+    padding-top: 10vh;
+}
+.tableRowDashboard{
+    width: 100vw;
+}
+.tableRowDashboard td{
+    max-width: 20%;
+}
