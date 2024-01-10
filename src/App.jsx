@@ -14,6 +14,7 @@ import Whatsapp from './components/Whatsapp/Whatsapp'
 import Accesories from './components/Accesories/Accesories'
 import Login from './components/Login/Login'
 import AuthContextComponent from './context/AuthContext'
+import { Dashboard } from '@mui/icons-material'
 
 function App() {
 
@@ -37,8 +38,9 @@ function App() {
           <Route path='/telas' element={< Fabrics />} />
           <Route path='/accesorios' element={< Accesories />} />
           <Route path='/sale' element={< Promos />} />
-          
           <Route path='/:curtain' element={< Detail />} />
+          <Route path='/dashboard' element={< Dashboard />} />
+          
           
         </Routes>
 

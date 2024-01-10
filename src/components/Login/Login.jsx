@@ -24,7 +24,6 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted');
     try {
       const res = await onSignIn(userCredentials);
       
@@ -39,6 +38,8 @@ function Login() {
           // rol: userDoc.data().rol
         }
         console.log('okk');
+        console.log('VITE_ROLADMIN:', import.meta.env.VITE_ROLADMIN);
+
         handleLogin(finallyUser);
         navigate('/');
       }  

@@ -4,10 +4,11 @@ import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { onLogOut } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Navbar() {
 
-  const {handleLogoutAuth, user} = useContext(AuthContext);
+  const {handleLogoutAuth, user, isLogged} = useContext(AuthContext);
   
   const windowWidth = window.innerWidth;
   let navigate = useNavigate()
@@ -61,19 +62,19 @@ function Navbar() {
 
           <Link to='/sale' onClick={closeDropdown} className='dropdownItem'>Sale</Link>
 
+          {
+            isLogged &&
+            <>
+              <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'>Dashboard</Link>
+              
+              <LogoutIcon className="listItemIcon" onClick={handleLogOut} />
+              {/* <span className="listItemText" onClick={handleLogOut}>Cerrar sesión</span> */}
+              
+            </>
+              
+            
+          }
         </div>
-        /* dashboard */
-        // {
-        //   user.rol === import.meta.env.VITE_ROLADMIN &&
-        //   <li>
-        //     <Link to={"/dashboard"}>
-        //       <div className="listItem">
-        //         <DashboardIcon className="listItemIcon"/>
-        //         <span className="listItemText">{"Dashboard"}</span>
-        //       </div>
-        //     </Link>
-        //   </li>
-        // }
       }
 
     </div>
