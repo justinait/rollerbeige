@@ -6,6 +6,15 @@
     background: #373737;
     flex-direction: row-reverse;
 }
+.justina {
+    background: #373737;
+}
+.justina p {
+    padding: 2% 5%;
+    text-align: right;
+    font-size: 10px;
+    margin: 0;
+}
 
 .logoFooter {
     width: 110px;
@@ -61,6 +70,10 @@
     .footerLinks {
         font-size: large;
         font-weight: 300;
+    }
+    .justina p {
+        padding: 1% 2%;
+        font-size: 12px;
     }
 }
 @media(min-width:1023px) {
