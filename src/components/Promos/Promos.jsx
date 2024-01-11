@@ -31,11 +31,11 @@ function Promos() {
           products.map(e=>{
             return(
               <div key={e.id}  className='promoContainer'>
-                <div>
-                  <img src={e.image} alt={e.title} className='promoImage' />
-                  <p className='promoTitle'>{e.title}</p>
-                  <p className='promoPrice'>$ {e.unit_price}</p>
-                </div>
+                
+                <img src={e.image} alt={e.title} className='promoImage' />                
+                <p className='promoTitle'>{e.title}</p>
+                <p className='promoPrice'>$ {e.unit_price}</p>
+
               </div>
             )
           })

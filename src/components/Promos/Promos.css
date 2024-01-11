@@ -14,7 +14,8 @@
 }
 .promoImage {
     width: 100%;
-    height: 150px;
+    height: auto;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 14px;
 }
@@ -35,10 +36,8 @@
     margin: 5px;
     color: var(--color-darkgrey);
     font-family: 'Raleway';
-
-    font-family: 'poppins';
+    /* font-family: 'poppins'; */
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .promoPrice {
@@ -48,4 +47,39 @@
     color: var(--color-darkgrey);
     color: black;
     font-weight: 600;
+    font-size: 20px;
+}
+
+@media(min-width: 639px){
+    .promoTitle{
+        font-size: 20px;
+    }
+    .promoPrice {
+        font-size: 26px;
+    }
+}
+@media(min-width: 1023px){
+    .promoContainer {
+        margin: 1%;
+        border: 3px solid #C1C09F;
+        width: 31%;
+    }
+    .promosDivContainer{
+        justify-content: flex-start;
+        margin: 5%;
+    }
+    .promoTitle{
+        font-size: 24px;
+    }
+    .promoPrice {
+        font-size: 26px;
+    }
+}
+@media(min-width: 1279px){
+
+    .promosDivContainer{
+    
+        width: 70vw;
+        margin: auto;
+    }
 }
