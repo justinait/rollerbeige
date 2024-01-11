@@ -30,8 +30,6 @@ function ProductsList({products, setIsChange}) {
         handleShow();
     }
     
-    let saleProducts = products.slice(1, products.length)
-    
     return (
         <div>
         
@@ -54,7 +52,7 @@ function ProductsList({products, setIsChange}) {
                     </tr>
                 </thead>
                 <tbody>
-                    {saleProducts.map((e, i)=>{
+                    {products.map((e, i)=>{
                         return (
                             <tr key={e.id} className='tableRowDashboard'>
                                 
