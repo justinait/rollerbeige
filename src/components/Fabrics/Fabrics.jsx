@@ -52,7 +52,7 @@ function Fabrics() {
       }
 
       <h5> Telas Tradicionales</h5>
-      <p className='traditionalDescription'>
+      {/* <p className='traditionalDescription'>
         En Roller Beige, estamos comprometidos con la excelencia y la satisfacción del
         cliente, y eso se refleja en cada detalle de nuestras telas de género. Antes de llegar a
         tus ventanas, cada cortina de género ha pasado por un riguroso proceso de calidad,
@@ -60,7 +60,7 @@ function Fabrics() {
         Cada una de nuestras telas tradicionales ha sido probada y aprobada por nosotros
         mismos, asegurando que cumplan con estabilidad dimensional y preservando la
         intensidad de los colores.
-      </p>
+      </p> */}
       {
         dataFabrics && dataFabrics.slice().reverse().map((e, i) =>  {
           

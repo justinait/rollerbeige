@@ -40,6 +40,12 @@ ul {
   font-size: 10px;
 }
 
+@media (min-width: 639px){
+ 
+    .detailsListContainer{
+        padding: 0 7%;
+    }
+}
 @media (min-width: 1023px){
     
     .detailImage {

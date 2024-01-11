@@ -49,15 +49,17 @@ h2 {
 
 h3 {
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 21px;
   color: var(--color-darkgrey);
+  padding: 5% 0;
 }
 h5 {
   text-align: center;
   font-weight: 300;
   font-size: 21px;
   color: var(--color-darkgrey);
+  padding-bottom: 5%;
 }
 
 @media (min-width:639px){

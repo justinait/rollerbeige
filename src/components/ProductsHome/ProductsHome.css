@@ -55,8 +55,8 @@
     font-family: 'Poppins';
     
 }
-.productBoxText strong {
-    font-weight: 600;
+strong {
+    font-weight: 600 !important;
 }
 #products h3 {
     margin-bottom: 0;

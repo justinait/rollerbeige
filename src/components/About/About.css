@@ -28,7 +28,7 @@
 .aboutContainer h3 {
     text-transform: uppercase;
     text-align: left;
-    font-weight: 800;
+    font-weight: 600;
     font-size: large;
     color: var(--color-darkgrey);
     padding-bottom: 5%;
