@@ -3,7 +3,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { db } from '../../firebaseConfig';
 import {deleteDoc, doc} from "firebase/firestore"
 import EditAddModal from './EditAddModal';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import EditIcon from '@mui/icons-material/Edit';
 import './ProductsList.css'
@@ -14,7 +13,6 @@ function ProductsList({products, setIsChange}) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
   
     const handleOpen = (product) => {
         setShow(true);
@@ -24,9 +22,6 @@ function ProductsList({products, setIsChange}) {
     const deleteProduct = (id) => {
         deleteDoc(doc(db, "products", id));
         setIsChange(true);
-    }
-    const addProduct = () => {
-        handleShow();
     }
     
     return (
@@ -81,7 +76,7 @@ function ProductsList({products, setIsChange}) {
                 </tbody>
             </table>    :    
             
-            <p>No hay promociones por el momento</p>
+            <p>No hay promociones por el momento.</p>
         
         }
     </div>
