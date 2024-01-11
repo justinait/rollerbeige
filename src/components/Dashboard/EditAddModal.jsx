@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import EditIcon from '@mui/icons-material/Edit';
 import { db, uploadFile } from '../../firebaseConfig';
 import {addDoc, collection, updateDoc, doc} from "firebase/firestore"
 
@@ -126,12 +125,12 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>
-            Cancelar
+          Cancelar
         </Button>
         
         {
-           !isLoading &&
-           <Button type='submit' onClick={handleSubmit} variant="primary">Guardar</Button>
+          !isLoading &&
+          <Button type='submit' onClick={handleSubmit} variant="primary">Guardar</Button>
         }
         
     </Modal.Footer>

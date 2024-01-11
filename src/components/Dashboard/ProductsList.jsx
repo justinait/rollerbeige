@@ -33,14 +33,13 @@ function ProductsList({products, setIsChange}) {
     return (
         <div>
         
-        <button onClick={()=>handleOpen(null)}>Agregar Nuevo Producto</button>
+        <button className='dashboardButton addButton' onClick={()=>handleOpen(null)}>Agregar Nuevo Producto</button>
         
         {
-            // products.length > 1 ? 
-            <table>
+            products.length > 1 ? 
+            <table className='tableDiv'>
                 <thead>
                     <tr>
-                        {/* <th>#</th> */}
 
                         <th>Título</th>
                         <th>Descrip.</th>
@@ -48,7 +47,7 @@ function ProductsList({products, setIsChange}) {
                         <th>Foto</th>
 
                         <th>Acción</th>
-                    {/* 7 */}
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -56,16 +55,14 @@ function ProductsList({products, setIsChange}) {
                         return (
                             <tr key={e.id} className='tableRowDashboard'>
                                 
-                                {/* <td> {i+1} </td> */}
-                                
                                 <td>{e.title}</td>
                                 <td>{e.description}</td>
                                 <td>{e.unit_price}</td>
                                 <td><img src={e.image} width={80} alt={e.title} /></td>
                                 
                                 <td>
-                                    <button onClick={()=> handleOpen(e) }> <EditIcon/> </button>
-                                    <button onClick={()=>deleteProduct(e.id)}> <DeleteIcon/></button>
+                                    <button className='dashboardButton editButton' onClick={()=> handleOpen(e) }> <EditIcon/> </button>
+                                    <button className='dashboardButton deleteButton' onClick={()=>deleteProduct(e.id)}> <DeleteIcon/></button>
                                 </td>
 
                                 <Modal
@@ -83,9 +80,9 @@ function ProductsList({products, setIsChange}) {
                         
 
                 </tbody>
-            </table>        
+            </table>    :    
             
-            // <p>No hay promociones por el momento</p>
+            <p>No hay promociones por el momento</p>
         
         }
     </div>
