@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../../firebaseConfig'
 import {getDocs, collection} from "firebase/firestore"
 import './Promos.css'
-import promo1 from '/images/curtains/cortinas (3).jpg'
-import promo2 from '/images/curtains/cortinas (2).jpg'
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Promos() {
@@ -43,7 +40,7 @@ function Promos() {
         {
           products.map(e=>{
             return(
-              <div key={e.id}  className='promoContainer' onClick={()=>handleClick(e)}>
+              <div key={e.id}  className='promoContainer' onClick={()=>handleClick(e)} style={{ cursor: 'pointer' }}>
                 
                 <img src={e.image} alt={e.title} className='promoImage' />                
                 <p className='promoTitle'>{e.title}</p>
