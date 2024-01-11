@@ -21,6 +21,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   color:var(--color-darkgrey);
+  font-family: 'Poppins';
 }
 a {
   color: var(--color-darkgrey);
