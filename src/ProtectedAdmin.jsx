@@ -1,17 +1,15 @@
 import React, { useContext } from 'react'
-import { AuthContext } from '../context/AuthContext';
 import { Navigate, Outlet } from 'react-router-dom';
+import { AuthContext } from './context/AuthContext';
 
 function ProtectedAdmin() {
-  const {user} = useContext(AuthContext);
-  const rolAdmin = import.meta.env.VITE_ROLADMIN
+  const {isLogged} = useContext(AuthContext);
   return (
     <>
       {
-        user?.rol === rolAdmin ?
+        isLogged ?
         <Outlet /> :
         <Navigate to="/" />
-      
       }
     </>
   )

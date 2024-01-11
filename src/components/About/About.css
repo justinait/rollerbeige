@@ -10,14 +10,12 @@
     height: 55vh;
     object-fit: cover;
     border-radius: 5px;
-    /* margin: 10% 0 0; */
 }
 .aboutImgDesktop{
     display: none;
 }
 
 .aboutText {
-    /* border: 2px solid #C1C09F; */
     color: var(--color-darkgrey);
     padding: 5% 3%;
     border-radius: 5px;
