@@ -24,6 +24,9 @@
     .servicesContainer {
         font-size: clamp(0.7rem, 6vw - 2rem, 3rem);
     }
+    .services {
+        margin-top: 5%;
+    }
 }
 @media(min-width:1279px){
     .servicesContainer {
