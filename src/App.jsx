@@ -12,36 +12,44 @@ import ProductsProvider from './context/ProductsProvider'
 import Fabrics from './components/Fabrics/Fabrics'
 import Whatsapp from './components/Whatsapp/Whatsapp'
 import Accesories from './components/Accesories/Accesories'
+import Login from './components/Login/Login'
+import AuthContextComponent from './context/AuthContext'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App() {
 
   return (
     <ProductsProvider>
-      <BrowserRouter>
-      
-      <Navbar />
-      <CheckScroll/>
-      <Whatsapp />
-
-      <Routes className='appRoutes'>
-
-        <Route path='/' element={< Home />} />
+      <AuthContextComponent>
+        <BrowserRouter>
         
-        <Route path='/about' element={< About />} />
-        
-        <Route path='/cortinas' element={< Products />} />
-        <Route path='/telas' element={< Fabrics />} />
-        <Route path='/accesorios' element={< Accesories />} />
-        <Route path='/sale' element={< Promos />} />
-        
-        <Route path='/:curtain' element={< Detail />} />
-        
-      </Routes>
+        <Navbar />
+        <CheckScroll/>
+        <Whatsapp />
 
-      <Footer />
+        <Routes className='appRoutes'>
 
-    </BrowserRouter>
-  </ProductsProvider>
+          <Route path='/' element={< Home />} />
+          <Route path='/entrar' element={< Login />} />
+          
+          <Route path='/about' element={< About />} />
+          
+          <Route path='/cortinas' element={< Products />} />
+          <Route path='/telas' element={< Fabrics />} />
+          <Route path='/accesorios' element={< Accesories />} />
+          <Route path='/sale' element={< Promos />} />
+          <Route path='/:curtain' element={< Detail />} />
+          <Route path='/dashboard' element={< Dashboard />} />
+          
+          
+        </Routes>
+
+        <Footer />
+
+        </BrowserRouter>
+      </AuthContextComponent>
+    </ProductsProvider>
 
   )
 }

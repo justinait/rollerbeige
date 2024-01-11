@@ -1,17 +1,29 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '/logo/logoNavbar.png'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { onLogOut } from '../../firebaseConfig';
+import { AuthContext } from '../../context/AuthContext';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { Dashboard } from '@mui/icons-material';
 
 function Navbar() {
 
-  const windowWidth = window.innerWidth;
+  const {handleLogoutAuth, user, isLogged} = useContext(AuthContext);
   
+  const windowWidth = window.innerWidth;
+  let navigate = useNavigate()
+
   const [showDropdown, setShowDropdown] = (windowWidth <= 1023) ? useState(false): useState(true)
   
+  const handleLogOut = () => {
+    onLogOut();
+    handleLogoutAuth()
+    navigate('/')
+  }
+
   const handleClick = () => {
     if (windowWidth <= 1023) {
-      // scrollToProducts();
       setShowDropdown(!showDropdown);
     }
   }
@@ -33,7 +45,7 @@ function Navbar() {
   };
 
   return (
-    <div className='navbar'>
+    <div className='header'>
       <Link to='/' style={{display: 'flex' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
       
       <div className='navbarItemsContainer'>
@@ -51,6 +63,17 @@ function Navbar() {
 
           <Link to='/sale' onClick={closeDropdown} className='dropdownItem'>Sale</Link>
 
+          {
+            isLogged &&
+            <>
+              <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'><Dashboard/></Link>
+              
+              <p className="dropdownItem"><LogoutIcon onClick={handleLogOut} /></p>
+              
+            </>
+              
+            
+          }
         </div>
       }
 
