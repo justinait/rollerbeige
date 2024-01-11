@@ -80,12 +80,6 @@ h5 {
   h3 {
     font-size: 40px;
   }
-  /* h3 {
-    font-size: 35px;
-    text-align: left;
-    margin: 8% 0;
-    width: 125%;
-  } */
 }
 @media (min-width: 1279px){
   h2 {    
@@ -118,10 +112,6 @@ h5 {
     font-size: 28px;
   }
 }
-
-/* ::-webkit-scrollbar {
-  width: 15px;
-} */
 
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;

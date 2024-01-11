@@ -41,7 +41,6 @@ export const onSignIn = async ({email, password}) => {
 
 export const onLogOut = () => {
   signOut(auth);
-  console.log('cerro');
 }
 
 export const forgotPassword = async ({email}) => {
@@ -59,5 +58,3 @@ export const uploadFile = async (file) =>{
   let url = await getDownloadURL(storageRef)
   return url;
 }
-
-// export default db;

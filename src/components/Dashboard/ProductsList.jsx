@@ -17,7 +17,6 @@ function ProductsList({products, setIsChange}) {
     const handleShow = () => setShow(true);
   
     const handleOpen = (product) => {
-        // handleShow();
         setShow(true);
         setProductSelected(product);
     }
