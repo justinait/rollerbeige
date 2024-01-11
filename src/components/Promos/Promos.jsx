@@ -3,6 +3,7 @@ import { db } from '../../firebaseConfig'
 import {getDocs, collection} from "firebase/firestore"
 import './Promos.css'
 import Modal from 'react-bootstrap/Modal';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Promos() {
   const [products, setProducts] = useState([]);
@@ -52,13 +53,13 @@ function Promos() {
         }
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{selectedItem?.title} </Modal.Title>
+            <Modal.Title className='modalPromoTitle'>{selectedItem?.title} </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <img src={selectedItem?.image} className='modalPromoImage' alt="" />
-            <p>{selectedItem?.description}</p>
-            <p>${selectedItem?.unit_price}</p>
-            <p>Consultá por este producto</p>
+            <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
+            <p className='modalPromoDescription'>{selectedItem?.description}</p>
+            <p className='modalWsp'>Consultá por este producto <WhatsAppIcon fontSize='16px'/> </p>
           </Modal.Body>
           
         </Modal>

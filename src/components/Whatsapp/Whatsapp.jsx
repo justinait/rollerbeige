@@ -1,7 +1,7 @@
 import React from 'react'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { Link } from 'react-router-dom';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Link } from 'react-router-dom';
 import './Whatsapp.css'
 
 function Whatsapp() {
