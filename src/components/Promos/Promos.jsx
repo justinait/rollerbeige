@@ -4,6 +4,7 @@ import {getDocs, collection} from "firebase/firestore"
 import './Promos.css'
 import Modal from 'react-bootstrap/Modal';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Link } from 'react-router-dom';
 
 function Promos() {
   const [products, setProducts] = useState([]);
@@ -59,7 +60,7 @@ function Promos() {
             <img src={selectedItem?.image} className='modalPromoImage' alt="" />
             <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
             <p className='modalPromoDescription'>{selectedItem?.description}</p>
-            <p className='modalWsp'>Consultá por este producto <WhatsAppIcon fontSize='16px'/> </p>
+            <Link target='_blank' to={`https://api.whatsapp.com/send?phone=5493434282937&text=Hola!%20Quiero%20consultar%20por:%20${selectedItem.title}%20`}><p className='modalWsp'>Consultá por este producto <WhatsAppIcon fontSize='16px'/> </p>            </Link>
           </Modal.Body>
           
         </Modal>
