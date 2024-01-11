@@ -1,5 +1,6 @@
 .promosDivContainer {
     display: flex;
+    flex-wrap: wrap;
     padding-bottom: 10vh;
 }
 
@@ -9,6 +10,7 @@
     border: 2px solid #C1C09F;
     width: 45%;
     border-radius: 20px;
+    margin-bottom: 5%;
 }
 .promoImage {
     width: 100%;
