@@ -57,15 +57,13 @@ function Promos() {
           <Modal.Header closeButton>
             <Modal.Title>{selectedItem?.title} </Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
+          <Modal.Body>
+            <img src={selectedItem?.image} className='modalPromoImage' alt="" />
+            <p>{selectedItem?.description}</p>
+            <p>${selectedItem?.unit_price}</p>
+            <p>Consultá por este producto</p>
+          </Modal.Body>
+          
         </Modal>
       </div>
     </div>
