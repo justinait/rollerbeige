@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Promos() {
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState([]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
