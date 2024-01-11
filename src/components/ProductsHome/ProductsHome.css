@@ -43,7 +43,7 @@
 
 .productBoxText {
     position: relative;
-    top: -85%;
+    top: -60%;
     right: -6%;
     color: white;
     font-size: 18px;
@@ -76,6 +76,7 @@
     }
     .productBoxText {
         font-size: 29px;
+        top: -65%;
     }
 }
 
@@ -119,7 +120,7 @@
     }
     .productBoxText {
         font-size: 36px;
-        top: -56%;
+        top: -42%;
         right: -15px;
     }
     .imageOverlay{
@@ -144,7 +145,6 @@
 @media (min-width: 1439px){
     
     .productBoxText {
-        top: -56%;
         right: -22px;
     }
 }
