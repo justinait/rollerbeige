@@ -97,6 +97,7 @@
     .dropdownContainer{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 30vw;
         background: unset;
         position: unset;
