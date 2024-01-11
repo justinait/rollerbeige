@@ -60,7 +60,7 @@
 
 @media (min-width:639px){
     .logoNavbar {
-        width: 200px;
+        width: 250px;
     }
     
     .navbarItemsContainer {
@@ -123,6 +123,10 @@
 }
 
 @media (min-width: 1279px){
+    
+    .logoNavbar {
+        width: 220px;
+    }
     .navbarItemsContainer{
         width: 50vw;
     }

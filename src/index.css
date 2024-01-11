@@ -44,7 +44,7 @@ h2 {
 
   font-weight: 300;
   color: #8C6C79;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 h3 {
@@ -95,14 +95,17 @@ h5 {
   h3, h5{
     font-size: 34px;
   }
-  /* h3{
-    font-size: 24px;
-  } */
+  h3{
+    padding: 2% 0 0;
+  }
 }
 @media (min-width: 1439px){
   
   h3, h5{
     font-size: 40px;
+  }
+  h5{
+    padding-bottom: 2%;
   }
 }
 @media (min-width: 1600px){

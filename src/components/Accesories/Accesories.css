@@ -36,6 +36,8 @@
         text-align: unset;
         width: unset;
         margin: 5% 24%;
+        font-weight: 500;
+        font-size: 22px;
     }
     .accesoriesImage { 
         height: 300px;

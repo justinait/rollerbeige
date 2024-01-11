@@ -28,11 +28,10 @@
 @media(min-width:1279px){
     .servicesContainer {
         border-radius: 30px;
-        padding: 6% 0% 6% 10%;
+        padding: 6% 0% 6% 8%;
         border: 4px solid #C1C09F;
         color: white;
         margin: 8% auto;
-        /* font-size: clamp(0.7rem, 6vw - 2rem, 1.5rem); */
         display: flex;
         width: 65vw;
         flex-wrap: wrap;
@@ -55,7 +54,7 @@
         flex-direction: row;
         justify-content: flex-start;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 19px;
     }
     .servicesDiv{
         width: 50%;
@@ -72,12 +71,12 @@
 
 @media(min-width:1439px){
     .servicesContainer {
-        margin: 5% auto;
-        padding: 4% 0% 4% 10%;
+        margin: 5% auto;    
+        padding: 4% 0% 4% 7%;
         width: 60vw;
     }
     .servicesContainer div{
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .services {
