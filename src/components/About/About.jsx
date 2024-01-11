@@ -26,7 +26,6 @@ function About() {
         <br />
         <br />
         
-        {/* <img src={image2} alt="" /> */}
         <h3>Por qué elegirnos</h3>
       
         Nuestra experiencia y profesionalismo en el mundo de las cortinas nos

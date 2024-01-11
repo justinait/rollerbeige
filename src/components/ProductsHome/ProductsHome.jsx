@@ -1,16 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './ProductsHome.css'
-// import blackout from '/images/fabrics/black clasico.jpg'
-// import sunscreen from '/images/fabrics/sunscreen4.png'
-// import traslucida from '/images/fabrics/traslucida.jpg'
-// import eclipse from '/images/fabrics/duo2.jpg'
-// import lino from '/images/fabrics/linorustico.jpeg'
-// import gasalino from '/images/fabrics/gasalino.jpg'
-// import gross from '/images/fabrics/gross.jpg'
-// import tusor from '/images/fabrics/tusor.jpg'
-// import gasahilo from '/images/fabrics/gasahilo.jpeg'
-// import voilehilo from '/images/fabrics/voilehilo.jpg'
 import { ProductsContext } from '../../context/ProductsProvider'
 
 function ProductsHome() {
@@ -74,11 +64,9 @@ function ProductsHome() {
                     return(
                         <Link 
                         to={`/${e.name}`} 
-                        // className='productBox' 
                         className={i === dataFabrics.length - 1 ? 'productBox fillBoxItem' : 'productBox'}
                         onClick={()=>setShowDropdown(false)} 
                         key={i} 
-                        // style={{ className: i === dataFabrics.length - 1 ? 'productBox fillBoxItem' : 'productBox' }}
                         >
                             <div className='imageOverlay'></div>
                             <img style={{scale: i === dataFabrics.length - 1 && '1'}} src={e.image} alt={e.title}/>

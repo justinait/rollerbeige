@@ -35,10 +35,7 @@ function Login() {
 
         let finallyUser = {
           email: res.user.email,
-          // rol: userDoc.data().rol
         }
-        console.log('okk');
-        console.log('VITE_ROLADMIN:', import.meta.env.VITE_ROLADMIN);
 
         handleLogin(finallyUser);
         navigate('/');
@@ -64,7 +61,6 @@ function Login() {
           <input
             type={showPassword ? "text" : "password"}
             name="password"
-            // autoComplete="current-password"
             onChange={handleChange}
             placeholder="Contraseña"
             className="input"

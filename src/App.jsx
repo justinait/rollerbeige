@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import About from './components/About/About'
@@ -16,6 +15,7 @@ import Login from './components/Login/Login'
 import AuthContextComponent from './context/AuthContext'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './components/Dashboard/Dashboard'
+import ProtectedAdmin from './ProtectedAdmin'
 
 function App() {
 
@@ -40,8 +40,11 @@ function App() {
           <Route path='/accesorios' element={< Accesories />} />
           <Route path='/sale' element={< Promos />} />
           <Route path='/:curtain' element={< Detail />} />
-          <Route path='/dashboard' element={< Dashboard />} />
           
+          
+          <Route element={<ProtectedAdmin/>} >
+              <Route path="/dashboard" element={<Dashboard/>} />
+          </Route>
           
         </Routes>
 
