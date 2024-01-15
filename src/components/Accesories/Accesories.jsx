@@ -29,7 +29,7 @@ function Accesories() {
       
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
-          <img src={bandas} alt="Roller" className='accesoriesImage' />
+          <img src={bandas} alt="Bandas verticales" className='accesoriesImage' />
           <h6 className='accesoriesSubtitles h3mobile h3longText'>Para Bandas Verticales y Paneles Orientales</h6>
         </div>
         <ul>
@@ -44,7 +44,7 @@ function Accesories() {
 
       <div className='accesoriesContainer'>
         <div className='ImgTitleAccesories'>
-          <img src={tradicionales} alt="Roller" className='accesoriesImage' />
+          <img src={tradicionales} alt="Cortinas Tradicionales" className='accesoriesImage' />
           <h6 className='accesoriesSubtitles h3mobile'>Para Tradicionales</h6>
         </div>
         <ul>

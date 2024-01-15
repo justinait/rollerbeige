@@ -52,7 +52,7 @@ function ProductsList({products, setIsChange}) {
                                 <td>{e.title}</td>
                                 <td>{e.description}</td>
                                 <td>{e.unit_price}</td>
-                                <td><img src={e.image} width={80} alt={e.title} /></td>
+                                <td><img src={e.image} width={80} alt={e.name} /></td>
                                 
                                 <td>
                                     <button className='dashboardButton editButton' onClick={()=> handleOpen(e) }> <EditIcon/> </button>

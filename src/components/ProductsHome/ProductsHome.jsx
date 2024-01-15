@@ -47,7 +47,7 @@ function ProductsHome() {
                     key={i} 
                     style={{ width: i === dataCurtains.length - 3 ? '100%' : '50%' }}>
                         <div className='imageOverlay'></div>
-                        <img src={e.image} alt={e.title}/>
+                        <img src={e.image} alt={e.name}/>
                         <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
                     </Link>
                 )
@@ -69,7 +69,7 @@ function ProductsHome() {
                         key={i} 
                         >
                             <div className='imageOverlay'></div>
-                            <img style={{scale: i === dataFabrics.length - 1 && '1'}} src={e.image} alt={e.title}/>
+                            <img style={{scale: i === dataFabrics.length - 1 && '1'}} src={e.image} alt={e.name}/>
                             <p dangerouslySetInnerHTML={{ __html: e.title }} className='productBoxText'></p>
                         </Link>
                     )
