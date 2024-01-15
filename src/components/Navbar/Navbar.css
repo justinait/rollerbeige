@@ -7,7 +7,7 @@
     width: 100%;
     background: #FAFAFA;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     padding: 0 5%;
 }
 .logoNavbar {
@@ -97,6 +97,7 @@
     .dropdownContainer{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 30vw;
         background: unset;
         position: unset;
