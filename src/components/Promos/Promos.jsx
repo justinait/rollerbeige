@@ -10,6 +10,7 @@ function Promos() {
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('Todos los productos');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -35,9 +36,28 @@ function Promos() {
     })
     .catch((err)=>console.log(err))
   }, [])
+  
+  const categories = [     'Todos los productos' , 'Borlas', 'Barrales y Cortinas de baño', 'Sujetadores de cortina', 'Accesorios para Roller', 'Accesorios para Bandas Verticales y Paneles Orientales' , 'Accesorios para Tradicionales', 'SALE'    ]
+
   return (
     <div className='productsContainer'>
+      
       <h2>NUESTRA TIENDA</h2>
+
+      <div className='storeCategoryBox' >
+        {categories.map((e, i) => (
+          <button
+            key={i}
+            className={`storeCategory ${selectedCategory === e ? 'storeCategoryActive' : ''}`}
+            onClick={() => setSelectedCategory(e)}
+          >
+            {e}
+          </button>
+          
+        ))}
+      </div>
+
+
       <div className='promosDivContainer'>
         {
           products.map(e=>{
@@ -52,6 +72,7 @@ function Promos() {
             )
           })
         }
+
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title className='modalPromoTitle'>{selectedItem?.title} </Modal.Title>

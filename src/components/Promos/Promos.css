@@ -78,6 +78,23 @@
 .modalWsp {
     font-size: 12px;
 }
+.storeCategoryBox {
+    border: none;
+    background: transparent;
+    color: #000;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 11px;
+    margin: 0 0 5% 0;
+}
+.storeCategoryActive{
+    text-decoration-line: underline;
+}
+.storeCategory {
+    
+    background: none;
+    border: none;
+}
 
 @media(min-width: 639px){
     .promoTitle{
