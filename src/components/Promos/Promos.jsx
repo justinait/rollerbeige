@@ -37,7 +37,7 @@ function Promos() {
   }, [])
   return (
     <div className='productsContainer'>
-      <h2>SALE</h2>
+      <h2>NUESTRA TIENDA</h2>
       <div className='promosDivContainer'>
         {
           products.map(e=>{
