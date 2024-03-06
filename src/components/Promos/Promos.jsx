@@ -1,16 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { db } from '../../firebaseConfig'
 import {getDocs, collection} from "firebase/firestore"
 import './Promos.css'
 import Modal from 'react-bootstrap/Modal';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 function Promos() {
+  
+  const { 
+    cart,
+    addToCartContext,
+    clearCart,
+    deleteById,
+    getTotalPrice,
+    totalProducts,
+    getQuantityById 
+  } = useContext(CartContext);
+
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Todos los productos');
+  const [quantity, setQuantity] = useState(1)
+  const [count, setCount] = useState(quantity);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -20,6 +34,27 @@ function Promos() {
       setSelectedItem(e);
       handleShow();
     }
+  }
+
+  function onAdd (product) {
+    if ( product.stock > count ){
+      return setCount(count+1);
+    }
+    else{
+      alert('stock maximo')
+    }
+  }
+    
+  function onRemove () {
+    if( count > 0)   setCount ( count - 1 )
+  }
+
+  function addToCart (product) {
+    let obj = {
+      ...product,
+      quantity: count
+    }
+    addToCartContext(obj)
   }
 
   useEffect(()=>{
@@ -36,6 +71,12 @@ function Promos() {
     })
     .catch((err)=>console.log(err))
   }, [])
+
+  useEffect(()=>{
+    if(selectedItem){
+      setQuantity(getQuantityById(selectedItem.id))
+    }
+  }, [selectedItem])
   
   const categories = [     'Todos los productos' , 'Borlas', 'Barrales y Cortinas de baño', 'Sujetadores de cortina', 'Accesorios para Roller', 'Accesorios para Bandas Verticales y Paneles Orientales' , 'Accesorios para Tradicionales', 'SALE'    ]
 
@@ -83,7 +124,15 @@ function Promos() {
             <img src={selectedItem?.image} className='modalPromoImage' alt="" />
             <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
             <p className='modalPromoDescription'>{selectedItem?.description}</p>
-            <Link target='_blank' to={`https://api.whatsapp.com/send?phone=5493434282937&text=Hola!%20Quiero%20consultar%20por:%20${selectedItem.title}%20`}><p className='modalWsp'>Consultá por este producto <WhatsAppIcon fontSize='16px'/> </p>            </Link>
+            
+            <div className='itemCountContainer'>
+            
+              <button className='buttonCount' onClick={ ()=>onRemove() }> - </button>
+              <p> { count } </p>
+              <button className='buttonCount' onClick={ ()=>onAdd(selectedItem) }> + </button>
+            </div>
+            <button className="addCartButton" onClick={ ()=> addToCart(selectedItem)} > Agregar al carrito </button>
+            
           </Modal.Body>
           
         </Modal>

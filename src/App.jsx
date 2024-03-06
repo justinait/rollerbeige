@@ -13,15 +13,19 @@ import Whatsapp from './components/Whatsapp/Whatsapp'
 import Accesories from './components/Accesories/Accesories'
 import Login from './components/Login/Login'
 import AuthContextComponent from './context/AuthContext'
+import CartContextComponent from './context/CartContext'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './components/Dashboard/Dashboard'
 import ProtectedAdmin from './ProtectedAdmin'
+import Checkout from './components/Checkout/Checkout'
+import Cart from './components/Cart/Cart'
 
 function App() {
 
   return (
     <ProductsProvider>
       <AuthContextComponent>
+        <CartContextComponent>
         <BrowserRouter>
         
         <Navbar />
@@ -41,9 +45,12 @@ function App() {
           <Route path='/store' element={< Promos />} />
           <Route path='/:curtain' element={< Detail />} />
           
+          <Route path='/checkout' element={< Checkout />} />
+          <Route path='/cart' element={< Cart />} />
+          
           
           <Route element={<ProtectedAdmin/>} >
-              <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
           </Route>
           
         </Routes>
@@ -51,6 +58,8 @@ function App() {
         <Footer />
 
         </BrowserRouter>
+        
+        </CartContextComponent>
       </AuthContextComponent>
     </ProductsProvider>
 

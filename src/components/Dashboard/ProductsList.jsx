@@ -59,18 +59,18 @@ function ProductsList({products, setIsChange}) {
                                     <button className='dashboardButton deleteButton' onClick={()=>deleteProduct(e.id)}> <DeleteIcon/></button>
                                 </td>
 
-                                <Modal
-                                    show={show}
-                                    onHide={handleClose}
-                                    backdrop="static"
-                                    keyboard={false}
-                                >
-                                    <EditAddModal handleClose={handleClose} setIsChange={setIsChange} productSelected={productSelected} setProductSelected={setProductSelected} />
-                                    
-                                </Modal>
                             </tr>
                         )
                     })}
+                    <Modal
+                        show={show}
+                        onHide={handleClose}
+                        backdrop="static"
+                        keyboard={false}
+                    >
+                        <EditAddModal handleClose={handleClose} setIsChange={setIsChange} productSelected={productSelected} setProductSelected={setProductSelected} />
+                        
+                    </Modal>
                         
 
                 </tbody>
