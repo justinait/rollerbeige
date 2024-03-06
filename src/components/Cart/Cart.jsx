@@ -56,7 +56,7 @@ function Cart() {
             <div className='emptyContainer'>
                 <ShoppingCartOutlinedIcon className='cartEmptyIcon'/>
                 <p className='cartEmptyText'>Tu carrito está vacío</p>
-                <Link to='/' className='returnButtonCart'>Regresar al Inicio</Link>
+                <Link to='/store' className='returnButtonCart'>Regresar a la tienda</Link>
             </div>
             }
         </div>
