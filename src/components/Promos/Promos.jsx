@@ -60,7 +60,9 @@ function Promos() {
 
       <div className='promosDivContainer'>
         {
-          products.map(e=>{
+          products
+          .filter((e) => selectedCategory === 'Todos los productos' || (selectedCategory === e.category))
+          .map((e, i)=>{
             return(
               <div key={e.id}  className='promoContainer' onClick={()=>handleClick(e)} style={{ cursor: 'pointer' }}>
                 
