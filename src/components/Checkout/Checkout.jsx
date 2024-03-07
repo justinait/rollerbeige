@@ -11,7 +11,9 @@ function Checkout() {
   
   const { cart, addToCartContext, clearCart, deleteById, getTotalPrice, totalProducts, getQuantityById   } = useContext(CartContext);
   
+  const [shipmentCost, setShipmentCost] = useState(100);
   const [preferenceId, setPreferenceId]= useState(null);
+  const [orderId, setOrderId] = useState(null)
   const [userData, setUserData] = useState({
     email: "",
     cp: "",
