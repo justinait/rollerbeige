@@ -81,7 +81,7 @@ h5 {
     font-size: 40px;
   }
 }
-@media (min-width: 1279px){
+@media (min-width: 1200px){
   h2 {    
     padding: 7%;
     margin: 0;

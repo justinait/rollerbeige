@@ -17,7 +17,7 @@ function Navbar() {
   const windowWidth = window.innerWidth;
   let navigate = useNavigate()
 
-  const [showDropdown, setShowDropdown] = (windowWidth <= 1023) ? useState(false): useState(true)
+  const [showDropdown, setShowDropdown] = (windowWidth <= 1200) ? useState(false): useState(true)
   
   const handleLogOut = () => {
     onLogOut();
@@ -26,7 +26,7 @@ function Navbar() {
   }
 
   const handleClick = () => {
-    if (windowWidth <= 1023) {
+    if (windowWidth <= 1200) {
       setShowDropdown(!showDropdown);
     }
   }
@@ -58,39 +58,35 @@ function Navbar() {
   return (
     <div className='header'>
       <Link to='/' style={{display: 'flex' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
-      
       <div className='navbarItemsContainer'>
-        <p className='navbarItems' onClick={closeDropdown}> <Link to='/about'>Nosotros</Link></p>
-        <p className='navbarItems productNavbarItem' onClick={handleClick}> Productos </p>
-        {console.log(cart)}
+
+        <div className='navbarItemsSubContainer'>
+          <p className='navbarItems' onClick={closeDropdown}> <Link to='/about'>Nosotros</Link></p>
+          <p className='navbarItems productNavbarItem' onClick={handleClick}> Productos </p>
+          
+        </div>
+        {showDropdown &&
+          <div className='dropdownContainer'>
+
+            <Link to='/cortinas' onClick={closeDropdown} className='dropdownItem'>Cortinas</Link>
+            <Link to='/telas' onClick={closeDropdown} className='dropdownItem'>Telas</Link>
+            <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
+            <Link to='/store' onClick={closeDropdown} className='dropdownItem'>TIENDA</Link>
+
+            {
+              isLogged &&
+              <>
+                <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'><Dashboard fontSize='small'/></Link>
+                <p className="dropdownItem"><LogoutIcon fontSize='small' onClick={handleLogOut} /></p>
+              </>
+            }
+          </div>
+        }
         {
           cart.length > 0 &&
           <CartWidget />
         }
       </div>
-      {showDropdown &&
-        <div className='dropdownContainer'>
-
-          <Link to='/cortinas' onClick={closeDropdown} className='dropdownItem'>Cortinas</Link>
-          <Link to='/telas' onClick={closeDropdown} className='dropdownItem'>Telas</Link>
-          <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
-          <Link to='/store' onClick={closeDropdown} className='dropdownItem'>TIENDA</Link>
-          <Link to='/cart' onClick={closeDropdown} className='dropdownItem'>Ver carrito</Link>
-
-          {
-            isLogged &&
-            <>
-              <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'><Dashboard/></Link>
-              
-              <p className="dropdownItem"><LogoutIcon onClick={handleLogOut} /></p>
-              
-            </>
-              
-            
-          }
-        </div>
-      }
-
     </div>
   )
 }

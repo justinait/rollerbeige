@@ -80,7 +80,7 @@
 .storeCategoryBox {
     border: none;
     background: transparent;
-    color: #000;
+    color: #575656;
     font-weight: 600;
     line-height: 30px;
     font-size: 11px;
@@ -102,6 +102,12 @@
     .promoPrice {
         font-size: 26px;
     }
+    .storeCategoryBox {
+        font-size: 14px;
+        margin: 0 0 5% 0;
+        width: 80vw;
+        margin: auto;
+    }
 }
 @media(min-width: 1023px){
     .promoContainer {
@@ -120,7 +126,7 @@
         font-size: 26px;
     }
 }
-@media(min-width: 1279px){
+@media(min-width: 1200px){
 
     .promosDivContainer{
         width: 70vw;

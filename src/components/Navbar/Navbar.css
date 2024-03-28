@@ -29,6 +29,12 @@
     justify-content: space-between;
     align-items: center;
 }
+.navbarItemsSubContainer {
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .cartItemNavbar {
     padding-right: 5%;
 }
@@ -52,7 +58,7 @@
     padding: 6% 14% 0 0;
     color: var(--color-darkgrey);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
 }
 .subcategoryDropdown {
     padding-right: 17%;
@@ -64,20 +70,20 @@
 
 @media (min-width:639px){
     .logoNavbar {
-        width: 250px;
+        width: 150px;
     }
-    
     .navbarItemsContainer {
         width: 37%;
     }
     
     .dropdownItem {
-        color: var(--color-darkgrey);
-        font-weight: 500;
-        font-size: 24px;
+        font-weight: 400;
+        font-size: 15px;
+        padding: 3% 10% 0 0;
     }
     .navbarItems {
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 400;
     }
     a:focus{
         color: #C1C09F;
@@ -88,12 +94,35 @@
     .dropdownItem.selected {
         color: #C1C09F;
     }
+    .navbarItemsSubContainer{
+        width: 80%;
+    }
 }
 
 @media(min-width:1023px){
+    .navbarItemsSubContainer{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .navbarItemsContainer{
+        width: 45%;
+        justify-content: flex-end;
+    }
+    .dropdownContainer{
+        padding: 2% 0 3%;
+    }
+    .dropdownItem{
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1200px){
+    .navbarItemsSubContainer{
+        width: 20%;
+    }
     .navbarItems{
         margin-bottom: 0;
-        font-size: 16px;
     }
     .productNavbarItem{
         display: none;
@@ -102,7 +131,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 30vw;
+        width: 55%;
         background: unset;
         position: unset;
         top: unset;
@@ -113,28 +142,17 @@
     }
     .dropdownItem{
         font-size: 16px;
-        font-weight: 500;
-        color: var(--color-darkgrey);
+        font-weight: 400;
         padding: 0 5% 0 0;
     }
-    .navbarItemsContainer{
-        width: 45%;
-        justify-content: flex-end;
-    }
-
-
-}
-
-@media (min-width: 1279px){
-    
     .logoNavbar {
         width: 220px;
     }
     .navbarItemsContainer{
         width: 50vw;
     }
-    .dropdownContainer{
-        width: 26vw;
+    .cartItemNavbar {
+        margin: 0 0 0 15px;
     }
 }
 @media (min-width: 1439px){

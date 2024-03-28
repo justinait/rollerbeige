@@ -21,7 +21,7 @@
         height: 105vh;
     }
 }
-@media (min-width: 1279px){
+@media (min-width: 1200px){
     .heroHomeImg {
         display: none;
     }
