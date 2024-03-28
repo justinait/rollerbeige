@@ -9,15 +9,16 @@
     margin: 0 2%;
     border: 2px solid #C1C09F;
     width: 45%;
-    border-radius: 20px;
+    border-radius: 30px;
     margin-bottom: 5%;
 }
 .promoImage {
-    width: 100%;
+    width: 90%;
+    margin: 6%;
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 14px;
+    border-radius: 20px;
 }
 
 .promoCategory {
@@ -35,8 +36,7 @@
     text-align: center;
     margin: 5px;
     color: var(--color-darkgrey);
-    font-family: 'Raleway';
-    font-weight: 600;
+    font-size: 13px;
     text-transform: capitalize;
 }
 

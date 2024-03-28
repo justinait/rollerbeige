@@ -47,7 +47,7 @@
 .dropdownItem {
     padding: 6% 14% 0 0;
     color: var(--color-darkgrey);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 15px;
 }
 .subcategoryDropdown {

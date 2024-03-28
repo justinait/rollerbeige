@@ -78,7 +78,7 @@ function Promos() {
     }
   }, [selectedItem])
   
-  const categories = [     'Todos los productos' , 'Borlas', 'Barrales y Cortinas de baño', 'Sujetadores de cortina', 'Accesorios para Roller', 'Accesorios para Bandas Verticales y Paneles Orientales' , 'Accesorios para Tradicionales', 'SALE'    ]
+  const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
 
   return (
     <div className='productsContainer'>

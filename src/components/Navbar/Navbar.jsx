@@ -56,14 +56,10 @@ function Navbar() {
         <div className='dropdownContainer'>
 
           <Link to='/cortinas' onClick={closeDropdown} className='dropdownItem'>Cortinas</Link>
-          
           <Link to='/telas' onClick={closeDropdown} className='dropdownItem'>Telas</Link>
-
           <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
-
           <Link to='/store' onClick={closeDropdown} className='dropdownItem'>TIENDA</Link>
-          
-          <Link to='/cart' onClick={closeDropdown} className='dropdownItem'>Carrito</Link>
+          <Link to='/cart' onClick={closeDropdown} className='dropdownItem'>Ver carrito</Link>
 
           {
             isLogged &&
