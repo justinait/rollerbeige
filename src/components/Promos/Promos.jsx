@@ -82,9 +82,7 @@ function Promos() {
 
   return (
     <div className='productsContainer'>
-      
       <h2>NUESTRA TIENDA</h2>
-
       <div className='storeCategoryBox' >
         {categories.map((e, i) => (
           <button
@@ -98,15 +96,14 @@ function Promos() {
         ))}
       </div>
 
-
       <div className='promosDivContainer'>
         {
           products
-          .filter((e) => selectedCategory === 'Todos los productos' || (selectedCategory === e.category))
+          .filter((e) => selectedCategory === 'Todos los productos' || (e.category && e.category.some(category => category === selectedCategory)))
           .map((e, i)=>{
             return(
               <div key={e.id}  className='promoContainer' onClick={()=>handleClick(e)} style={{ cursor: 'pointer' }}>
-                
+                {console.log(e)}
                 <img src={e.image} alt={e.title} className='promoImage' />                
                 <p className='promoTitle'>{e.title}</p>
                 <p className='promoPrice'>$ {e.unit_price}</p>

@@ -46,10 +46,10 @@ function CartWidget() {
                     return (
                         <div key={i} className='cartWidgetItemContainer'>
     
-                            <img className='cartWidgetImage' src={e.productData.image} alt={e.title} />
+                            <img className='cartWidgetImage' src={e.image} alt={e.title} />
                             <div className='cartWidgetContainerInfo'>
-                                <h6>{e.productData.title}</h6>
-                                <p className='cartItemPrice'> ${e.productData.unit_price}</p>
+                                <h6>{e.title}</h6>
+                                <p className='cartItemPrice'> ${e.unit_price}</p>
                             </div>
                         </div>
                     )
