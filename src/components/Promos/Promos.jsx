@@ -82,7 +82,7 @@ function Promos() {
 
   return (
     <div className='productsContainer'>
-      <h2>NUESTRA TIENDA</h2>
+      <h2 style={{marginBottom: '-2%' }}>NUESTRA TIENDA</h2>
       <div className='storeCategoryBox' >
         {categories.map((e, i) => (
           <button
@@ -103,7 +103,6 @@ function Promos() {
           .map((e, i)=>{
             return(
               <div key={e.id}  className='promoContainer' onClick={()=>handleClick(e)} style={{ cursor: 'pointer' }}>
-                {console.log(e)}
                 <img src={e.image} alt={e.title} className='promoImage' />                
                 <p className='promoTitle'>{e.title}</p>
                 <p className='promoPrice'>$ {e.unit_price}</p>
