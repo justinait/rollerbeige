@@ -25,8 +25,12 @@
 
 .navbarItemsContainer {
     display: flex;
-    width: 40%;
+    width: 45%;
     justify-content: space-between;
+    align-items: center;
+}
+.cartItemNavbar {
+    padding-right: 5%;
 }
 
 .dropdownContainer {

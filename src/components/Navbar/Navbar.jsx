@@ -6,6 +6,9 @@ import { onLogOut } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Dashboard } from '@mui/icons-material';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { CartContext } from '../../context/CartContext';
+import CartWidget from './CartWidget';
 
 function Navbar() {
 
@@ -43,7 +46,15 @@ function Navbar() {
       behavior: 'smooth' 
     });
   };
-
+  const { 
+    cart,
+    addToCartContext,
+    clearCart,
+    deleteById,
+    getTotalPrice,
+    totalProducts,
+    getQuantityById 
+  } = useContext(CartContext);
   return (
     <div className='header'>
       <Link to='/' style={{display: 'flex' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
@@ -51,6 +62,11 @@ function Navbar() {
       <div className='navbarItemsContainer'>
         <p className='navbarItems' onClick={closeDropdown}> <Link to='/about'>Nosotros</Link></p>
         <p className='navbarItems productNavbarItem' onClick={handleClick}> Productos </p>
+        {console.log(cart)}
+        {
+          cart.length > 0 &&
+          <CartWidget />
+        }
       </div>
       {showDropdown &&
         <div className='dropdownContainer'>

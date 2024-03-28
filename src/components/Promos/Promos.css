@@ -2,21 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10vh;
+    justify-content: space-evenly;
 }
 
 .promoContainer {
     padding: 2%;
-    margin: 0 2%;
     border: 2px solid #C1C09F;
-    width: 45%;
+    width: 42%;
     border-radius: 30px;
-    margin-bottom: 5%;
+    margin: 5% 0% 2% 0%;
 }
 .promoImage {
     width: 90%;
     margin: 6%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+    height: 100px;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -45,7 +44,7 @@
     margin: 5px;
     font-family: 'Raleway';
     color: var(--color-darkgrey);
-    color: #373737;;
+    color: #575656;
     font-weight: 600;
     font-size: 20px;
 }

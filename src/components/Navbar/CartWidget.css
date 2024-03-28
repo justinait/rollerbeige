@@ -1,0 +1,128 @@
+.cartWidgetBox{
+    width: 55vw;
+    position: absolute;
+    top: 10vh;
+    background: #fafafa;
+    right: 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 92vh;
+    border-radius: 3px;
+}
+.cartWidgetImage {
+    height: 50px;
+}
+.cartWidgetContainerInfo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.cartWidgetItemContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 5% 10%;
+    justify-content: space-between;
+}
+.cartWidgetItemDelete{
+    border: none;
+    background-color: #FAFAFA;
+}
+.cartWidgetItemContainer h6{    
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.cartWidgetButton {
+    text-align: left;
+    margin: 1% auto 7%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+.cartItemPrice{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.subtotalCart {
+    font-size: 14px;
+    margin: 0;
+}
+@media(min-width:600px) {
+    .cartWidgetItemContainer h6 {
+        font-size: 15px;
+        margin: 4% 16% 2% 0;
+    }
+    .subtotalCart {
+        margin: auto;
+    }
+    
+    .cartWidgetBox{    
+        right: -17vw;
+    }
+}
+@media(min-width:1000px) {
+    .cartWidgetItemContainer h6 {
+        font-size: 18px;
+    }
+    .cartWidgetImage {
+        height: 100px;
+    }
+    .cartItemDetail{
+        font-size: 16px;
+    }
+    .cartItemPrice {
+        font-size: 19px;
+    }
+}
+@media(min-width:1200px) {
+    .cartWidgetItemContainer h6 {
+        font-size: 18px;
+        margin: 4% 11% 0% 0;
+    }
+    .cartItemDetail{
+        font-size: 16px;
+    }
+    .cartItemPrice {
+        font-size: 20px;
+    }
+    .cartWidgetBox{
+        right: -12vw;
+        width: 27vw;
+    }
+    .cartWidgetButton {
+        font-size: 20px;
+    }
+}   
+@media(min-width:1200px) {
+    .cartWidgetBox{
+        right: -13vw;
+    }
+}
+
+@media(min-width:1600px) {
+    .cartWidgetBox{
+        right: -13vw;
+    }
+    .cartWidgetItemContainer h6 {
+        font-size: 21px;
+        margin: 5% 15% 0% 0;
+    }
+    .infoCartItem p {   
+        font-size: 22px;
+    }
+    .subtotalCart {
+        font-size: 26px;
+    }
+    .cartWidgetButton {
+        font-size: 30px;
+    }
+    .cartWidgetImage {
+        height: 130px;
+    }
+    .subtotalCart{
+        font-size: 24px;
+    }
+}
