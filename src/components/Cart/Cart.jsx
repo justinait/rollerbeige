@@ -30,6 +30,8 @@ function Cart() {
                     <Link to='/checkout' className='goToCheckoutButton'>Finalizar compra</Link>
                 </div>
                 {console.log(cart)}
+                <div className='cartMapContainer'>
+
                 {
                     cart.map((e, i)=>{
                         return (
@@ -50,6 +52,7 @@ function Cart() {
                         )
                     })
                 }
+                </div>
                 <p className='subtotalCart'>Subtotal: ${total}</p>
             </>
             :
