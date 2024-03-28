@@ -111,7 +111,6 @@
     
     background: none;
     border: 2px solid #8c6c79;
-    border-radius: 50%;
     height: 29px;
     border-radius: 4px;
     font-size: 13px;
@@ -142,12 +141,22 @@
     .promoImage{
         height: 150px;
     }
+    .itemCountContainer{
+        width: 20%;
+    }
+    .modalPromoDescription {
+        font-size: 13px !important;
+        margin-bottom: 5%;
+    }
 }
 @media(min-width: 1000px){
     .promoContainer {
         margin: 1%;
         border: 3px solid #C1C09F;
         width: 31%;
+    }
+    .modalPromoTitle {
+        font-size: 15px !important;
     }
     .promosDivContainer{
         justify-content: flex-start;
@@ -172,15 +181,31 @@
         object-fit: cover;
         border-radius: 25px;
     }
+    .modal-dialog{
+        width: 60vw !important;
+        max-width: 80vw !important; 
+    }
+    .modal-content {
+        border-radius: 17px;
+    }
+    .modalPromoImage{
+        width: 80%;
+        margin: 0 10% 5%;
+    }
 }
-@media(min-width: 1200px){
 
+@media(min-width: 1200px){
+    .modal-body {
+        display: flex;
+        justify-content: space-between;
+    }
     .promosDivContainer{
         width: 80vw;
         margin: auto;
     }
     .modalPromoTitle {
         font-size: 22px !important;
+        margin-left: 2%;
     }
     .modalPromoPrice{
         font-size: 36px;
@@ -191,12 +216,15 @@
     }
     .modalPromoDescription {
         font-size: 18px !important;
+        text-align: right;
     }
     .modalWsp {
         font-size: 14px;
     }
     .modalPromoImage {
         max-height: 50vh;
+        margin: 2%;
+        width: 50%;
     }
     .storeCategoryBox{
         margin: 0 auto 5%;
@@ -208,10 +236,30 @@
     .promoContainer {
         width: 23%;
     }
+    .infoModalContainer{
+        
+        padding-right: 2%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .itemCountContainer {
+        width: 30%;
+    }
+    .addCartContainerModal{
+        justify-content: space-between;
+    }
 }
 @media(min-width: 1400px){
     .promoImage{
         height: 210px;
+    }
+    .buttonCount{
+        font-size: 16px;
+    }
+    .itemCountContainer p {
+        font-size: 20px;
     }
 }
 @media(min-width:1600px){
@@ -220,5 +268,8 @@
     }
     .promosDivContainer {
         width: 70vw;
+    }
+    .modal-dialog {
+        width: 50vw !important;
     }
 }

@@ -118,18 +118,21 @@ function Promos() {
           </Modal.Header>
           <Modal.Body>
             <img src={selectedItem?.image} className='modalPromoImage' alt="" />
-            <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
-            <p className='modalPromoDescription'>{selectedItem?.description}</p>
-            
-            <div className='addCartContainerModal'>
+            <div className='infoModalContainer'>
 
-              <div className='itemCountContainer'>
+              <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
+              <p className='modalPromoDescription'>{selectedItem?.description}</p>
               
-                <button className='buttonCount' onClick={ ()=>onRemove() }> - </button>
-                <p> { count } </p>
-                <button className='buttonCount' onClick={ ()=>onAdd(selectedItem) }> + </button>
+              <div className='addCartContainerModal'>
+
+                <div className='itemCountContainer'>
+                
+                  <button className='buttonCount' onClick={ ()=>onRemove() }> - </button>
+                  <p> { count } </p>
+                  <button className='buttonCount' onClick={ ()=>onAdd(selectedItem) }> + </button>
+                </div>
+                <button className="buttonCount" onClick={ ()=> addToCart(selectedItem)} > Agregar al carrito </button>
               </div>
-              <button className="buttonCount" onClick={ ()=> addToCart(selectedItem)} > Agregar al carrito </button>
             </div>
             
           </Modal.Body>
