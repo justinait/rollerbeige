@@ -97,16 +97,23 @@
 
 @media(min-width: 639px){
     .promoTitle{
-        font-size: 20px;
+        font-size: 15px;
     }
     .promoPrice {
-        font-size: 26px;
+        font-size: 20px;
     }
     .storeCategoryBox {
         font-size: 14px;
         margin: 0 0 5% 0;
         width: 80vw;
         margin: auto;
+    }
+    .promosDivContainer{
+        width: 78vw;
+        margin: 5% auto;
+    }
+    .promoImage{
+        height: 150px;
     }
 }
 @media(min-width: 1000px){
@@ -117,7 +124,6 @@
     }
     .promosDivContainer{
         justify-content: flex-start;
-        margin: 5%;
     }
     .promoTitle{
         font-size: 17px;
@@ -135,7 +141,7 @@
     .promoImage {
         width: 95%;
         margin: 3%;
-        height: 210px;
+        height: 190px;
         object-fit: cover;
         border-radius: 25px;
     }
