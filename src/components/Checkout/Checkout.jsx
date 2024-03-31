@@ -52,7 +52,7 @@ function Checkout() {
     };
     
     try {
-      await emailjs.send('service_kapndfh', 'template_76f9ja7', templateParams, 'eL-fM4UTQmw1_lpi4');
+      await emailjs.send('service_', 'template_', templateParams, 'publickey');
       console.log('Correo electrónico enviado correctamente!');
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error);

@@ -21,17 +21,17 @@ function UserOrders() {
   return (
     <div className='userOrdersContainer'>
         <p>ORDENES</p>
+        {console.log(orders)}
         {orders.map(e => {
-            {
+            return(
                 e?.items?.map(item => {
                     return <div>
-                        <h2>{item.title}</h2>
+                        <p>{item.title}</p>
+                        <p>{item.unit_price}</p>
                     </div>
                 })
-            }
-            return <div key={e.id}>
-                <h4>{e.title}</h4>
-            </div>
+            )
+            
         })
         }
     </div>
