@@ -6,9 +6,9 @@ import { onLogOut } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Dashboard } from '@mui/icons-material';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { CartContext } from '../../context/CartContext';
 import CartWidget from './CartWidget';
+import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 
 function Navbar() {
 
@@ -72,14 +72,15 @@ function Navbar() {
             <Link to='/telas' onClick={closeDropdown} className='dropdownItem'>Telas</Link>
             <Link to='/accesorios' onClick={closeDropdown} className='dropdownItem'>Accesorios</Link>
             <Link to='/store' onClick={closeDropdown} className='dropdownItem'>TIENDA</Link>
-
             {
               isLogged &&
               <>
                 <Link to='/dashboard' onClick={closeDropdown} className='dropdownItem'><Dashboard fontSize='small'/></Link>
                 <p className="dropdownItem"><LogoutIcon fontSize='small' onClick={handleLogOut} /></p>
+                <Link to='/orders' className="dropdownItem"><FeaturedPlayListIcon fontSize='small' /></Link>
               </>
             }
+
           </div>
         }
         {

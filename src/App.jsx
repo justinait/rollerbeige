@@ -20,6 +20,7 @@ import ProtectedAdmin from './ProtectedAdmin'
 import Checkout from './components/Checkout/Checkout'
 import Cart from './components/Cart/Cart'
 import UserOrders from './components/Dashboard/UserOrders'
+import Transfer from './components/Checkout/Transfer'
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
           <Route path='/checkout' element={< Checkout />} />
           <Route path='/cart' element={< Cart />} />
           <Route path='/orders' element={< UserOrders />} />
+          <Route path='/transfer' element={< Transfer />} />
           
           
           <Route element={<ProtectedAdmin/>} >
