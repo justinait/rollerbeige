@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { db, uploadFile } from '../../firebaseConfig';
@@ -7,12 +7,14 @@ import {addDoc, collection, updateDoc, doc} from "firebase/firestore"
 function EditAddModal({handleClose, setIsChange, productSelected, setProductSelected}) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-    
+  const [checkboxes, setCheckboxes] = useState([])
+  const [categoryArray, setCategoryArray] = useState([])
   const [newProduct, setNewProduct] = useState({
     title:"",
     unit_price:0,
     image:"",
-    description:""
+    description:"",
+    category: []
   })
   const [file, setFile] = useState(null);
 
@@ -48,7 +50,8 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     if(productSelected){
       let obj = {
         ...productSelected,
-        unit_price: +productSelected.unit_price
+        unit_price: +productSelected.unit_price,
+        category: newProduct.category
       }
 
       updateDoc(doc(productsCollection, productSelected.id), obj).then(()=>{
@@ -68,6 +71,43 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
 
     }
   }
+
+  const categories = [  'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
+  const handleCheckboxChange = (event, category) => {
+    const { checked } = event.target;
+    const updatedCheckboxes = { ...checkboxes, [category]: checked };
+    setCheckboxes(updatedCheckboxes);
+    updateCategoryArray(category, checked);
+  };
+
+  const updateCategoryArray = (category, checked) => {
+    if (checked) {
+      setNewProduct(prevState => ({
+        ...prevState,
+        category: [...prevState.category, category]
+      }));
+    } else {
+      setNewProduct(prevState => ({
+        ...prevState,
+        category: prevState.category.filter(cat => cat !== category)
+      }));
+    }
+    console.log(newProduct);
+  };
+  useEffect(() => {
+    if (productSelected) {
+      const selectedCategories = productSelected.category;
+      const updatedCheckboxes = {};
+      categories.forEach(category => {
+        updatedCheckboxes[category] = selectedCategories.includes(category);
+      });
+      setCheckboxes(updatedCheckboxes);
+      setNewProduct(prevState => ({
+        ...prevState,
+        category: selectedCategories
+      }));
+    }
+  }, [productSelected]);
 
   return (
     <>
@@ -106,6 +146,24 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
               className="input"
               defaultValue={productSelected?.description}
             />
+          </div>
+          
+          <p>Categorías</p>
+          <div className="inputModal">
+            {categories.map((category, i)=>{    
+              return (
+                <div key={i}>
+                  <input
+                    type="checkbox"
+                    name={category}
+                    checked={checkboxes[category] || false}
+                    id={`checkbox-${category}`}
+                    onChange={(event)=>handleCheckboxChange(event, category)}
+                  />
+                  <label>{category}</label>
+                </div>
+              )
+            })}
           </div>
 
           <div className="input">
