@@ -18,6 +18,7 @@ function UserOrders() {
             setOrders(newArr)
         })
     }, [ ])
+    
     const markAsSent = async (orderId) => {
         const orderRef = doc(db, "orders", orderId);
         await updateDoc(orderRef, {

@@ -38,7 +38,9 @@
     margin-left: 25%;
     margin-bottom: 15%;
 }
-
+.descriptionDashboard{
+    font-size: smaller;
+}
 @media(min-width:1023px){
     .tableDiv {
         font-size: 16px;

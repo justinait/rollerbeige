@@ -11,7 +11,8 @@ function ProductsList({products, setIsChange}) {
 
     const [productSelected, setProductSelected] = useState(null)
     const [show, setShow] = useState(false);
-
+    const [selectedCategory, setSelectedCategory] = useState('Todos los productos');
+  
     const handleClose = () => setShow(false);
   
     const handleOpen = (product) => {
@@ -23,12 +24,25 @@ function ProductsList({products, setIsChange}) {
         deleteDoc(doc(db, "products", id));
         setIsChange(true);
     }
-    
+
+    const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
+
     return (
         <div>
         
         <button className='dashboardButton addButton' onClick={()=>handleOpen(null)}>Agregar Nuevo Producto</button>
-        
+        <div className='storeCategoryBox' >
+        {categories.map((e, i) => (
+          <button
+            key={i}
+            className={`storeCategory ${selectedCategory === e ? 'storeCategoryActive' : ''}`}
+            onClick={() => setSelectedCategory(e)}
+          >
+            {e}
+          </button>
+          
+        ))}
+      </div>
         {
             products.length > 1 ? 
             <table className='tableDiv'>
@@ -45,12 +59,14 @@ function ProductsList({products, setIsChange}) {
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map((e, i)=>{
+                    {products
+                    .filter((e) => selectedCategory === 'Todos los productos' || (e.category && e.category.some(category => category === selectedCategory)))
+                    .map((e, i)=>{
                         return (
                             <tr key={e.id} className='tableRowDashboard'>
                                 
                                 <td>{e.title}</td>
-                                <td>{e.description}</td>
+                                <td className='descriptionDashboard'>{e.description}</td>
                                 <td>{e.unit_price}</td>
                                 <td><img src={e.image} width={80} alt={e.name} /></td>
                                 
