@@ -1,3 +1,44 @@
 .userOrdersContainer {
     margin-top: 10vh;
 }
+.orderTitle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.orderContainer {
+    background-color: antiquewhite;
+    padding: 2%;
+    margin: 2%;
+}
+.itemOrderGroup{
+    display: flex;
+    justify-content: space-between;
+}
+.userOrder p {
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.dashboardCategoryBox{
+    margin-bottom: 15%;
+}
+.dashboardCategory {
+    border: none;
+    background: transparent;    
+    color: #000;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.26px;
+    padding: 2%;
+    padding: 1% 2%;
+    font-size: 12px;
+    border-radius: 25px;
+}
+.dashboardCategory:hover {
+    text-decoration-line: underline;
+}
+.dashboardCategoryActive{
+    background-color: black;
+    color: white;
+}

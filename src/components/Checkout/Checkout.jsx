@@ -75,9 +75,9 @@ function Checkout() {
         console.error("Error adding document: ", error);
       });
       console.log({order});
-      // order.items.foreach((e)=>{
-      //   updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
-      // })
+      order.items.foreach((e)=>{
+        updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
+      })
       localStorage.removeItem("order");
       clearCart();
     } else if(order?.paymentMethod === 'card') {
@@ -90,7 +90,9 @@ function Checkout() {
       }).catch((error) => {
         console.error("Error adding document: ", error);
       });
-
+      order.items.foreach((e)=>{
+        updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
+      })
       localStorage.removeItem("order");
       clearCart();
     }
