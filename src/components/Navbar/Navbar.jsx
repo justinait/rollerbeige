@@ -83,10 +83,8 @@ function Navbar() {
 
           </div>
         }
-        {
-          cart.length > 0 &&
-          <CartWidget />
-        }
+      <CartWidget />
+        
       </div>
     </div>
   )
