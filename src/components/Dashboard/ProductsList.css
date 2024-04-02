@@ -41,6 +41,32 @@
 .descriptionDashboard{
     font-size: smaller;
 }
+.shipmentCostDashboard {
+    border: 1px solid black;
+    width: fit-content;
+    margin: 5% auto;
+    padding: 1%;
+    border-radius: 25px;
+}
+
+.shipmentCostDashboard:hover {
+    background-color: grey;
+    color: white;
+}
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.modificarEnvio {
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1%;
+}
+.modificarEnvio:hover{
+    background-color: grey;
+    color: white;
+}
 @media(min-width:1023px){
     .tableDiv {
         font-size: 16px;
@@ -51,5 +77,9 @@
         padding: 1%;
         margin-left: 5%;
         margin-bottom: 10%;
+    }
+    .shipmentCostDashboard {
+        margin: 1% 5%;
+        border-radius: 20px;
     }
 }
