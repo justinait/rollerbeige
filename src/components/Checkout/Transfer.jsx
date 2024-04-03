@@ -34,9 +34,9 @@ function Transfer() {
       <strong>¡Gracias por tu compra!</strong>
       <br /><br />
 
+      </p>
       <p>El valor de tu compra es <strong>${finalPrice}</strong> </p>
       {/* <p>Con el descuento del 10%, el valor de tu compra es de: <strong> ${discountPrice}</strong> </p> */}
-      </p>
 
       <br />
       <Link to={'/'}>Continuar comprando</Link>

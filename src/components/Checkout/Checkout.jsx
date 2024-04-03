@@ -166,13 +166,10 @@ function Checkout() {
 
   const handlePickUp =(e)=> {
     setPickUp(e.target.checked);
-    if(pickUp == true){
-      setShipmentCost(0);   
-    } else {
-      setShipmentCost(shipmentCostAux);
-    }
   }
-
+  useEffect(()=>{
+    console.log(shipmentCost);
+  }, [shipmentCost])
   const validate = (values) => {
     const errors = {}
     if(!values.name){
@@ -258,10 +255,12 @@ function Checkout() {
             {errorsArray.phone && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.phone}           </Alert> }
           </div>
 
+          <h6>Costo de envío: ${shipmentCost}</h6>
           <div className='checkboxContainerCheckout'>
-            <h6>Retiro por el local</h6>
+            <h6>Retiro por el local (gratis)</h6>
             <input type="checkbox" name='pickUp' checked={pickUp} onChange={(e)=>handlePickUp(e)} />
           </div>
+
           {(pickUp == false) &&
           <>
             <h5>DATOS DE ENVÍO</h5>

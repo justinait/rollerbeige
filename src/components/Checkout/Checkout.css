@@ -5,3 +5,183 @@
 .approvedText{
     margin: 5% 0 10%;
 }
+.checkoutContainer {
+    margin: 10vh 5%;
+    min-height: 70vh;
+}
+.checkoutContainer h5 {
+    margin: 5% 0;
+}
+.checkoutContainer h6{
+    
+    margin: 5% 0 8%;
+    font-size: 16px;
+}
+.imgCheckout {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.checkoutDetailContainer {
+    display: flex;
+    font-size: 11px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.seleccionarMetodoCheckout {
+    margin: 3vh 0 0;
+    background: none;
+    padding: 2% 0;
+    border-radius: 5px;
+    font-size: 13px;
+    border: grey 2px solid;
+    height: 56.7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+    color: grey;
+}
+.seleccionarMetodoCheckout:hover {
+    border: black 2px solid;
+    color: black;
+}
+.mercadoPagoLogo {
+    width: 40px;
+}
+.transferCheckout{
+    margin: 0;
+    background: grey;
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.transferContainer {
+    margin-top: 10vh;
+    min-height: 70vh;
+}
+.approvedText{
+    margin: 5% 0 10%;
+}
+.totalCheckout {
+    font-weight: 600;
+    text-align: right;
+}
+.checkboxContainerCheckout {
+    display: flex;
+    justify-content: space-between;
+    margin: 6% 0 0%;
+    align-items: baseline;
+    width: 60vw;
+}
+@media(min-width: 600px){
+    .seleccionarMetodoCheckout{
+        width: 60vw;
+    }
+    #walletBrick_container{
+        width: 60vw !important;
+    }
+    .input {
+        padding: 10px;
+    }
+}
+@media(min-width:1000px){
+    .checkoutDetailContainer{
+        font-size: 14px;    
+    }
+    
+    .totalCheckout {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .input {
+        width: 50vw;
+    }
+    
+    .checkboxContainerCheckout {
+        width: 50vw;
+    }
+    .checkoutContainer h5 {
+        margin: 5% 0 2%;
+    }
+    .seleccionarMetodoCheckout {
+        width: 50vw;
+        margin: 2vh 0 0;
+        font-size: 15px;
+    }
+    
+    #walletBrick_container{
+        width: 50vw !important;
+    }
+    .buttonsCheckoutContainer{
+        margin-top: 5%;
+    }
+    .detailCheckout {
+        width: 70vw;
+        margin: auto;
+
+    }
+    .transferCheckout{
+        padding: 1.5%;
+    }
+}
+@media(min-width:1200px){
+    .imgCheckout{
+        width: 60px;
+        height: 60px;
+    }
+    .input, .checkboxContainerCheckout, .seleccionarMetodoCheckout {
+        width: 40vw;
+    }
+    
+    #walletBrick_container{
+        width: 40vw !important;
+    }
+    .checkoutContainer h6 {
+        margin: 5% 0;
+    }
+}
+@media(min-width: 1500px){
+    .totalCheckout{
+        font-size: 20px;
+    }
+    .checkoutDetailContainer {
+        font-size: 16px;
+    }
+    .checkoutContainer h6 {
+        font-size: 18px;
+        margin: 2% 0 4%;
+    }
+    .input {
+        font-size: 15px;
+    }
+    .checkoutContainer {
+        margin: 15vh 5%;
+    }
+}
+
+@media(min-width:1700px){
+    
+    .checkoutContainer h6 {
+        font-size: 20px;
+    }
+    .checkoutDetailContainer {
+        font-size: 18px;
+    }
+    .imgCheckout {
+        width: 80px;
+        height: 80px;
+    }
+    .checkoutContainer h5 {
+        
+        font-size: 24px;
+    }
+    .seleccionarMetodoCheckout {
+        padding: 1% 0;
+    }
+    .transferCheckout {
+        padding: 1%;
+    }
+}
