@@ -1,0 +1,10 @@
+.menuStore {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media(min-width: 1000px){
+    .menuStore{
+        
+    padding: 5%;
+    }
+}
