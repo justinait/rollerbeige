@@ -14,6 +14,9 @@ function Navbar() {
 
   const {handleLogoutAuth, user, isLogged} = useContext(AuthContext);
   
+  const [showProductDropdown, setShowProductDropdown] = useState(false);
+  const [showCartDropdown, setShowCartDropdown] = useState(false);
+
   const windowWidth = window.innerWidth;
   let navigate = useNavigate()
 
@@ -45,16 +48,9 @@ function Navbar() {
       top: offset,
       behavior: 'smooth' 
     });
-  };
-  const { 
-    cart,
-    addToCartContext,
-    clearCart,
-    deleteById,
-    getTotalPrice,
-    totalProducts,
-    getQuantityById 
-  } = useContext(CartContext);
+  }
+
+  
   return (
     <div className='header'>
       <Link to='/' style={{display: 'flex' }} onClick={closeDropdown}><img src={logo} alt="cortinas rollerbeige" className='logoNavbar' /></Link>
@@ -63,8 +59,8 @@ function Navbar() {
         <div className='navbarItemsSubContainer'>
           <p className='navbarItems' onClick={closeDropdown}> <Link to='/about'>Nosotros</Link></p>
           <p className='navbarItems productNavbarItem' onClick={handleClick}> Productos </p>
-          
         </div>
+
         {showDropdown &&
           <div className='dropdownContainer'>
 
