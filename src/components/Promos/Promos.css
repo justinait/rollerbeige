@@ -96,7 +96,9 @@
 .modalWsp {
     font-size: 12px;
 }
-
+.modal-body {
+    display: block !important;
+}
 .modal {   
     height: 80vh !important;
     margin-top: 10vh;
@@ -200,7 +202,7 @@
 
 @media(min-width: 1200px){
     .modal-body {
-        display: flex;
+        display: flex !important;
         justify-content: space-between;
     }
     .promosDivContainer{
