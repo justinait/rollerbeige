@@ -52,7 +52,7 @@ function Checkout() {
     };
     
     try {
-      await emailjs.send('service_', 'template_', templateParams, 'publickey');
+      await emailjs.send('34014722', 'template_gtev08e', templateParams, 'd1e499f2Vp0oNsjIh');
       console.log('Correo electrónico enviado correctamente!');
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error);
@@ -75,9 +75,9 @@ function Checkout() {
         console.error("Error adding document: ", error);
       });
       console.log({order});
-      order.items.foreach((e)=>{
-        updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
-      })
+      // order.items.foreach((e)=>{
+      //   updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
+      // })
       localStorage.removeItem("order");
       clearCart();
     } else if(order?.paymentMethod === 'card') {
