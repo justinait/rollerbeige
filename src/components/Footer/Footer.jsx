@@ -31,7 +31,7 @@ function Footer() {
         </div>
       </div>
       
-      <p> Desarrollada por <Link target='_blank' to="https://justinaiturraspe.vercel.app/">Justina Iturraspe</Link> </p>
+      <p> Powered By <Link target='_blank' to="https://imjustwebs.com/">ImJustWebs</Link> </p>
     </div>
   )
 }
