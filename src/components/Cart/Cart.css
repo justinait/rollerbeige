@@ -18,6 +18,10 @@
     width: 50%;
     transition: border 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out; 
 }
+.returnButtonCart:hover {
+    color: #8C6C79;
+    background-color: white
+}
 .cartEmptyText {
     text-transform: uppercase;   
     font-size: 14px;
