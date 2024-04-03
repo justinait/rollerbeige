@@ -69,7 +69,7 @@
 }
 
 
-@media (min-width:639px){
+@media (min-width:600px){
     .logoNavbar {
         width: 150px;
     }
@@ -103,7 +103,7 @@
     }
 }
 
-@media(min-width:1023px){
+@media(min-width:1000px){
     .navbarItemsSubContainer{
         width: 60%;
         display: flex;

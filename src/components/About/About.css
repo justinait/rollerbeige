@@ -43,7 +43,7 @@
     padding-top: 0;
 }
 
-@media(min-width:1023px){
+@media(min-width:1000px){
     
     .aboutContainer h3 {
         font-size: 30px;

@@ -42,7 +42,7 @@
     font-weight: 500;
     color: #bfbfbf
 }
-@media(min-width:639px) {
+@media(min-width:600px) {
     .footer{
         height: 250px;
     }
@@ -57,7 +57,7 @@
         font-weight: 300;
     }
 }
-@media(min-width:1023px) {
+@media(min-width:1000px) {
     .footer{
         height: 320px;
     }
@@ -76,7 +76,7 @@
         font-size: 12px;
     }
 }
-@media(min-width:1023px) {
+@media(min-width:1000px) {
     
     .css-i4bv87-MuiSvgIcon-root, .icons {
         width: 1.5em !important;
@@ -94,7 +94,7 @@
         margin: 2% 3% !important;
     }
 }
-@media (min-width: 1439px){
+@media (min-width: 1400px){
     .footerInfo h4 {
         margin: 3% 4% 3%;
         font-size: 26px;

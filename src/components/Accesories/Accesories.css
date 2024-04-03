@@ -31,7 +31,7 @@
 .h3longText {
     font-size: 17px;
 }
-@media(min-width:639px){
+@media(min-width:600px){
     .accesoriesSubtitles {
         text-align: unset;
         width: unset;
@@ -62,7 +62,7 @@
     }
 }
 
-@media(min-width:1023px){
+@media(min-width:1000px){
     .accesoriesSubtitles {
         font-size: 35px;
         text-align: left;
@@ -126,7 +126,7 @@
         padding: 0 0 0 20%;
     }
 }
-@media(min-width:1439px){
+@media(min-width:1400px){
     .accesoriesContainer {
         padding: 0 25% 8%;
     }

@@ -36,7 +36,7 @@
 .curtainsh2 {
     margin-bottom: 0;
 }
-@media(min-width:639px) {
+@media(min-width:600px) {
     .imgProduct{
         border-radius: 10px;
         height: 260px;
@@ -48,7 +48,7 @@
         font-size: 16px;
     }
 }
-@media(min-width:1023px){
+@media(min-width:1000px){
     .imgProduct {
         margin: 6% 0 1%;
         height: 300px;
@@ -65,7 +65,7 @@
         padding-bottom: 0;
     }
 }
-@media(min-width:1269px){
+@media(min-width:1200px){
     .productContainer {
         display: flex;
         width: 90%;
@@ -94,7 +94,7 @@
         width: 60%;
     }
 }
-@media(min-width:1439px){
+@media(min-width:1400px){
     .imgProduct {
         width: 30vw;
         height: 450px;

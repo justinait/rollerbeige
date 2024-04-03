@@ -127,7 +127,7 @@
     display: flex;
     justify-content: space-around;
 }
-@media(min-width: 639px){
+@media(min-width: 600px){
     .promoTitle{
         font-size: 15px;
     }

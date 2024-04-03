@@ -47,7 +47,7 @@ function Navbar() {
     }
   }
   const closeDropdown = () => {
-    if (windowWidth <= 1023) {
+    if (windowWidth <= 1000) {
       setShowDropdown(false);
     }
   }
