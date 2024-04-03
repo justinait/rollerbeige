@@ -15,14 +15,14 @@
     margin-top: 8%;
 }
 
-@media(min-width:639px){
+@media(min-width:600px){
     .servicesContainer {
         font-size: clamp(1.3rem, 8vw - 2rem, 3rem);
     }
 }
-@media(min-width:1023px){
+@media(min-width:1000px){
     .servicesContainer {
-        font-size: clamp(0.7rem, 6vw - 2rem, 3rem);
+        font-size: clamp(0.6rem, 6vw - 2rem, 3rem);
     }
     .services {
         margin-top: 5%;
@@ -72,7 +72,7 @@
     }
 }
 
-@media(min-width:1439px){
+@media(min-width:1400px){
     .servicesContainer {
         margin: 5% auto;    
         padding: 4% 0% 4% 7%;

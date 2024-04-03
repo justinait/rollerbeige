@@ -119,6 +119,10 @@
     .dropdownItem{
         font-size: 17px;
     }
+    
+    .logoNavbar {
+        width: 200px;
+    }
 }
 
 @media (min-width: 1200px){
@@ -151,7 +155,7 @@
         padding: 0 5% 0 0;
     }
     .logoNavbar {
-        width: 220px;
+        width: 180px;
     }
     .navbarItemsContainer{
         width: 50vw;
@@ -162,9 +166,13 @@
         font-size: 1.2em !important;
     }
 }
-@media (min-width: 1439px){
+@media (min-width: 1400px){
     .header{
         height: 12vh;
+    }
+    
+    .logoNavbar {
+        width: 220px;
     }
 }
 @media (min-width: 1800px){

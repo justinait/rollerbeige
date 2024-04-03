@@ -23,7 +23,7 @@ function HomeCart() {
         })
         .catch((err)=>console.log(err))
     }, [])
-    const numToShow = window.innerWidth < 1000 ? 2 : 4; // Adjust according to screen size
+    const numToShow = window.innerWidth < 1000 ? 2 : 4;
 
   return (
     <div>
