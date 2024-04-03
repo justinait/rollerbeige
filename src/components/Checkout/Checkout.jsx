@@ -204,7 +204,7 @@ function Checkout() {
       <Link to={'/cart'}>Volver al carrito</Link>
       {
         <form ref={form} className="form">
-          <h6>DETALLE DE LA COMPRA</h6>
+          <h6 className='checkoutSubtitle'>DETALLE DE LA COMPRA</h6>
           <div className='detailCheckout'>
 
             {cart.map((e, i)=>{

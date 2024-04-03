@@ -12,8 +12,7 @@
 .checkoutContainer h5 {
     margin: 5% 0;
 }
-.checkoutContainer h6{
-    
+.checkoutSubtitle{
     margin: 5% 0 8%;
     font-size: 16px;
 }
@@ -41,6 +40,7 @@
     align-items: center;
     font-weight: 500;
     color: grey;
+    width: 100%;
 }
 .seleccionarMetodoCheckout:hover {
     border: black 2px solid;
@@ -72,7 +72,7 @@
 .checkboxContainerCheckout {
     display: flex;
     justify-content: space-between;
-    margin: 6% 0 0%;
+    /* margin: 6% 0 0%; */
     align-items: baseline;
     width: 60vw;
 }
@@ -139,7 +139,7 @@
     #walletBrick_container{
         width: 40vw !important;
     }
-    .checkoutContainer h6 {
+    .checkoutSubtitle {
         margin: 5% 0;
     }
 }
@@ -150,7 +150,7 @@
     .checkoutDetailContainer {
         font-size: 16px;
     }
-    .checkoutContainer h6 {
+    .checkoutSubtitle {
         font-size: 18px;
         margin: 2% 0 4%;
     }
@@ -164,7 +164,7 @@
 
 @media(min-width:1700px){
     
-    .checkoutContainer h6 {
+    .checkoutSubtitle {
         font-size: 20px;
     }
     .checkoutDetailContainer {
