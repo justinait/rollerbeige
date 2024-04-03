@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import logo from '/logo/logoNavbar.png'
 import './Navbar.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { onLogOut } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -9,19 +9,31 @@ import { Dashboard } from '@mui/icons-material';
 import { CartContext } from '../../context/CartContext';
 import CartWidget from './CartWidget';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function Navbar() {
 
   const {handleLogoutAuth, user, isLogged} = useContext(AuthContext);
   
   const [showProductDropdown, setShowProductDropdown] = useState(false);
-  const [showCartDropdown, setShowCartDropdown] = useState(false);
+  const [openCartDropdown, setOpenCartDropdown] = useState(false);
+  const [prevTotal, setPrevTotal] = useState(0);
 
   const windowWidth = window.innerWidth;
   let navigate = useNavigate()
 
+  const location = useLocation();
   const [showDropdown, setShowDropdown] = (windowWidth <= 1200) ? useState(false): useState(true)
   
+  const { 
+    cart,
+    addToCart,
+    clearCart,
+    deleteById,
+    getTotalPrice,
+    totalProducts } = useContext(CartContext);
+    
+  let total = getTotalPrice()
   const handleLogOut = () => {
     onLogOut();
     handleLogoutAuth()
@@ -31,6 +43,7 @@ function Navbar() {
   const handleClick = () => {
     if (windowWidth <= 1200) {
       setShowDropdown(!showDropdown);
+      setOpenCartDropdown(false);
     }
   }
   const closeDropdown = () => {
@@ -38,7 +51,29 @@ function Navbar() {
       setShowDropdown(false);
     }
   }
-  
+  const handleClickCart = () => {
+    
+    if(openCartDropdown == false){
+      setOpenCartDropdown(true)
+      if (windowWidth <= 1200) {
+        setShowDropdown(false);
+      }
+    } else{
+      setOpenCartDropdown(false)
+    }
+    
+  };
+  useEffect(()=> {
+    if (total > prevTotal) {
+      setOpenCartDropdown(true);
+    }
+    setPrevTotal(total);
+  }, [total])
+
+  useEffect(()=> {
+    setOpenCartDropdown(false);
+  }, [location.pathname]);
+
   const scrollToProducts = () => {
 
     const productsSection = document.getElementById('products');
@@ -79,8 +114,10 @@ function Navbar() {
 
           </div>
         }
-      <CartWidget />
-        
+        {!isLogged && <ShoppingCartOutlinedIcon color='grey' fontSize='small' className='cartItemNavbar' onClick={handleClickCart}/>}
+        {openCartDropdown &&
+          <CartWidget />
+        }
       </div>
     </div>
   )

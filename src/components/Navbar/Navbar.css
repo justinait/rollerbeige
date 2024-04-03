@@ -37,6 +37,7 @@
 }
 .cartItemNavbar {
     padding-right: 5%;
+    font-size: 1.2em !important;
 }
 
 .dropdownContainer {
@@ -76,6 +77,9 @@
         width: 37%;
     }
     
+    .cartItemNavbar {
+        padding-right: 1%;
+    }
     .dropdownItem {
         font-weight: 400;
         font-size: 15px;
@@ -152,7 +156,9 @@
         width: 50vw;
     }
     .cartItemNavbar {
-        margin: 0 0 0 15px;
+        /* margin: 0 0 0 15px; */
+        padding: 0;
+        font-size: 1.2em !important;
     }
 }
 @media (min-width: 1439px){

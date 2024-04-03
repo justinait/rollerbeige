@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../context/CartContext';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import './CartWidget.css'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CartWidget() {
 
@@ -14,31 +12,12 @@ function CartWidget() {
         deleteById,
         getTotalPrice,
         totalProducts } = useContext(CartContext);
-    const [openCartDropdown, setOpenCartDropdown] = useState(false)
-    const [prevTotal, setPrevTotal] = useState(0);
-    let total = getTotalPrice()
-    const location = useLocation();
 
-    const handleOpenCart =()=> {
-        if(openCartDropdown == false)
-            setOpenCartDropdown(true)
-        else
-            setOpenCartDropdown(false)
-    }
-    useEffect(()=> {
-        if (total > prevTotal) {
-            setOpenCartDropdown(true);
-        }
-        setPrevTotal(total);
-    }, [total])
-    
-    useEffect(()=> {
-        setOpenCartDropdown(false);
-    }, [location.pathname]);
+    let total = getTotalPrice()
+
   return (
     <div>
-        <ShoppingCartOutlinedIcon fontSize='small' className='cartItemNavbar' onClick={handleOpenCart}/>
-        {openCartDropdown &&
+        {
             <div className='cartWidgetBox'>
             {
                 cart.map((e, i)=>{
@@ -55,7 +34,7 @@ function CartWidget() {
                 })
             }
             <p className='subtotalCart'>Subtotal: <strong>${total}</strong> </p>
-            <Link className='cartWidgetButton' to='/cart' onClick={handleOpenCart}>Ver carrito</Link>
+            <Link className='cartWidgetButton' to='/cart' >Ver carrito</Link>
             </div>
         }
         
