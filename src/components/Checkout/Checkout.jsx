@@ -122,6 +122,7 @@ function Checkout() {
   const handleBuy = async (e, method) => {
     e.preventDefault();
     const result = validate(userData);
+    //validaciones
     if(!Object.keys(result).length){ 
       setMethodChange(!methodChange)
       let paymentMethod = method;
@@ -144,7 +145,7 @@ function Checkout() {
       await sendEmail();
     }
     
-    if(paymentMethod === 'card'){
+    if(method === 'card'){
       const id = await createPreference();
       if(id){
         setPreferenceId(id);
