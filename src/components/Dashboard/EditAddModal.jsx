@@ -3,12 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { db, uploadFile } from '../../firebaseConfig';
 import {addDoc, collection, updateDoc, doc} from "firebase/firestore"
+import Alert from 'react-bootstrap/Alert';
 
 function EditAddModal({handleClose, setIsChange, productSelected, setProductSelected}) {
-  const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [checkboxes, setCheckboxes] = useState([])
-  const [categoryArray, setCategoryArray] = useState([])
+  const [errorsArray, setErrorsArray] = useState([])
+  const [details, setDetails] = useState([''])
   const [newProduct, setNewProduct] = useState({
     title:"",
     unit_price:0,
@@ -17,7 +18,10 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     category: []
   })
   const [file, setFile] = useState(null);
-
+  const [categoryArray, setCategoryArray] = useState([])
+  const [show, setShow] = useState(false);
+  const [stock, setStock] = useState([''])
+  
   const handleImage = async () => {
     setIsLoading(true);
     let url = await uploadFile(file);
@@ -51,25 +55,35 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       let obj = {
         ...productSelected,
         unit_price: +productSelected.unit_price,
-        category: newProduct.category
+        category: newProduct.category,
+        details: details
       }
 
-      updateDoc(doc(productsCollection, productSelected.id), obj).then(()=>{
-        setIsChange(true);
-        handleClose();
-      })
-      
+      const result = validate(productSelected)
+      console.log(productSelected);
+      if(!Object.keys(result).length){
+        updateDoc(doc(productsCollection, productSelected.id), obj).then(()=>{
+          setIsChange(true);
+          handleClose();
+        })
+      }
     } else{
       let obj = {
         ...newProduct,
-        unit_price: +newProduct.unit_price
+        unit_price: +newProduct.unit_price,
+        details: details
       }
-      addDoc(productsCollection, obj).then(()=> {
-        setIsChange(true);
-        handleClose();
-      })
+      const result = validate(newProduct)
+      
+      if(!Object.keys(result).length){
+        addDoc(productsCollection, obj).then(()=> {
+          setIsChange(true);
+          handleClose();
+        })
+      }
 
     }
+    
   }
 
   const categories = [  'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
@@ -108,7 +122,62 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       }));
     }
   }, [productSelected]);
+  const addColorInput = () => {
+    setDetails([...details, '']);
+  };
+  const removeColorInput = () => {
+    if(details.length > 0){
+      const newDetails = [...details];
+      newDetails.pop();
+      setDetails(newDetails);
+    }
+  };
+  const handleColorChange =(index, event)=> {
+    const newDetails = [...details];
+    newDetails[index].color = event.target.value;
+    setDetails(newDetails);
+  }
+  const handleStockChange = (index, event) => {
+    const newDetails = [...details];
+    newDetails[index] = {
+      ...newDetails[index],
+      stock: Number(event.target.value)  // Convierte el valor del input a un número
+    };
+    setDetails(newDetails);
+  };
 
+  const validate = (values) => {
+    const errors = {}
+    if(!values.title){
+      errors.title = 'Este campo es obligatorio'
+    }
+    if(!values.unit_price || values.unit_price == 0){
+      errors.unit_price = 'Este campo es obligatorio'
+    }
+    if(!newProduct.category){
+      errors.category = 'Este campo es obligatorio'
+    }
+    if(!values.description){
+      errors.description = 'Este campo es obligatorio'
+    } 
+    
+    if (details.some(detail => (detail === '') || (!detail))) {
+      errors.details = 'Este campo es obligatorio';
+    }
+    
+    console.log(details);
+    
+    if(!productSelected) {
+
+      if(!values.firstImage){
+        errors.firstImage = 'Este campo es obligatorio'
+      }
+    }
+
+    setErrorsArray(errors)
+    
+    return errors
+  }
   return (
     <>
       <Modal.Header closeButton>
@@ -117,38 +186,42 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       <Modal.Body>
          
         <form className="form">
-          <div className="input">
+
+          <div className="">
+            <p className='modalDescription'>Nombre</p>
             <input
               type="text"
               name="title"
               onChange={handleChange}
-              placeholder="Nombre"
               className="input"
               defaultValue={productSelected?.title}
             />
+            {errorsArray.title && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.title}           </Alert> }
           </div>
-          <div className="input">
+          <div className="">
+            <h6 className='modalDescription'>Precio</h6>
             <input
               type="number"
               name="unit_price"
               onChange={handleChange}
-              placeholder="Precio"
               className="input"
               defaultValue={productSelected?.unit_price}
             />
+            {errorsArray.unit_price && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.unit_price}           </Alert> }
           </div>
-          <div className="input">
+          <div className="">
+            <h6 className='modalDescription'>Descripción</h6>
             <input
               type="text"
               name="description"
               onChange={handleChange}
-              placeholder="Descripción"
               className="input"
               defaultValue={productSelected?.description}
             />
+            {errorsArray.description && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.description}           </Alert> }
           </div>
           
-          <p>Categorías</p>
+          <h6 className='modalDescription'>Categorías</h6>
           <div className="inputModal">
             {categories.map((category, i)=>{    
               return (
@@ -164,20 +237,51 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
                 </div>
               )
             })}
+            {errorsArray.category && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.category}           </Alert> }
           </div>
 
-          <div className="input">
+          <div>
+            <h6 className='modalDescription'>Colores y Stock</h6>
+            {details.map((e, index) => (
+              <div key={index} className="inputModal inputModalColors">
+                <input
+                  type="text"
+                  defaultValue={e}
+                  name="color"
+                  onChange={(event) => handleColorChange(index, event)}
+                  placeholder="Color"
+                  className="inputModal"
+                />
+                <input
+                  type="number"
+                  defaultValue={e}
+                  name="stock"
+                  onChange={(event) => handleStockChange(index, event)}
+                  placeholder="Stock"
+                  className="inputModal"
+                  />
+              </div>
+            ))}
+            {errorsArray.details && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.details}           </Alert> }
+            
+            <p className='addMoreButton' onClick={()=> removeColorInput()}>-</p>
+            <p className='addMoreButton' onClick={addColorInput}>+</p>
+          </div>
+
+
+          <div className="">
+          <p className='modalDescription'>Imagen</p>
             <input
               type="file"
               onChange={(e)=>setFile(e.target.files[0])}
-              className="input"
+              className=""
             />
           </div>
           {
             file &&
             <button type='button' onClick={handleImage}>Confirmar imagen</button>
           }
-
+          {errorsArray.firstImage && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.firstImage}           </Alert> }
         </form>
          
       </Modal.Body>
