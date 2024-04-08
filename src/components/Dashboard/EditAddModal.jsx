@@ -17,6 +17,9 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     description:"",
     category: []
   })
+  
+  const [imageValidation, setImageValidation] = useState(false);
+  
   const [file, setFile] = useState(null);
   const [categoryArray, setCategoryArray] = useState([])
   const [show, setShow] = useState(false);
@@ -30,8 +33,10 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       setProductSelected({
         ...productSelected, image: url
       })
+      setImageValidation(true);
     } else {
       setNewProduct({...newProduct, image: url})
+      setImageValidation(true);
     }
 
     setIsLoading(false);
@@ -106,7 +111,6 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
         category: prevState.category.filter(cat => cat !== category)
       }));
     }
-    console.log(newProduct);
   };
   useEffect(() => {
     if (productSelected) {
@@ -133,8 +137,12 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     }
   };
   const handleColorChange =(index, event)=> {
+    console.log(event.target.value);
     const newDetails = [...details];
-    newDetails[index].color = event.target.value;
+    newDetails[index] = {
+      ...newDetails[index],
+      color: event.target.value
+    };
     setDetails(newDetails);
   }
   const handleStockChange = (index, event) => {
@@ -154,7 +162,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     if(!values.unit_price || values.unit_price == 0){
       errors.unit_price = 'Este campo es obligatorio'
     }
-    if(!newProduct.category){
+    if(newProduct.category.length <= 0){
       errors.category = 'Este campo es obligatorio'
     }
     if(!values.description){
@@ -169,7 +177,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     
     if(!productSelected) {
 
-      if(!values.firstImage){
+      if(!imageValidation){
         errors.firstImage = 'Este campo es obligatorio'
       }
     }
