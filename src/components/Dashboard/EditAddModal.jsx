@@ -19,11 +19,8 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
   })
   
   const [imageValidation, setImageValidation] = useState(false);
-  
   const [file, setFile] = useState(null);
-  const [categoryArray, setCategoryArray] = useState([])
-  const [show, setShow] = useState(false);
-  const [stock, setStock] = useState([''])
+  const categories = [  'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
   
   const handleImage = async () => {
     setIsLoading(true);
@@ -91,7 +88,6 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     
   }
 
-  const categories = [  'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
   const handleCheckboxChange = (event, category) => {
     const { checked } = event.target;
     const updatedCheckboxes = { ...checkboxes, [category]: checked };
@@ -124,11 +120,14 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
         ...prevState,
         category: selectedCategories
       }));
+      setDetails(productSelected.details)
     }
   }, [productSelected]);
+
   const addColorInput = () => {
     setDetails([...details, '']);
   };
+
   const removeColorInput = () => {
     if(details.length > 0){
       const newDetails = [...details];
@@ -136,6 +135,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       setDetails(newDetails);
     }
   };
+
   const handleColorChange =(index, event)=> {
     console.log(event.target.value);
     const newDetails = [...details];
@@ -143,6 +143,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       ...newDetails[index],
       color: event.target.value
     };
+
     setDetails(newDetails);
   }
   const handleStockChange = (index, event) => {
@@ -254,7 +255,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
               <div key={index} className="inputModal inputModalColors">
                 <input
                   type="text"
-                  defaultValue={e}
+                  defaultValue={e.color}
                   name="color"
                   onChange={(event) => handleColorChange(index, event)}
                   placeholder="Color"
@@ -262,7 +263,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
                 />
                 <input
                   type="number"
-                  defaultValue={e}
+                  defaultValue={e.stock}
                   name="stock"
                   onChange={(event) => handleStockChange(index, event)}
                   placeholder="Stock"
