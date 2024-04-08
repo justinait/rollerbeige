@@ -299,11 +299,11 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
           Cancelar
         </Button>
         
-        {
-          !isLoading &&
-          <Button type='submit' onClick={handleSubmit} variant="primary">Guardar</Button>
-        }
-        
+      {
+        !isLoading &&
+        <Button type='submit' onClick={handleSubmit} variant="primary">Guardar</Button>
+      }
+      
     </Modal.Footer>
     </>
   );

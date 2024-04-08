@@ -22,11 +22,11 @@ function Transfer() {
       Podés hacer transferencia o depósito desde cualquier billetera virtual o banco, a la siguiente cuenta:
       <br /><br />
 
-      Banco  <br />
-      Número de CBU: 
+      Cuenta de Mercado Pago.<br />
+      Número de CBU: 0000003100039494013205
       <br />
-      Alias:  <br />
-      Titular de la cuenta:
+      Alias: roller.beige.mp <br />
+      Titular de la cuenta: Franchini, Ana Mercedes
       
       <br /> <br />
       Recordá enviar el comprobante dentro de las 48 horas respondiendo el mail de compra que te llegó para poder confirmarte tu pedido.
