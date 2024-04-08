@@ -122,7 +122,16 @@ function Promos() {
 
               <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
               <p className='modalPromoDescription'>{selectedItem?.description}</p>
-              
+              <div>
+                {
+                  selectedItem.details?.map(e=>{
+                    return(
+                      <p className='modalColors'>{e.color}</p>
+                    )
+                  })
+                }
+                {console.log(selectedItem.details)}
+              </div>
               <div className='addCartContainerModal'>
 
                 <div className='itemCountContainer'>
