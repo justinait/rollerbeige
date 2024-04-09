@@ -122,7 +122,6 @@ function Checkout() {
   const handleBuy = async (e, method) => {
     e.preventDefault();
     const result = validate(userData);
-    //validaciones
     if(!Object.keys(result).length){ 
       setMethodChange(!methodChange)
       let paymentMethod = method;

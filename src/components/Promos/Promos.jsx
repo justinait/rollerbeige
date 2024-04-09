@@ -28,12 +28,15 @@ function Promos() {
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedStock, setSelectedStock] = useState(0);
   const [available, setAvailable] = useState(0)
+  const [noStock, setNoStock] = useState(false);
 
   const handleClose = () => {
     setShow(false);
     setSelectedItem([])
     setSelectedColor('')
     setSelectedStock(0)
+    setNoStock(false)
+    setCount(1)
   }
   const handleShow = () => setShow(true);
   
@@ -49,7 +52,7 @@ function Promos() {
       return setCount(count+1);
     }
     else{
-      alert('Stock máximo')
+      setNoStock(true)
     }
   }
     
@@ -102,11 +105,15 @@ function Promos() {
   useEffect(()=>{
     checkStock();
   }, [selectedColor])
-  const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
+  const categories = ['Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE']
+  
   const handleColorPick = (e) => {
     setSelectedColor(e.color);
-    setSelectedStock(e.stock)
+    setSelectedStock(e.stock);
+    setNoStock(false);
+    setCount(1)
   }
+
   return (
     <div className='productsContainer'>
       <h2 style={{marginBottom: '-2%' }}>NUESTRA TIENDA</h2>
@@ -174,6 +181,10 @@ function Promos() {
                 onClick={ ()=> addToCart(selectedItem, count)} 
                 disabled={(!available || !selectedColor )}> Agregar al carrito </button>
               </div>
+                {
+                  noStock &&
+                  <p className='noStock'>Sin stock</p>
+                }
             </div>
             
           </Modal.Body>
