@@ -42,3 +42,9 @@
     background-color: black;
     color: white;
 }
+@media(min-width:1000px) {
+    
+    .dashboardCategoryBox{
+        margin-bottom: 0;
+    }
+}

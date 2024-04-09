@@ -251,7 +251,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
 
           <div>
             <h6 className='modalDescription'>Colores y Stock</h6>
-            {details.map((e, index) => (
+            {details?.map((e, index) => (
               <div key={index} className="inputModal inputModalColors">
                 <input
                   type="text"
