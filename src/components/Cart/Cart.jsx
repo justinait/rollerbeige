@@ -41,7 +41,8 @@ function Cart() {
                                     
                                     <img className='cartItemImage' src={e.image} alt={e.title} />
                                     <div className='infoCartItem'>
-                                        <h6>{e.title}</h6>
+                                        <p>{e.title}</p>
+                                        <p>{e.color}</p>
                                         <button className='cartItemDelete' onClick={()=>deleteById(e.id)}> <DeleteOutlinedIcon/> </button>
                                         <h6 className='cartItemPrice'>{e.quantity} x <strong> ${e.unit_price}</strong></h6>
                                     </div>

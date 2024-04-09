@@ -24,14 +24,14 @@ function CartContextComponent({children}) {
             localStorage.setItem("cart", JSON.stringify(newArr))
             setTotalProducts(totalProducts+product.quantity)
             setCart(newArr)
-
+            
         } else {
             localStorage.setItem("cart", JSON.stringify([...cart, product]))
             setCart([...cart, product])
             setTotalProducts(totalProducts+product.quantity)
         }
-        
     }
+
     const getQuantityById = (id) =>{
         let product = cart.find(e=> e.id ===id);
         return product?.quantity;

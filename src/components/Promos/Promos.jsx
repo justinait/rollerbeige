@@ -63,6 +63,7 @@ function Promos() {
   function addToCart (product, count) {
     let obj = {
       ...product,
+      color: selectedColor,
       quantity: count
     }
     addToCartContext(obj)
@@ -91,8 +92,7 @@ function Promos() {
 
   const checkStock = () => {
     if(selectedItem.length !== 0){
-      const detailsArray = selectedItem.details
-      {console.log(detailsArray)}
+      const detailsArray = selectedItem.details;
       
       detailsArray.map((e) => {
         if (e.color == selectedColor && e.stock > 1){
@@ -105,6 +105,7 @@ function Promos() {
   useEffect(()=>{
     checkStock();
   }, [selectedColor])
+  
   const categories = ['Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE']
   
   const handleColorPick = (e) => {

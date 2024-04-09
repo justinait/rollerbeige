@@ -47,4 +47,7 @@
     .dashboardCategoryBox{
         margin-bottom: 0;
     }
+    .orderContainer{
+        width: 50%;
+    }
 }

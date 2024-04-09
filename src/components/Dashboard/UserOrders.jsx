@@ -61,16 +61,17 @@ function UserOrders() {
                     <p>Método de pago: {e.paymentMethod}</p>
                     <p>Total: ${e.total}</p>
 
-                    {e?.items?.map(item => {
+                    {e?.items?.map((item, index) => {
                         return (
                             <div className='itemOrderContainer'>
                                 <div className='itemOrderGroup'>
-                                    <p>Prenda {i + 1}</p>
+                                    <p>Item {index + 1}</p>
                                     <img src={item.image} width={50}/> 
                                 </div>
                                 <div className='itemOrderGroup'>
                                     <p>{item.title}</p>
-                                    <p>${item.unit_price}</p>
+                                    <p>{item.quantity} x ${item.unit_price}</p>
+                                    <p>{item.color}</p>
                                 </div>
                             </div>
                         )

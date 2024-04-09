@@ -11,7 +11,7 @@ function Transfer() {
   const discount = total * 0.10;
   const discountPrice = total - discount;
 
-  const finalPrice = discountPrice + shipmentCost
+  const finalPrice = total + shipmentCost
 
   return (
     <div className='checkoutContainer'>

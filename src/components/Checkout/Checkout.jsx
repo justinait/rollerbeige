@@ -75,9 +75,11 @@ function Checkout() {
         console.error("Error adding document: ", error);
       });
       console.log({order});
+
       // order.items.foreach((e)=>{
       //   updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
       // })
+
       localStorage.removeItem("order");
       clearCart();
     } else if(order?.paymentMethod === 'card') {
@@ -129,7 +131,9 @@ function Checkout() {
         return {
           title: e.title,
           unit_price: +e.unit_price,
-          image: e.image
+          image: e.image,
+          color: e.color,
+          quantity: e.quantity
         }
       })
       let order = {
@@ -317,7 +321,7 @@ function Checkout() {
           
           }
           <div className='buttonsCheckoutContainer'>
-            <p className='seleccionarMetodoCheckout' onClick={(e)=>handleBuy(e, 'transfer')}> Pagar con transferencia <p className='transferCheckout'>10% OFF</p></p>
+            <p className='seleccionarMetodoCheckout' onClick={(e)=>handleBuy(e, 'transfer')}> Pagar con transferencia</p>
             <button className='seleccionarMetodoCheckout' onClick={(e)=>handleBuy(e, 'card')} disabled={(preferenceId!=null)}> <img src={mp} alt="Mercado Pago" className='mercadoPagoLogo' /> Pagar con tarjeta de crédito/débito</button>
           </div>
 
