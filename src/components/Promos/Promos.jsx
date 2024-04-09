@@ -25,8 +25,13 @@ function Promos() {
   const [selectedCategory, setSelectedCategory] = useState('Todos los productos');
   const [quantity, setQuantity] = useState(1)
   const [count, setCount] = useState(quantity);
+  const [selectedColor, setSelectedColor] = useState('');
+  const [available, setAvailable] = useState(0)
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setSelectedItem([])
+  }
   const handleShow = () => setShow(true);
   
   const handleClick =(e)=>{
@@ -49,7 +54,7 @@ function Promos() {
     if( count > 0)   setCount ( count - 1 )
   }
 
-  function addToCart (product) {
+  function addToCart (product, count) {
     let obj = {
       ...product,
       quantity: count
@@ -77,9 +82,27 @@ function Promos() {
       setQuantity(getQuantityById(selectedItem.id))
     }
   }, [selectedItem])
-  
-  const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
 
+  const checkStock = () => {
+    if(selectedItem.length !== 0){
+      const detailsArray = selectedItem.details
+      {console.log(detailsArray)}
+      
+      detailsArray.map((e) => {
+        if (e.color == selectedColor && e.stock > 1){
+          return setAvailable(true)
+        }
+      });
+    }
+  }
+
+  useEffect(()=>{
+    checkStock();
+  }, [selectedColor])
+  const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
+  const handleColorPick = (color) => {
+    setSelectedColor(color);
+  }
   return (
     <div className='productsContainer'>
       <h2 style={{marginBottom: '-2%' }}>NUESTRA TIENDA</h2>
@@ -124,23 +147,29 @@ function Promos() {
               <p className='modalPromoDescription'>{selectedItem?.description}</p>
               <div>
                 {
-                  selectedItem.details?.map(e=>{
+                  selectedItem.details?.map((e, i)=>{
                     return(
-                      <p className='modalColors'>{e.color}</p>
+                      <p key={i} onClick={()=>{handleColorPick(e.color)}} className={`modalColors ${selectedColor === e.color ? 'sizeActive' : ''}`}>{e.color}</p>
                     )
                   })
                 }
-                {console.log(selectedItem.details)}
+                {
+                  (selectedColor && !available) &&
+                  <p className='noStock'>Sin stock</p>
+                }
               </div>
               <div className='addCartContainerModal'>
 
                 <div className='itemCountContainer'>
-                
                   <button className='buttonCount' onClick={ ()=>onRemove() }> - </button>
                   <p> { count } </p>
                   <button className='buttonCount' onClick={ ()=>onAdd(selectedItem) }> + </button>
                 </div>
-                <button className="buttonCount" onClick={ ()=> addToCart(selectedItem)} > Agregar al carrito </button>
+                <button 
+                className={`buttonCountAdd ${ (!available || !selectedColor )
+                ? 'disabledButton' : ''}`} 
+                onClick={ ()=> addToCart(selectedItem, count)} 
+                disabled={(!available || !selectedColor )}> Agregar al carrito </button>
               </div>
             </div>
             

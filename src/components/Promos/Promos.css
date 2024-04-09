@@ -113,8 +113,7 @@
     justify-content: space-between;
     width: 30%;
 }
-.buttonCount {
-    
+.buttonCount, .buttonCountAdd {
     background: none;
     border: 2px solid #8c6c79;
     height: 29px;
@@ -126,6 +125,34 @@
 .addCartContainerModal{
     display: flex;
     justify-content: space-around;
+}
+
+.modalColors {    
+    width: 30%;
+    border: grey 2px solid;
+    padding: 1% 4%;
+    border-radius: 10px;
+}
+.sizeActive{
+    background-color: grey;
+    color: white !important;
+    font-weight: 500;
+}
+.noStock {
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 700;
+    margin: 5% 2%;
+    font-size: larger;
+}
+.buttonCount:hover{
+    background-color: grey;
+    color: white;
+    border: 2px solid white;
+}
+.disabledButton{
+    color: rgb(188, 187, 187);
+    border: 2px solid rgb(188, 187, 187);
 }
 @media(min-width: 600px){
     .promoTitle{
