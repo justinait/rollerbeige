@@ -76,7 +76,7 @@
 .modalPromoImage {
     width: 90%;
     height: auto;
-    max-height: 40vh;
+    max-height: 27vh;
     object-fit: cover;
     border-radius: 20px;
     margin: 5%;
@@ -128,15 +128,21 @@
 }
 
 .modalColors {    
-    width: 30%;
+    width: fit-content;
     border: grey 2px solid;
     padding: 1% 4%;
     border-radius: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.modalColors:hover {
+    color: #575656;
+    border: #575656 2px solid;
+    cursor: pointer;
 }
 .sizeActive{
     background-color: grey;
     color: white !important;
-    font-weight: 500;
 }
 .noStock {
     text-transform: uppercase;
@@ -179,6 +185,9 @@
     .modalPromoDescription {
         font-size: 13px !important;
         margin-bottom: 5%;
+    }
+    .addCartContainerModal{
+        margin-top: 6%;
     }
 }
 @media(min-width: 1000px){
@@ -249,6 +258,7 @@
     .modalPromoDescription {
         font-size: 18px !important;
         text-align: right;
+        margin-bottom: 15%;
     }
     .modalWsp {
         font-size: 14px;
@@ -303,5 +313,8 @@
     }
     .modal-dialog {
         width: 50vw !important;
+    }
+    .infoModalContainer{
+        margin-top: 9%;
     }
 }

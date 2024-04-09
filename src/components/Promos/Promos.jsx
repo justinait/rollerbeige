@@ -32,6 +32,8 @@ function Promos() {
   const handleClose = () => {
     setShow(false);
     setSelectedItem([])
+    setSelectedColor('')
+    setSelectedStock(0)
   }
   const handleShow = () => setShow(true);
   
@@ -131,7 +133,6 @@ function Promos() {
                 <img src={e.image} alt={e.title} className='promoImage' />                
                 <p className='promoTitle'>{e.title}</p>
                 <p className='promoPrice'>$ {e.unit_price}</p>
-
               </div>
             )
           })
