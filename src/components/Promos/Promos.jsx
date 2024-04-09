@@ -26,6 +26,7 @@ function Promos() {
   const [quantity, setQuantity] = useState(1)
   const [count, setCount] = useState(quantity);
   const [selectedColor, setSelectedColor] = useState('');
+  const [selectedStock, setSelectedStock] = useState(0);
   const [available, setAvailable] = useState(0)
 
   const handleClose = () => {
@@ -41,12 +42,12 @@ function Promos() {
     }
   }
 
-  function onAdd (product) {
-    if ( product.stock > count ){
+  function onAdd () {
+    if ( selectedStock > count ){
       return setCount(count+1);
     }
     else{
-      alert('stock maximo')
+      alert('Stock máximo')
     }
   }
     
@@ -100,8 +101,9 @@ function Promos() {
     checkStock();
   }, [selectedColor])
   const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
-  const handleColorPick = (color) => {
-    setSelectedColor(color);
+  const handleColorPick = (e) => {
+    setSelectedColor(e.color);
+    setSelectedStock(e.stock)
   }
   return (
     <div className='productsContainer'>
@@ -149,7 +151,7 @@ function Promos() {
                 {
                   selectedItem.details?.map((e, i)=>{
                     return(
-                      <p key={i} onClick={()=>{handleColorPick(e.color)}} className={`modalColors ${selectedColor === e.color ? 'sizeActive' : ''}`}>{e.color}</p>
+                      <p key={i} onClick={()=>{handleColorPick(e)}} className={`modalColors ${selectedColor === e.color ? 'sizeActive' : ''}`}>{e.color}</p>
                     )
                   })
                 }
@@ -163,7 +165,7 @@ function Promos() {
                 <div className='itemCountContainer'>
                   <button className='buttonCount' onClick={ ()=>onRemove() }> - </button>
                   <p> { count } </p>
-                  <button className='buttonCount' onClick={ ()=>onAdd(selectedItem) }> + </button>
+                  <button className='buttonCount' onClick={ ()=>onAdd() }> + </button>
                 </div>
                 <button 
                 className={`buttonCountAdd ${ (!available || !selectedColor )
