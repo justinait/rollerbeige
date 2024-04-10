@@ -42,6 +42,11 @@ function Transfer() {
       {/* <p>Con el descuento del 10%, el valor de tu compra es de: <strong> ${discountPrice}</strong> </p> */}
 
       <br />
+      <br />
+      <br />
+      <p>Recordá que si retirás tu pedido por el local, debés coordinar con nosotros. <Link target='_blank' to='https://wa.link/fstsmy'>Hace click aquí</Link> o respondé el mail de compra pidiendo mas información sobre tu retiro.</p>
+
+      <br />
       <Link to={'/'}>Continuar comprando</Link>
     </div>
   )
