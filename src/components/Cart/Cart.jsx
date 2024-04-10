@@ -54,6 +54,7 @@ function Cart() {
                 }
                 </div>
                 <p className='subtotalCart'>Subtotal: ${total}</p>
+                <Link to={'/store'}>Continuar comprando</Link>
             </>
             :
             <div className='emptyContainer'>

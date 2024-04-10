@@ -12,11 +12,12 @@ function CartContextComponent({children}) {
     }, [cart]);
 
     const addToCartContext = (product) => {
-        let exist = cart.some(e=> e.id ===product.id)
+        let exist = cart.some(e=> e.id ==product.id)
+        
         if(exist){
             let newArr = cart.map (e =>{
                 if(e.id === product.id){
-                    return {...e, quantity: product.quantity}
+                    return {...e, quantity: e.quantity + product.quantity};
                 } else {
                     return e;
                 }
