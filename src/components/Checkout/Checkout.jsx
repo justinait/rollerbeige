@@ -250,7 +250,8 @@ function Checkout() {
                   <div className='checkoutDetailContainer'>
                     <img src={e.image} alt="" className='imgCheckout'/>
                     <p>{e.title}</p>
-                    <p>${e.unit_price}</p>
+                    <p>{e.color}</p>
+                    <p> {e.quantity} x ${e.unit_price}</p>
                   </div>
 
                   <div className='separatorCart'></div>

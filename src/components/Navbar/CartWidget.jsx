@@ -27,7 +27,8 @@ function CartWidget() {
                             <img className='cartWidgetImage' src={e.image} alt={e.title} />
                             <div className='cartWidgetContainerInfo'>
                                 <h6>{e.title}</h6>
-                                <p className='cartItemPrice'> ${e.unit_price}</p>
+                                <h6>{e.color}</h6>
+                                <p className='cartItemPrice'> {e.quantity} x ${e.unit_price}</p>
                             </div>
                         </div>
                     )
