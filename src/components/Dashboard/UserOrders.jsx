@@ -1,12 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebaseConfig';
-import { collection, doc, getDocs, updateDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, updateDoc } from 'firebase/firestore';
 import './UserOrders.css'
 
 function UserOrders() {
     const [orders, setOrders] = useState([]);
     const [orderState, setOrderState] = useState(false);
-
+    const [shipmentCost, setShipmentCost] = useState(0);
+    
+    useEffect(()=>{
+        const shipmentDocRef = doc(db, "shipment", "2EprTT1j7rjCxhSFA8ox");
+        
+        getDoc(shipmentDocRef).then((doc) => {
+          if (doc.exists()) {
+            setShipmentCost(doc.data().cost)
+          }
+        }).catch((error) => {
+          console.log("Error getting document:", error);
+        });
+    
+      }, [])
     useEffect(()=> {
         const ordersCollections = collection (db, "orders")
         getDocs(ordersCollections).then(res =>{
@@ -40,7 +53,6 @@ function UserOrders() {
             <button className={`dashboardCategory ${orderState === true ? 'dashboardCategoryActive' : ''}`} onClick={() => setOrderState(true)}>Enviadas</button>
         </div>
 
-        {console.log(orders)}
         {orders
         .filter((e) => (orderState === e.sent))
         .map((e, i) => {
@@ -59,7 +71,7 @@ function UserOrders() {
                     <p>Fecha de compra: {finalDate}</p>
                     {e.pickUp && <h6>RETIRA POR EL LOCAL</h6>}
                     <p>Método de pago: {e.paymentMethod}</p>
-                    <p>Total: ${e.total}</p>
+                    <p>Total: ${e.total} + {shipmentCost}</p>
 
                     {e?.items?.map((item, index) => {
                         return (
@@ -77,8 +89,7 @@ function UserOrders() {
                         )
                     })}
 
-                    <h6>Datos del comprador:</h6>
-                    
+                    <h6>Datos del comprador:</h6>                   
                     {Object.keys(e.userData).map((key, index) => {
                         const element = e.userData[key];
                         return (

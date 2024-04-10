@@ -16,7 +16,7 @@ function Checkout() {
   
   const { cart, addToCartContext, clearCart, deleteById, getTotalPrice, totalProducts, getQuantityById   } = useContext(CartContext);
   
-  const [shipmentCost, setShipmentCost] = useState(100);
+  const [shipmentCost, setShipmentCost] = useState(0);
   const [shipmentCostAux, setShipmentCostAux] = useState(0);
   const [preferenceId, setPreferenceId]= useState(null);
   const [userData, setUserData] = useState({
@@ -48,6 +48,7 @@ function Checkout() {
       user_name,
       user_email,
       total,
+      shipmentCost,
       items: items.join(', ')
     };
     
@@ -194,12 +195,17 @@ function Checkout() {
     setUserData({...userData, [e.target.name]: e.target.value})
   }
   useEffect(()=>{
-    let shipmentCollection = collection(db, "shipment")
-    let shipmentDoc = doc(shipmentCollection, "9W3lmfPC5YpolvXbmrEL")
-    getDoc(shipmentDoc).then(res=>{
-      setShipmentCost(res.data().cost)
-      setShipmentCostAux(res.data().cost)
-    })
+    const shipmentDocRef = doc(db, "shipment", "2EprTT1j7rjCxhSFA8ox");
+    
+    getDoc(shipmentDocRef).then((doc) => {
+      if (doc.exists()) {
+        setShipmentCost(doc.data().cost)
+        setShipmentCostAux(doc.data().cost)
+      }
+    }).catch((error) => {
+      console.log("Error getting document:", error);
+    });
+
   }, [])
 
   const handlePickUp =(e)=> {
