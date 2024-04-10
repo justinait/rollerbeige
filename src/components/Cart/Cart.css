@@ -210,7 +210,9 @@
     }
     .goToCheckoutButton, .clearCartButton {
         padding: 1.5% 3%;
-        width: 25%;
+        width: 20%;
+        display: inline-block;
+        text-align: center;
     }
     .emptyContainer{
         height: 60vh;

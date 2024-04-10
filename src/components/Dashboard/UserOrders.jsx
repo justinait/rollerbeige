@@ -75,7 +75,7 @@ function UserOrders() {
 
                     {e?.items?.map((item, index) => {
                         return (
-                            <div className='itemOrderContainer'>
+                            <div className='itemOrderContainer' key={index}>
                                 <div className='itemOrderGroup'>
                                     <p>Item {index + 1}</p>
                                     <img src={item.image} width={50}/> 
