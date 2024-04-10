@@ -165,7 +165,7 @@ function Promos() {
 
               <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
               <p className='modalPromoDescription'>{selectedItem?.description}</p>
-              <div>
+              <div className='modalPromoColorsContainer'>
                 {
                   selectedItem.details?.map((e, i)=>{
                     return(

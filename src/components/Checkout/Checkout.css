@@ -1,4 +1,4 @@
-.checkoutContainer {
+.checkoutContainer, .transferPageContainer {
     margin-top: 12vh;
     margin: 12vh 7% 5vh;
     margin: 12vh 5%;
@@ -160,7 +160,7 @@
     .input {
         font-size: 15px;
     }
-    .checkoutContainer {
+    .checkoutContainer, .transferPageContainer {
         margin: 15vh 5%;
     }
 }

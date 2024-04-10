@@ -159,6 +159,12 @@
     color: rgb(188, 187, 187);
     border: 2px solid rgb(188, 187, 187);
 }
+.modalPromoColorsContainer{
+    display: flex;
+}
+.modalPromoColorsContainer p {
+    margin-right: 3%;
+}
 @media(min-width: 600px){
     .promoTitle{
         font-size: 15px;
