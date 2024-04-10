@@ -53,12 +53,14 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     e.preventDefault();
     const productsCollection = collection(db, "products")
     
+    let capitalizedDetails = details.map(e => e.color.charAt(0).toUpperCase() + e.color.slice(1));
+
     if(productSelected){
       let obj = {
         ...productSelected,
         unit_price: +productSelected.unit_price,
         category: newProduct.category,
-        details: details
+        details: capitalizedDetails
       }
 
       const result = validate(productSelected)
@@ -73,7 +75,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       let obj = {
         ...newProduct,
         unit_price: +newProduct.unit_price,
-        details: details
+        details: capitalizedDetails
       }
       const result = validate(newProduct)
       
@@ -272,9 +274,10 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
               </div>
             ))}
             {errorsArray.details && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.details}           </Alert> }
-            
-            <p className='addMoreButton' onClick={()=> removeColorInput()}>-</p>
-            <p className='addMoreButton' onClick={addColorInput}>+</p>
+            <div className='addMoreButtonContainer'>
+              <p className='addMoreButton' onClick={addColorInput}>+</p>
+              <p className='addMoreButton' onClick={()=> removeColorInput()}>-</p>
+            </div>
           </div>
 
 

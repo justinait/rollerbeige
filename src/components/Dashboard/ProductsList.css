@@ -70,6 +70,12 @@
 .modalDescription {
     margin: 0;
 }
+.addMoreButtonContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    font-size: 35px;
+}
 @media(min-width:1000px){
     .tableDiv {
         font-size: 16px;
