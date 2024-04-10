@@ -27,7 +27,7 @@ function Promos() {
   const [count, setCount] = useState(quantity);
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedStock, setSelectedStock] = useState(0);
-  const [available, setAvailable] = useState(0)
+  const [available, setAvailable] = useState()
   const [noStock, setNoStock] = useState(false);
 
   const handleClose = () => {
@@ -48,11 +48,15 @@ function Promos() {
   }
 
   function onAdd () {
-    if ( selectedStock > count ){
-      return setCount(count+1);
-    }
-    else{
-      setNoStock(true)
+    if(selectedColor){
+
+      if ( selectedStock > count ){
+        setNoStock(false)
+        return setCount(count+1);
+      }
+      else{
+        setNoStock(true)
+      }
     }
   }
     
@@ -61,13 +65,16 @@ function Promos() {
   }
 
   function addToCart (product, count) {
-    let obj = {
-      ...product,
-      color: selectedColor,
-      quantity: count
+    checkStock()
+    if (available) {
+      let obj = {
+        ...product,
+        color: selectedColor,
+        quantity: count
+      };
+      addToCartContext(obj);
+      handleClose();
     }
-    addToCartContext(obj)
-    handleClose();
   }
 
   useEffect(()=>{
@@ -94,17 +101,30 @@ function Promos() {
   const checkStock = () => {
     if(selectedItem.length !== 0){
       const detailsArray = selectedItem.details;
-      
-      detailsArray.map((e) => {
-        if (e.color == selectedColor && e.stock > 1){
-          return setAvailable(true)
-        }
-      });
+      const foundItem = detailsArray.find(e => e.color === selectedColor);
+      console.log(selectedColor);
+      if (foundItem && foundItem.stock > 1) {
+        console.log(foundItem.stock);
+        setAvailable(true);
+      } else {
+        console.log(foundItem ? foundItem.stock : 0);
+        setAvailable(false);
+      }
+      // detailsArray.map((e) => {
+      //   if (e.color == selectedColor && e.stock > 1){
+      //     console.log(e.stock);
+      //     return setAvailable(true)
+      //   } else {
+      //     console.log(e.stock);
+      //     return setAvailable(false)
+      //   }
+      // });
     }
   }
 
   useEffect(()=>{
     checkStock();
+    // setAvailable()
   }, [selectedColor])
 
   const categories = ['Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Riles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE']
@@ -165,10 +185,6 @@ function Promos() {
                     )
                   })
                 }
-                {
-                  (selectedColor && !available) &&
-                  <p className='noStock'>Sin stock</p>
-                }
               </div>
               <div className='addCartContainerModal'>
 
@@ -184,8 +200,8 @@ function Promos() {
                 disabled={(!available || !selectedColor )}> Agregar al carrito </button>
               </div>
                 {
-                  noStock &&
-                  <p className='noStock'>Sin stock</p>
+                  ((selectedColor && !available) || noStock )&&
+                  <p className='noStock'>No hay más stock</p>
                 }
             </div>
             

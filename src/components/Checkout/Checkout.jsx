@@ -42,7 +42,7 @@ function Checkout() {
     const user_email =userData.email;
     const user_name =userData.name;
     const total =getTotalPrice();
-    const items = cart.map ( e=> `${e.title}: $${e.unit_price}`);
+    const items = cart.map ( e=> `${e.title}: ${e.quantity} x $${e.unit_price}`);
 
     const templateParams = {
       user_name,
