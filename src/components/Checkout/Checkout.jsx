@@ -74,14 +74,33 @@ function Checkout() {
       }).catch((error) => {
         console.error("Error adding document: ", error);
       });
-      console.log({order});
-
-      // order.items.foreach((e)=>{
-      //   updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
-      // })
+      //descontar stock
+      Object.keys(cart).forEach(key => {
+        const cartItem = cart[key];
+        
+        order?.items.forEach(e => {
+          if (cartItem.color === e.color) {
+            
+            if (cartItem.color === e.color) {
+              const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
+              updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
+            }
+          }
+        });
+      });
 
       localStorage.removeItem("order");
       clearCart();
+      setUserData({
+        email: "",
+        name: "",
+        cp: "",
+        phone: "",
+        city: "",
+        province: "",
+        adress: "",
+        depto: "",
+      })
     } else if(order?.paymentMethod === 'card') {
 
       let ordersCollections = collection(db, "orders");
@@ -92,11 +111,33 @@ function Checkout() {
       }).catch((error) => {
         console.error("Error adding document: ", error);
       });
-      order.items.foreach((e)=>{
-        updateDoc(doc(db, "products", e.id), {stock: e.stock - e.quantity})
-      })
+      
+      Object.keys(cart).forEach(key => {
+        const cartItem = cart[key];
+        
+        order?.items.forEach(e => {
+          if (cartItem.color === e.color) {
+            
+            if (cartItem.color === e.color) {
+              const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
+              updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
+            }
+          }
+        });
+      });
+
       localStorage.removeItem("order");
       clearCart();
+      setUserData({
+        email: "",
+        name: "",
+        cp: "",
+        phone: "",
+        city: "",
+        province: "",
+        adress: "",
+        depto: "",
+      })
     }
 
   }, [methodChange])
@@ -260,10 +301,11 @@ function Checkout() {
 
           <h6>Costo de envío: ${shipmentCost}</h6>
           <div className='checkboxContainerCheckout'>
-            <h6>Retiro por el local (gratis)</h6>
+            <h6>Retiro por el local en Paraná, Entre Ríos (gratis)</h6>
             <input type="checkbox" name='pickUp' checked={pickUp} onChange={(e)=>handlePickUp(e)} />
           </div>
-
+          <p>En caso de retiro por el local comunicate para coordinar con nosotros.</p>
+            {console.log(cart)}
           {(pickUp == false) &&
           <>
             <h5>DATOS DE ENVÍO</h5>

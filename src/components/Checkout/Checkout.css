@@ -140,6 +140,11 @@
     .checkoutSubtitle {
         margin: 5% 0;
     }
+    .transferPageContainer{
+        margin: 20vh 6%;
+        width: 46%;
+        min-height: 70vh;
+    }
 }
 @media(min-width: 1500px){
     .totalCheckout{

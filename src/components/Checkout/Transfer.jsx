@@ -14,7 +14,7 @@ function Transfer() {
   const finalPrice = total + shipmentCost
 
   return (
-    <div className='checkoutContainer'>
+    <div className='transferPageContainer'>
 
       <p>
       ¡Hola! ¿Cómo estás? <br /><br />
@@ -22,11 +22,14 @@ function Transfer() {
       Podés hacer transferencia o depósito desde cualquier billetera virtual o banco, a la siguiente cuenta:
       <br /><br />
 
+      <strong>
+
       Cuenta de Mercado Pago.<br />
       Número de CBU: 0000003100039494013205
       <br />
       Alias: roller.beige.mp <br />
       Titular de la cuenta: Franchini, Ana Mercedes
+      </strong>
       
       <br /> <br />
       Recordá enviar el comprobante dentro de las 48 horas respondiendo el mail de compra que te llegó para poder confirmarte tu pedido.
