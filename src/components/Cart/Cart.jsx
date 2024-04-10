@@ -43,7 +43,7 @@ function Cart() {
                                     <div className='infoCartItem'>
                                         <p>{e.title}</p>
                                         <p>{e.color}</p>
-                                        <button className='cartItemDelete' onClick={()=>deleteById(e.id)}> <DeleteOutlinedIcon/> </button>
+                                        <button className='cartItemDelete' onClick={()=>deleteById(e.id, e.color)}> <DeleteOutlinedIcon/> </button>
                                         <h6 className='cartItemPrice'>{e.quantity} x <strong> ${e.unit_price}</strong></h6>
                                     </div>
                                 </div>

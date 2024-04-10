@@ -102,23 +102,11 @@ function Promos() {
     if(selectedItem.length !== 0){
       const detailsArray = selectedItem.details;
       const foundItem = detailsArray.find(e => e.color === selectedColor);
-      console.log(selectedColor);
       if (foundItem && foundItem.stock > 1) {
-        console.log(foundItem.stock);
         setAvailable(true);
       } else {
-        console.log(foundItem ? foundItem.stock : 0);
         setAvailable(false);
       }
-      // detailsArray.map((e) => {
-      //   if (e.color == selectedColor && e.stock > 1){
-      //     console.log(e.stock);
-      //     return setAvailable(true)
-      //   } else {
-      //     console.log(e.stock);
-      //     return setAvailable(false)
-      //   }
-      // });
     }
   }
 

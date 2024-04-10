@@ -12,12 +12,13 @@ function CartContextComponent({children}) {
     }, [cart]);
 
     const addToCartContext = (product) => {
-        let exist = cart.some(e=> e.id ==product.id)
+
+        let exist = cart.some(e=> (e.id == product.id) && (e.color == product.color))
         
         if(exist){
             let newArr = cart.map (e =>{
-                if(e.id === product.id){
-                    return {...e, quantity: e.quantity + product.quantity};
+                if((e.id == product.id) && (e.color == product.color)){
+                    return {...e, color: product.color, quantity: product.quantity};
                 } else {
                     return e;
                 }
@@ -43,8 +44,8 @@ function CartContextComponent({children}) {
         setCart([]);
     }
     
-    const deleteById = (id) => {
-        const newArr = cart.filter(e=> e.id !== id)
+    const deleteById = (id, color) => {
+        const newArr = cart.filter(e => !(e.id === id && e.color === color));
         setCart(newArr)
         localStorage.setItem("cart", JSON.stringify(newArr))
         setTotalProducts(totalProducts-1)

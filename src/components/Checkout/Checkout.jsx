@@ -74,17 +74,15 @@ function Checkout() {
       }).catch((error) => {
         console.error("Error adding document: ", error);
       });
+
       //descontar stock
       Object.keys(cart).forEach(key => {
         const cartItem = cart[key];
-        
         order?.items.forEach(e => {
+          console.log(e); 
           if (cartItem.color === e.color) {
-            
-            if (cartItem.color === e.color) {
-              const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
-              updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
-            }
+            const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
+            updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
           }
         });
       });
@@ -104,7 +102,6 @@ function Checkout() {
     } else if(order?.paymentMethod === 'card') {
 
       let ordersCollections = collection(db, "orders");
-      console.log("Order data:", order);
       addDoc(ordersCollections, {
         ...order,
         date: serverTimestamp()
@@ -114,14 +111,11 @@ function Checkout() {
       
       Object.keys(cart).forEach(key => {
         const cartItem = cart[key];
-        
         order?.items.forEach(e => {
+          console.log(e); 
           if (cartItem.color === e.color) {
-            
-            if (cartItem.color === e.color) {
-              const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
-              updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
-            }
+            const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
+            updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
           }
         });
       });
@@ -212,7 +206,6 @@ function Checkout() {
     setPickUp(e.target.checked);
   }
   useEffect(()=>{
-    console.log(shipmentCost);
   }, [shipmentCost])
   const validate = (values) => {
     const errors = {}

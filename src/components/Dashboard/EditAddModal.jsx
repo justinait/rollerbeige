@@ -150,7 +150,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     const newDetails = [...details];
     newDetails[index] = {
       ...newDetails[index],
-      stock: Number(event.target.value)  // Convierte el valor del input a un número
+      stock: Number(event.target.value)
     };
     setDetails(newDetails);
   };
