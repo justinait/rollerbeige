@@ -52,19 +52,15 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
   const handleSubmit = (e) => {
     e.preventDefault();
     const productsCollection = collection(db, "products")
-    
-    let capitalizedDetails = details.map(e => e.color.charAt(0).toUpperCase() + e.color.slice(1));
 
     if(productSelected){
       let obj = {
         ...productSelected,
         unit_price: +productSelected.unit_price,
         category: newProduct.category,
-        details: capitalizedDetails
+        details: details
       }
-
       const result = validate(productSelected)
-      console.log(productSelected);
       if(!Object.keys(result).length){
         updateDoc(doc(productsCollection, productSelected.id), obj).then(()=>{
           setIsChange(true);
@@ -75,7 +71,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       let obj = {
         ...newProduct,
         unit_price: +newProduct.unit_price,
-        details: capitalizedDetails
+        details: details
       }
       const result = validate(newProduct)
       
@@ -85,9 +81,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
           handleClose();
         })
       }
-
     }
-    
   }
 
   const handleCheckboxChange = (event, category) => {

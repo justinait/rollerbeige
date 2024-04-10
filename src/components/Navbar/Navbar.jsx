@@ -114,8 +114,13 @@ function Navbar() {
 
           </div>
         }
-        {!isLogged && <ShoppingCartOutlinedIcon color='grey' fontSize='small' className='cartItemNavbar' onClick={handleClickCart}/>}
-        <span className="cartItemCount">{totalProducts}</span>
+        {!isLogged && 
+        <>
+          <span className="cartItemCount">{totalProducts}</span>
+          <ShoppingCartOutlinedIcon color='grey' fontSize='small' className='cartItemNavbar' onClick={handleClickCart}/>
+        </>
+        }
+        
         {openCartDropdown &&
           
           <CartWidget />

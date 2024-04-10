@@ -203,7 +203,9 @@
     .header{
         height: 12vh;
     }
-    
+    .dropdownItem{
+        padding: 0 6% 0 0;
+    }
     .cartItemCount{
         top: 3.6vh;
         margin: 0 3.3% 0 0;
@@ -213,7 +215,7 @@
         width: 220px;
     }
 }
-@media (min-width: 1800px){
+@media (min-width: 1700px){
     .logoNavbar {
         width: 230px;
     }

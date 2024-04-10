@@ -55,9 +55,6 @@
     margin: 1rem;
 }
 @media(min-width:600px) {
-    .cartWidgetItemContainer h6 {
-        /* font-size: 15px; */
-    }
     .subtotalCart {
         margin: auto;
     }
@@ -105,6 +102,9 @@
     }
 }   
 @media(min-width:1400px) {
+    .cartWidgetEmpty {
+        margin: 2.5rem 0 1rem;
+    }
 }
 
 @media(min-width:1600px) {
