@@ -102,7 +102,7 @@ function Promos() {
     if(selectedItem.length !== 0){
       const detailsArray = selectedItem.details;
       const foundItem = detailsArray.find(e => e.color === selectedColor);
-      if (foundItem && foundItem.stock > 1) {
+      if (foundItem && foundItem.stock >= 1) {
         setAvailable(true);
       } else {
         setAvailable(false);

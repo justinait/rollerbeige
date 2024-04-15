@@ -54,20 +54,10 @@ function Checkout() {
     
     try {
       await emailjs.send('34014722', 'template_gtev08e', templateParams, 'd1e499f2Vp0oNsjIh');
-      console.log('Correo electrónico enviado correctamente!');
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error);
     }
   };
-  // const updateStock = async (order) => {
-  //   order?.items.forEach((e, i) => {
-      
-  //     updateDoc(
-  //       doc(db, "products", e.id), 
-  //       {details: e.color == details[0].color && (details[0].stock = (details[0].stock - e.quantity))}
-  //     )
-  //   })
-  // };
   const updateStock = async (order) => {
  
     order?.items.forEach(async (item) => {
@@ -86,7 +76,6 @@ function Checkout() {
           })
           cartItem.details = newArray
           await updateDoc(doc(db, "products", item.id), { "details": newArray });
-          console.log(newArray);
         }
       }
       
@@ -107,23 +96,7 @@ function Checkout() {
         console.error("Error adding document: ", error);
       });
 
-      //descontar stock
-      //descuenta solo 1 si hya varios del mismo color
-      // Object.keys(cart).forEach(key => {
-      //   const cartItem = cart[key];
-      //   order?.items.forEach(e => {
-      //     console.log(e); 
-      //     if (cartItem.color === e.color) {
-      //       const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
-      //       cartItem.details.map(item => {
-      //         item.color === cartItem.color ? { ...item, stock: newStock } : item
-      //       })
-      //       updateDoc(doc(db, "products", cartItem.id), {"details": x });
-      //     }
-      //   });
-      // });
       updateStock(order);
-      
 
       localStorage.removeItem("order");
       clearCart();
@@ -146,7 +119,6 @@ function Checkout() {
       }).catch((error) => {
         console.error("Error adding document: ", error);
       });
-      
       
       updateStock(order);
 
@@ -335,7 +307,6 @@ function Checkout() {
             <input type="checkbox" name='pickUp' checked={pickUp} onChange={(e)=>handlePickUp(e)} />
           </div>
           <p>En caso de retiro por el local comunicate para coordinar con nosotros.</p>
-            {console.log(cart)}
           {(pickUp == false) &&
           <>
             <h5>DATOS DE ENVÍO</h5>
