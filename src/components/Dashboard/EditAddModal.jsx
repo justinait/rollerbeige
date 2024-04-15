@@ -133,7 +133,6 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
   };
 
   const handleColorChange =(index, event)=> {
-    console.log(event.target.value);
     const newDetails = [...details];
     newDetails[index] = {
       ...newDetails[index],
@@ -169,8 +168,6 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     if (details.some(detail => (detail === '') || (!detail))) {
       errors.details = 'Este campo es obligatorio';
     }
-    
-    console.log(details);
     
     if(!productSelected) {
 

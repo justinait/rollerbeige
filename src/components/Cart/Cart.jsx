@@ -29,7 +29,6 @@ function Cart() {
                     <button className='clearCartButton' onClick={clearCart}>Vaciar carrito</button>
                     <Link to='/checkout' className='goToCheckoutButton'>Finalizar compra</Link>
                 </div>
-                {console.log(cart)}
                 <div className='cartMapContainer'>
 
                 {
