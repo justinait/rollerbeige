@@ -4,7 +4,7 @@ import { CartContext } from '../../context/CartContext';
 import './Checkout.css'
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { addDoc, collection, updateDoc, serverTimestamp, doc, getDoc } from 'firebase/firestore';
+import { addDoc, collection, updateDoc, serverTimestamp, doc, getDoc, getDocs } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import mp from '/mercadopago.png'
 import { Alert } from 'react-bootstrap';
@@ -59,13 +59,49 @@ function Checkout() {
       console.error('Error al enviar el correo electrónico:', error);
     }
   };
+  // const updateStock = async (order) => {
+  //   order?.items.forEach((e, i) => {
+      
+  //     updateDoc(
+  //       doc(db, "products", e.id), 
+  //       {details: e.color == details[0].color && (details[0].stock = (details[0].stock - e.quantity))}
+  //     )
+  //   })
+  // };
+  const updateStock = async (order) => {
 
+    order?.items.forEach(async (item) => {
+      console.log(item);
+      console.log(item.id);
+      let itemNewStock = null;
+
+      for (const key in cart) {
+        const cartItem = cart[key];
+        console.log(cartItem.id);
+        console.log(item.id);
+        
+        if (cartItem.id === item.id) {
+          const newArray = cartItem.details.map(e=>{
+            if(e.color == item.color){
+              const updatedStock = e.stock - item.quantity;
+              itemNewStock = e.stock - item.quantity
+              return { ...e, stock: updatedStock }
+            } else {
+              return e
+            }
+          })
+          console.log(newArray);
+          updateDoc(doc(db, "products", item.id), { "details": newArray });
+        }
+      }
+      
+    });
+  };
   useEffect(()=>{
     let order = JSON.parse(localStorage.getItem("order"));
     
     if(order?.paymentMethod === 'transfer') {
       let ordersCollections = collection(db, "orders");
-      console.log("Order data:", order);
       addDoc(ordersCollections, {
         ...order,
         date: serverTimestamp()
@@ -77,16 +113,22 @@ function Checkout() {
       });
 
       //descontar stock
-      Object.keys(cart).forEach(key => {
-        const cartItem = cart[key];
-        order?.items.forEach(e => {
-          console.log(e); 
-          if (cartItem.color === e.color) {
-            const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
-            updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
-          }
-        });
-      });
+      //descuenta solo 1 si hya varios del mismo color
+      // Object.keys(cart).forEach(key => {
+      //   const cartItem = cart[key];
+      //   order?.items.forEach(e => {
+      //     console.log(e); 
+      //     if (cartItem.color === e.color) {
+      //       const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
+      //       cartItem.details.map(item => {
+      //         item.color === cartItem.color ? { ...item, stock: newStock } : item
+      //       })
+      //       updateDoc(doc(db, "products", cartItem.id), {"details": x });
+      //     }
+      //   });
+      // });
+      updateStock(order);
+      
 
       localStorage.removeItem("order");
       clearCart();
@@ -169,7 +211,8 @@ function Checkout() {
           unit_price: +e.unit_price,
           image: e.image,
           color: e.color,
-          quantity: e.quantity
+          quantity: e.quantity,
+          id: e.id
         }
       })
       let order = {

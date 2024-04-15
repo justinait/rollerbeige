@@ -7,9 +7,12 @@
     text-align: right;
     display: flex;
     flex-direction: column;
+    max-height: 82vh;
+    border-radius: 3px;
+}
+.cartWidgetItemsContainer {
     overflow-y: auto;
     max-height: 62vh;
-    border-radius: 3px;
 }
 .cartWidgetImage {
     height: 50px;
@@ -99,6 +102,13 @@
     .cartWidgetItemContainer{
         margin: 5% 0;
         padding: 0 5vw;
+    }
+    .cartWidgetBox{
+        max-height: 90vh;
+    }
+    .cartWidgetItemsContainer {
+        overflow-y: auto;
+        max-height: 80vh;
     }
 }   
 @media(min-width:1400px) {

@@ -22,7 +22,7 @@ function CartWidget() {
                 {
                     (cart.length == 0) ?
                     <p className='cartWidgetEmpty'>Tu carrito esta vacío</p>:
-                    <div>
+                    <div className='cartWidgetItemsContainer'>
                         {cart.map((e, i)=>{
                             return (
                                 <div key={i} className='cartWidgetItemContainer'>
@@ -38,8 +38,8 @@ function CartWidget() {
                         })}
                     </div>
                 }
-            <p className='subtotalCart'>Subtotal: <strong>${total}</strong> </p>
-            <Link className='cartWidgetButton' to='/cart' >Ver carrito</Link>
+                <p className='subtotalCart'>Subtotal: <strong>${total}</strong> </p>
+                <Link className='cartWidgetButton' to='/cart' >Ver carrito</Link>
             </div>
         }
         
