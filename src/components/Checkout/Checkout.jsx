@@ -69,29 +69,24 @@ function Checkout() {
   //   })
   // };
   const updateStock = async (order) => {
-
+ 
     order?.items.forEach(async (item) => {
-      console.log(item);
-      console.log(item.id);
-      let itemNewStock = null;
-
       for (const key in cart) {
         const cartItem = cart[key];
-        console.log(cartItem.id);
-        console.log(item.id);
         
         if (cartItem.id === item.id) {
           const newArray = cartItem.details.map(e=>{
             if(e.color == item.color){
               const updatedStock = e.stock - item.quantity;
-              itemNewStock = e.stock - item.quantity
               return { ...e, stock: updatedStock }
             } else {
               return e
             }
+            
           })
+          cartItem.details = newArray
+          await updateDoc(doc(db, "products", item.id), { "details": newArray });
           console.log(newArray);
-          updateDoc(doc(db, "products", item.id), { "details": newArray });
         }
       }
       
@@ -152,16 +147,8 @@ function Checkout() {
         console.error("Error adding document: ", error);
       });
       
-      Object.keys(cart).forEach(key => {
-        const cartItem = cart[key];
-        order?.items.forEach(e => {
-          console.log(e); 
-          if (cartItem.color === e.color) {
-            const newStock = parseFloat(cartItem.details.find(item => item.color === cartItem.color).stock) - parseFloat(e.quantity);
-            updateDoc(doc(db, "products", cartItem.id), {"details": cartItem.details.map(item => item.color === cartItem.color ? { ...item, stock: newStock } : item)});
-          }
-        });
-      });
+      
+      updateStock(order);
 
       localStorage.removeItem("order");
       clearCart();
