@@ -28,7 +28,7 @@ function HomeCart() {
 
   return (
     <div>
-      <h3>NUESTRA TIENDA</h3>
+      <h3 className='storeHomeTitle'>NUESTRA TIENDA</h3>
       <div className='menuStore'>
         {
         products

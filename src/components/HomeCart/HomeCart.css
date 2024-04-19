@@ -2,9 +2,14 @@
     display: flex;
     justify-content: space-evenly;
 }
+.storeHomeTitle {
+    padding-top: 13%;
+}
 @media(min-width: 1000px){
     .menuStore{
-        
-    padding: 5%;
+        padding: 5%;
+    }
+    .storeHomeTitle {
+        padding-top: 7% !important;
     }
 }
