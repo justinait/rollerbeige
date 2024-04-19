@@ -226,21 +226,23 @@ function Checkout() {
     if(!values.phone){
       errors.phone = 'Este campo es obligatorio'
     }
-
-    if(!pickUp){
-      if(!values.cp){
-        errors.cp = 'Este campo es obligatorio'
-      }
-      if(!values.city){
-        errors.city = 'Este campo es obligatorio'
-      }
-      if(!values.province){
-        errors.province = 'Este campo es obligatorio'
-      }
-      if(!values.adress){
-        errors.adress = 'Este campo es obligatorio'
-      }
+    if(!values.dni){
+      errors.dni = 'Este campo es obligatorio'
     }
+
+    if(!values.cp){
+      errors.cp = 'Este campo es obligatorio'
+    }
+    if(!values.city){
+      errors.city = 'Este campo es obligatorio'
+    }
+    if(!values.province){
+      errors.province = 'Este campo es obligatorio'
+    }
+    if(!values.adress){
+      errors.adress = 'Este campo es obligatorio'
+    }
+
     setErrorsArray(errors)
     return errors;
   }
@@ -280,6 +282,16 @@ function Checkout() {
             />
             {errorsArray.name && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.name}           </Alert> }
           </div>
+          <div>
+            <input
+              type="text"
+              name="dni"
+              onChange={handleChange}
+              placeholder="Documento/CUIL"
+              className="input"
+            />
+            {errorsArray.dni && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.dni}           </Alert> }
+          </div>
           <div >
             <input
               type="text"
@@ -307,7 +319,7 @@ function Checkout() {
             <input type="checkbox" name='pickUp' checked={pickUp} onChange={(e)=>handlePickUp(e)} />
           </div>
           <p>En caso de retiro por el local comunicate para coordinar con nosotros.</p>
-          {(pickUp == false) &&
+          
           <>
             <h5>DATOS DE ENVÍO</h5>
             <div >
@@ -362,7 +374,7 @@ function Checkout() {
             </div>
           </>
           
-          }
+          
           <div className='buttonsCheckoutContainer'>
             <p className='seleccionarMetodoCheckout' onClick={(e)=>handleBuy(e, 'transfer')}> Pagar con transferencia</p>
             <button className='seleccionarMetodoCheckout' onClick={(e)=>handleBuy(e, 'card')} disabled={(preferenceId!=null)}> <img src={mp} alt="Mercado Pago" className='mercadoPagoLogo' /> Pagar con tarjeta de crédito/débito</button>
