@@ -39,6 +39,9 @@
     padding-right: 5%;
     font-size: 1.2em !important;
 }
+.cartItemNavbar:hover {
+    cursor: pointer;
+}
 
 .dropdownContainer {
     position: absolute;

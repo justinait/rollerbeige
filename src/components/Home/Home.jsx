@@ -13,8 +13,8 @@ function Home() {
       <img src={hero} alt="cortina" className='heroHomeImg' />
       <img src={heroPc} alt="cortina" className='heroHomeImgDesktop' />
       
-      <Services/>
       <HomeCart/>
+      <Services/>
       <ProductsHome/>
       
     </div>
