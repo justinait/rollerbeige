@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebaseConfig';
-import { collection, doc, getDoc, getDocs, updateDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, orderBy, query, updateDoc } from 'firebase/firestore';
 import './UserOrders.css'
 
 function UserOrders() {
@@ -19,18 +19,20 @@ function UserOrders() {
           console.log("Error getting document:", error);
         });
     
-      }, [])
+    }, [])
+    
     useEffect(()=> {
         const ordersCollections = collection (db, "orders")
-        getDocs(ordersCollections).then(res =>{
-            const newArr = res.docs.map( e =>{
+        const ordersQuery = query(ordersCollections, orderBy("date", "desc"))
+        getDocs(ordersQuery).then(res =>{
+            const newArr = res.docs.map(e =>{
                 return {
                     ...e.data(), id: e.id
                 }
             })
             setOrders(newArr)
         })
-    }, [ ])
+    }, [])
     
     const markAsSent = async (orderId) => {
         const orderRef = doc(db, "orders", orderId);
