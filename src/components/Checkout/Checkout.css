@@ -74,6 +74,9 @@
     align-items: baseline;
     width: 60vw;
 }
+.clickHere {
+    text-decoration: underline;
+}
 @media(min-width: 600px){
     .seleccionarMetodoCheckout{
         width: 60vw;
