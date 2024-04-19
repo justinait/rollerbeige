@@ -2,6 +2,12 @@
     margin: 10vh 0;
     min-height: 80vh;
 }
+.spinner{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .detailsListContainer{
     padding: 0 5%;
 }
