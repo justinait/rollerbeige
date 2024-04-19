@@ -23,7 +23,7 @@
 .productDescription {
     width: 80vw;
     text-align: left;
-    font-size: 14px;
+    font-size: 12.5px;
 }
 .moreInfo{    
     text-align: left;
@@ -45,7 +45,7 @@
         font-size: 18px;
     }
     .productDescription {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 @media(min-width:1000px){
@@ -58,7 +58,7 @@
     }
     
     .productDescription {
-        font-size: 20px;
+        font-size: 16px;
     }
     .moreInfo{
         font-size: 15px;
@@ -78,13 +78,14 @@
     }
     .imgProduct {
         margin: 0;
-        height: 400px;
+        height: 350px;
         width: 35vw;
         min-width: 200px;
     }
     .productDescription{
         padding: 0 5%;
         width: 80%;
+        font-size: 18px;
     }
     .productName{
         padding: 1% 5%;
@@ -97,15 +98,22 @@
 @media(min-width:1400px){
     .imgProduct {
         width: 30vw;
-        height: 450px;
-    }
-    .productDescription{
-        font-size: 22px;
     }
     .productName{
         font-size: 32px;
     }
     .moreInfo {
-        font-size: 17px;
+        font-size: 14px;
+    }
+}
+@media(min-width:1600px){
+    .imgProduct {
+        height: 400px;
+    }
+    .productName{
+        font-size: 32px;
+    }
+    .productDescription {
+        font-size: 20px;
     }
 }
