@@ -68,7 +68,7 @@ function UserOrders() {
                     <div className='orderTitle'>
                         <p>Código: {e.id}</p>
                     </div>
-                    <p>{!e.sent && <button onClick={() => markAsSent(e.id)}>Marcar como enviada</button>}</p>
+                    <p>{!e.sent && <button className='markAsSentButton' onClick={() => markAsSent(e.id)}>Marcar como enviada</button>}</p>
                     
                     <p>Fecha de compra: {finalDate}</p>
                     {e.pickUp && <h6>RETIRA POR EL LOCAL</h6>}

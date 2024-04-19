@@ -149,7 +149,7 @@ function Checkout() {
     try {
       let response = await axios.post("https://roller-backend-ten.vercel.app/create_preference", {
         items: newArray,
-        shipment_cost: 100
+        shipment_cost: shipmentCost
       })
       const {id} = response.data
       return id;

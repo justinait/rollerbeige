@@ -42,6 +42,13 @@
     background-color: black;
     color: white;
 }
+.markAsSentButton {
+    background-color: white;
+    padding: 1%;
+}
+.markAsSentButton:hover {
+    background-color: rgb(255, 220, 167);
+}
 @media(min-width:1000px) {
     
     .dashboardCategoryBox{
