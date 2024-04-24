@@ -20,7 +20,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
   
   const [imageValidation, setImageValidation] = useState(false);
   const [file, setFile] = useState(null);
-  const categories = [  'Borlas y Sujetadores', 'Cortinas de baño', 'Rieles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
+  const categories = [  'Borlas y Sujetadores','Borlas', 'Sujetadores', 'Cortinas de baño', 'Rieles y Barrales', 'Rieles', 'Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
   
   const handleImage = async () => {
     setIsLoading(true);

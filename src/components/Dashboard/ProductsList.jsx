@@ -25,7 +25,7 @@ function ProductsList({products, setIsChange}) {
         setIsChange(true);
     }
 
-    const categories = [     'Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Rieles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
+    const categories = [     'Todos los productos' , 'Borlas y Sujetadores','Borlas', 'Sujetadores', 'Cortinas de baño', 'Rieles y Barrales', 'Rieles', 'Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
 
     return (
         <div>

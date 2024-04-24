@@ -29,7 +29,30 @@ function Promos() {
   const [selectedStock, setSelectedStock] = useState(0);
   const [available, setAvailable] = useState()
   const [noStock, setNoStock] = useState(false);
+  const [hoveredCategory, setHoveredCategory] = useState(null);
 
+  const handleMouseEnter = (category) => {
+    setHoveredCategory(category.name);
+  };
+  
+  const handleMouseLeave = () => {
+    setHoveredCategory(null);
+  };
+  
+  const handleSubnamesMouseEnter = (category) => {
+    setHoveredCategory(category.name);
+  };
+  
+  const handleSubnamesMouseLeave = () => {
+    setHoveredCategory(null);
+  };
+  
+  const handleSubnamesClick =(subname)=> {
+    setSelectedCategory(subname);
+    console.log(hoveredCategory);
+    setHoveredCategory(null);
+    console.log(hoveredCategory);
+  }
   const handleClose = () => {
     setShow(false);
     setSelectedItem([])
@@ -116,29 +139,48 @@ function Promos() {
   }, [selectedColor])
 
   const categories = ['Todos los productos' , 'Borlas y Sujetadores', 'Cortinas de baño', 'Rieles y Barrales', 'Cortinas estándar', 'Accesorios', 'SALE']
-  
+  const categories2 = [
+    { name: 'Todos los productos' },
+    { name: 'Borlas y Sujetadores', subnames: ['Borlas', 'Sujetadores']},
+    { name: 'Cortinas de baño'},
+    { name: 'Rieles y Barrales', subnames: ['Rieles', 'Barrales']},
+    { name: 'Cortinas estándar'},
+    { name: 'Accesorios'},
+    { name: 'SALE'},
+    
+]
   const handleColorPick = (e) => {
     setSelectedColor(e.color);
     setSelectedStock(e.stock);
     setNoStock(false);
     setCount(1)
   }
-
   return (
     <div className='productsContainer'>
       <h2 style={{marginBottom: '-2%' }}>NUESTRA TIENDA</h2>
-      <div className='storeCategoryBox' >
-        {categories.map((e, i) => (
+      <div className='storeCategoryBox'>
+
+      {categories2.map((category, index) => (
+        <div key={index} className={`storeCategory`}>
           <button
-            key={i}
-            className={`storeCategory ${selectedCategory === e ? 'storeCategoryActive' : ''}`}
-            onClick={() => setSelectedCategory(e)}
+            className={`${selectedCategory === category.name ? 'storeCategoryActive' : ''}`}
+            onClick={() => setSelectedCategory(category.name)}
+            onMouseEnter={() => handleMouseEnter(category)}
+            onMouseLeave={() => handleMouseLeave()}
           >
-            {e}
+            {category.name}
           </button>
-          
-        ))}
-      </div>
+          {(hoveredCategory === category.name || hoveredCategory === category.name) && category.subnames && (
+            <div className="subnames" onClick={() => handleSubnamesMouseEnter(category)} onMouseEnter={() => handleSubnamesMouseEnter(category)} onMouseLeave={() => handleSubnamesMouseLeave()}>
+              {category.subnames.map((subname, subIndex) => (
+                <span key={subIndex} onClick={()=>handleSubnamesClick(subname)}>{subname}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+</div>
+
 
       <div className='promosDivContainer'>
         {

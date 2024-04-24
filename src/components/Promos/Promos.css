@@ -59,7 +59,10 @@
     font-weight: 600;
     line-height: 30px;
     font-size: 11px;
-    margin: 0 0 5% 0;
+    margin: 5%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
 }
 .storeCategoryActive{
     text-decoration-line: underline;
@@ -67,6 +70,19 @@
 .storeCategory {
     background: none;
     border: none;
+}
+.storeCategory button {
+    background: none;
+    border: none;
+}
+.subnames {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #FAFAFA;
+}
+.subnames span {
+    font-weight: 400;
 }
 .modal-dialog {
     width: 80vw !important;
@@ -275,6 +291,7 @@
         width: 50%;
     }
     .storeCategoryBox{
+        display: flex;
         margin: 0 auto 5%;
         width: 100%;
     }
