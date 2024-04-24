@@ -84,6 +84,9 @@
 .subnames span {
     font-weight: 400;
 }
+.subnames span:hover {
+    cursor: pointer;
+}
 .modal-dialog {
     width: 80vw !important;
     margin: auto !important;
