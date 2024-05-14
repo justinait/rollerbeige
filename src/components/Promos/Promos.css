@@ -329,6 +329,9 @@
     .itemCountContainer p {
         font-size: 20px;
     }
+    .storeCategoryBox {
+        justify-content: center;
+    }
 }
 @media(min-width:1600px){
     .storeCategoryBox {
