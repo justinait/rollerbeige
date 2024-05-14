@@ -53,7 +53,7 @@ function Checkout() {
     };
     
     try {
-      await emailjs.send('34014722', 'template_gtev08e', templateParams, 'd1e499f2Vp0oNsjIh');
+      await emailjs.send('service_9ybr669', 'template_gtev08e', templateParams, 'd1e499f2Vp0oNsjIh');
     } catch (error) {
       console.error('Error al enviar el correo electrónico:', error);
     }
