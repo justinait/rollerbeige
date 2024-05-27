@@ -166,6 +166,13 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
         category: selectedCategories
       }));
       setDetails(productSelected.details)
+      const existingImages = [];
+      for (let i = 2; i <= 5; i++) {
+        if (productSelected[`image${i}`]) {
+          existingImages.push(productSelected[`image${i}`]);
+        }
+      }
+      setAdditionalFiles(existingImages);
     }
   }, [productSelected]);
 

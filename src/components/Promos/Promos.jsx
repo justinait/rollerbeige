@@ -50,9 +50,7 @@ function Promos() {
   
   const handleSubnamesClick =(subname)=> {
     setSelectedCategory(subname);
-    console.log(hoveredCategory);
     setHoveredCategory(null);
-    console.log(hoveredCategory);
   }
   const handleClose = () => {
     setShow(false);
