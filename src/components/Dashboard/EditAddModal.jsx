@@ -337,7 +337,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
 
           {additionalFiles.map((additionalFile, index) => (
             <div key={index}>
-              <p>Imagen Nº {index +3}</p>
+              <p>Imagen Nº {index +2}</p>
               <input
                 type="file"
                 onChange={(e) => handleAdditionalImageChange(e, index)}

@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import { Carousel } from 'react-bootstrap';
 
 function Promos() {
   
@@ -202,7 +203,34 @@ function Promos() {
             <Modal.Title className='modalPromoTitle'>{selectedItem?.title} </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={selectedItem?.image} className='modalPromoImage' alt="" />
+            {/* <div>
+              <img src={selectedItem?.image} className='modalPromoImage' alt="" />
+            </div> */}
+            <Carousel>
+              <Carousel.Item>
+                <img src={selectedItem?.image} alt={selectedItem?.title} className='modalPromoImage'/>
+              </Carousel.Item>
+              {selectedItem?.image2 &&
+              <Carousel.Item>
+                <img src={selectedItem?.image2} alt={selectedItem?.title} className='modalPromoImage'/>
+              </Carousel.Item>
+              }
+              {selectedItem?.image3 &&
+              <Carousel.Item>
+                <img src={selectedItem?.image3} alt={selectedItem?.title} className='modalPromoImage'/>
+              </Carousel.Item>
+              }
+              {selectedItem?.image4 &&
+              <Carousel.Item>
+                <img src={selectedItem?.image4} alt={selectedItem?.title} className='modalPromoImage'/>
+              </Carousel.Item>
+              }
+              {selectedItem?.image5 &&
+              <Carousel.Item>
+                <img src={selectedItem?.image5} alt={selectedItem?.title} className='modalPromoImage'/>
+              </Carousel.Item>
+              }
+            </Carousel>
             <div className='infoModalContainer'>
 
               <p className='modalPromoPrice'>${selectedItem?.unit_price}</p>
