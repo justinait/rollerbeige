@@ -10,6 +10,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
   const [checkboxes, setCheckboxes] = useState([])
   const [errorsArray, setErrorsArray] = useState([])
   const [details, setDetails] = useState([''])
+  const [additionalFiles, setAdditionalFiles] = useState([]);
   const [newProduct, setNewProduct] = useState({
     title:"",
     unit_price:0,
@@ -17,11 +18,59 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     description:"",
     category: []
   })
-  
+
   const [imageValidation, setImageValidation] = useState(false);
   const [file, setFile] = useState(null);
   const categories = [  'Borlas y Sujetadores','Borlas', 'Sujetadores', 'Cortinas de baño', 'Rieles y Barrales', 'Rieles', 'Barrales', 'Cortinas estándar', 'Accesorios', 'SALE'    ]
   
+  const handleAdditionalImage = async () => {
+    setIsLoading(true);
+    additionalFiles.map((e, i)=>{
+      let imageNumber = 'image'+(2+i);
+      if(e != (i+1)){
+        uploadFile(e)
+        .then(url => {
+          if(productSelected) {
+            setProductSelected(prevState => ({
+              ...prevState,
+              [imageNumber]: url,
+            })); 
+            productSelected.image2 &&
+            setAdditionalFiles([1])
+            productSelected.image3 &&
+            setAdditionalFiles([1, 2])
+            productSelected.image4 &&
+            setAdditionalFiles([1, 2, 3])
+            productSelected.image5 &&
+            setAdditionalFiles([1, 2, 3, 4])           
+          } 
+        })
+        .catch(error => {
+          console.error("Error al cargar la imagen:", error);
+        });
+      }
+    })
+    setIsLoading(false);
+  }
+  const handleAdditionalImageChange = (e, index) => {
+    const newFiles = [...additionalFiles];
+    const selectedFile = e.target.files[0];
+    const currentFile = newFiles[index];
+    
+    if (selectedFile !== currentFile) {
+      newFiles[index] = selectedFile;
+      setAdditionalFiles(newFiles);
+    }
+  };
+  
+  const handleAddImageInput = () => {
+    setAdditionalFiles([...additionalFiles, null]);
+  };
+  const handleRemoveImageInput = (index) => {
+    const newFiles = [...additionalFiles];
+    newFiles.splice(index, 1);
+    setAdditionalFiles(newFiles);
+  };
   const handleImage = async () => {
     setIsLoading(true);
     let url = await uploadFile(file);
@@ -273,7 +322,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
 
 
           <div className="">
-          <p className='modalDescription'>Imagen</p>
+          <p className='modalDescription'>Imagen Principal</p>
             <input
               type="file"
               onChange={(e)=>setFile(e.target.files[0])}
@@ -285,6 +334,25 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
             <button type='button' onClick={handleImage}>Confirmar imagen</button>
           }
           {errorsArray.firstImage && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.firstImage}           </Alert> }
+
+          {additionalFiles.map((additionalFile, index) => (
+            <div key={index}>
+              <p>Imagen Nº {index +3}</p>
+              <input
+                type="file"
+                onChange={(e) => handleAdditionalImageChange(e, index)}
+                className="inputModal"
+              />
+              <p className="addMoreButton" onClick={() => handleRemoveImageInput(index)}>-</p>
+            </div>
+          ))}
+          <p className="addMoreButton" onClick={handleAddImageInput}>+</p>
+          {additionalFiles.length > 0 && (
+            <>
+              <button type="button" className="confirmImage" onClick={handleAdditionalImage}>Confirmar imágenes adicionales</button>
+            </>
+          )}
+     
         </form>
          
       </Modal.Body>
