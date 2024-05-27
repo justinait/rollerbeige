@@ -12,13 +12,13 @@ import {getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage"
 import {v4} from "uuid"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDC6o9IF9LZXwjA8uGLmRBfBchBoqaRijQ",
-  authDomain: "rollerbeige.firebaseapp.com",
-  projectId: "rollerbeige",
-  storageBucket: "rollerbeige.appspot.com",
-  messagingSenderId: "428936960776",
-  appId: "1:428936960776:web:a86341316c0990004beabd",
-  measurementId: "G-7XXJQ0K1PR"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTH,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESSAGING,
+  appId: import.meta.env.VITE_APPID,
+  measurementId: import.meta.env.VITE_MEASUREMENT
 };
 
 const app = initializeApp(firebaseConfig);
