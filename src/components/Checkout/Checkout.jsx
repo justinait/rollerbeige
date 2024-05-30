@@ -22,6 +22,7 @@ function Checkout() {
   const [userData, setUserData] = useState({
     email: "",
     name: "",
+    dni: "",
     cp: "",
     phone: "",
     city: "",
@@ -104,6 +105,7 @@ function Checkout() {
         email: "",
         name: "",
         cp: "",
+        dni: "",
         phone: "",
         city: "",
         province: "",
@@ -127,6 +129,7 @@ function Checkout() {
       setUserData({
         email: "",
         name: "",
+        dni: "",
         cp: "",
         phone: "",
         city: "",
