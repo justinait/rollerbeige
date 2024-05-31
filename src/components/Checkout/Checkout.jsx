@@ -332,6 +332,7 @@ function Checkout() {
                 onChange={handleChange}
                 placeholder="Código Postal"
                 className="input"
+                value={userData.cp}
               />
               {errorsArray.cp && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.cp}           </Alert> }
             </div>
@@ -342,6 +343,7 @@ function Checkout() {
                 onChange={handleChange}
                 placeholder="Ciudad"
                 className="input"
+                value={userData.city}
               />
               {errorsArray.city && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.city}           </Alert> }
             </div>
@@ -352,6 +354,7 @@ function Checkout() {
                 onChange={handleChange}
                 placeholder="Provincia"
                 className="input"
+                value={userData.province}
               />
               {errorsArray.province && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.province}           </Alert> }
             </div>
@@ -362,6 +365,7 @@ function Checkout() {
                 onChange={handleChange}
                 placeholder="Dirección de entrega"
                 className="input"
+                value={userData.adress}
               />
               {errorsArray.adress && <Alert key={'danger'} variant={'danger'} className='p-1' style={{ width: 'fit-content' }}>                {errorsArray.adress}           </Alert> }
             </div>
@@ -373,6 +377,7 @@ function Checkout() {
                 onChange={handleChange}
                 placeholder="Departamento"
                 className="input"
+                value={userData.depto}
               />
             </div>
           </>
