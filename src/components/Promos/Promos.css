@@ -55,7 +55,7 @@
 .storeCategoryBox {
     border: none;
     background: transparent;
-    color: #575656;
+    color: #575656 !important;
     font-weight: 600;
     line-height: 30px;
     font-size: 11px;

@@ -57,6 +57,9 @@
     border-bottom: 1px solid grey;
     margin: 5% 5%;
 }
+.cartItemDelete .css-i4bv87-MuiSvgIcon-root {
+    color: black !important;
+}
 .cartItemDelete {
     border: 2px solid grey;
     border-radius: 15px;
