@@ -247,6 +247,7 @@ function Checkout() {
     }
 
     setErrorsArray(errors)
+    console.log("Errors array:", errors);
     return errors;
   }
   return (

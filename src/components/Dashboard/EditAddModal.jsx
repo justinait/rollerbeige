@@ -101,7 +101,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
   const handleSubmit = (e) => {
     e.preventDefault();
     const productsCollection = collection(db, "products")
-
+    setErrorsArray([]);
     if(productSelected){
       let obj = {
         ...productSelected,
@@ -113,7 +113,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       if(!Object.keys(result).length){
         updateDoc(doc(productsCollection, productSelected.id), obj).then(()=>{
           setIsChange(true);
-          handleClose();
+          handleCloseModal();
         })
       }
     } else{
@@ -127,7 +127,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
       if(!Object.keys(result).length){
         addDoc(productsCollection, obj).then(()=> {
           setIsChange(true);
-          handleClose();
+          handleCloseModal();
         })
       }
     }
@@ -236,9 +236,14 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
     
     return errors
   }
+  const handleCloseModal = () => {
+    setErrorsArray([]);
+    handleClose();
+  }
+
   return (
     <>
-      <Modal.Header closeButton>
+      <Modal.Header closeButton onClick={handleCloseModal}>
         <Modal.Title>{productSelected?.title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -364,7 +369,7 @@ function EditAddModal({handleClose, setIsChange, productSelected, setProductSele
          
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
+        <Button variant="secondary" onClick={handleCloseModal}>
           Cancelar
         </Button>
         
